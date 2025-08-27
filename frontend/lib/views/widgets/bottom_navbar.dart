@@ -21,11 +21,11 @@ class _BottomNavbarState extends State<BottomNavbar> {
               label: 'Home',
             ),
             NavigationDestination(
-              icon: Icon(Icons.chat),
+              icon: Icon(Icons.chat_rounded),
               label: 'Chatbot',
             ),
             NavigationDestination(
-              icon: Icon(Icons.bookmark),
+              icon: Icon(Icons.bookmarks),
               label: 'Bookmarks',
             ),
           ],

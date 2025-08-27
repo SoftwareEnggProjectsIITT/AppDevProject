@@ -20,6 +20,19 @@ class _WidgetTreeState extends State<WidgetTree> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDarkMode, child) {
+                return Icon(isDarkMode ? Icons.light_mode :Icons.dark_mode);
+              },
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: ValueListenableBuilder(
