@@ -44,7 +44,8 @@ A **Flutter-based mobile app** that enables verified citizens to report local ci
 ## 🏗️ Tech Stack (Proposed)
 
 - **Frontend:** Flutter (Dart)
-- **Backend:** Firebase (Auth, Firestore, Storage, Cloud Functions) _or_ Node.js + REST
+- **Middleware:**FastAPI deployed on google could run (free)
+- **Backend:** Firebase (Auth, Firestore, Storage, Cloud Functions)
 - **Maps & Geocoding:** Google Maps Platform
 - **Auth:** Aadhaar sandbox/mock for development
 - **CI/CD:** GitHub Actions / Codemagic (optional)
