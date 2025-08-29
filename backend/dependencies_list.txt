@@ -1,9 +1,5 @@
-firebase_test.py:
-pip install firebase_admin
 
-get_links_from_webpage.py:
+pip install firebase_admin
 pip install selenium
 pip install bs4
-
-web_scraping.py:
-pip install bs4
+pip install regex
