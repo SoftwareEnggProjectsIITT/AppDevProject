@@ -4,9 +4,10 @@ from selenium.webdriver.support.ui import Select
 import time
 from bs4 import BeautifulSoup
 import regex as re
+from modules.constants import PIB_CATEGORIES
 
 
-def get_ids(day_value: str) -> list[int]:
+def get_ids_by_categories(day_value: str) -> dict[str, list[int]]:
     # Launch browser
     driver = webdriver.Chrome()
 
@@ -24,16 +25,25 @@ def get_ids(day_value: str) -> list[int]:
     #extracting all the links that we found on the webpage
     soup = BeautifulSoup(driver.page_source[:], "html.parser")
 
-    list = []
-        
+    #dictionary ans
+    ans = {}
 
-    for link in soup.find_all("a"):
-        href = link.get('href')
-        if href.startswith("/PressReleasePage.aspx?PRID="):
-            id = re.search(r'PRID=(\d+)', href).group(1)    #catching from the first group
-            list.append(int(id))    #we have to return list of integers
+    #soup is given
+    for category in PIB_CATEGORIES:
+        header = soup.find("h3", class_="font104", string=category)
+    
+        ids = []    
+        if header:
+            ul = header.find_next("ul", class_="num")
+            if ul:
+                for a in ul.find_all("a", href=True):
+                    link_text = str(a['href'])
+                    id = re.search(r'PRID=(\d+)', link_text).group(1)
+                    ids.append(int(id))
+                
+        ans[category] = ids
 
 
     driver.quit()
         
-    return list
+    return ans
