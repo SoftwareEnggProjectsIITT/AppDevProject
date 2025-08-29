@@ -27,4 +27,15 @@ def parse_date(html: str) -> str:
     return date_string
 
 #get the main image of the post
-#def parse_image(html: str):
+#standard form of image is: https://static.pib.gov.in/WriteReadData/userfiles/image/
+
+def parse_image(html: str) -> str:
+    regex_pattern = r'(https://static\.pib\.gov\.in/WriteReadData/userfiles/image/[A-Za-z0-9_]+\.(?:jpg|jpeg|png))'
+    match = re.search(regex_pattern, str(html))     #html was BeautifulSoup type object, converted to string type
+    
+    if(match):
+        image_link = match.group(0)
+    else:
+        return ""
+    
+    return image_link
