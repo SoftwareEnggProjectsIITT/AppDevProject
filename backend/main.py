@@ -13,10 +13,11 @@ ref = firebase_config.init_firebase()
 base_url = 'https://www.pib.gov.in/PressReleasePage.aspx?PRID='
 
 for id in id_list:
-    html = scraper.fetch_page(id)
+    html = scraper.fetch_page(id)   #here html is of type BeautifulSoup and not string
     
     title = parser_utils.parse_title(html)
     body = parser_utils.parse_body(html)
     date = parser_utils.parse_date(html)
+    image_link = parser_utils.parse_image(html)
     
-    uploader.upload_post(ref, id, title, body, date)
+    uploader.upload_post(ref, id, title, body, date, image_link)
