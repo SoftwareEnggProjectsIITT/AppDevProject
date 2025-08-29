@@ -1,0 +1,777 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Press Release:Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" />
+
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" /><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
+    <script type="text/javascript">
+        $(window).load(function () {
+            // executes when complete page is fully loaded, including all frames, objects and images
+            var varPermId = $('[id*=hydpermid').val();
+            $.ajax({
+                type: "POST",
+                url: "AjaxMethod.aspx/UpdateHitCount",
+                async: false,
+
+                data: JSON.stringify({ 'PermId': varPermId }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+
+                    // var trecord = JSON.parse(response.d).length;
+
+
+                },
+                failure: function (request, error) {
+
+                    alert(" Can't do because: " + error);
+                }
+            });
+
+        });
+
+    </script>
+
+    <style type="text/css">
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        full-width {
+            width: 100%;
+        }
+
+        .logo-left, .logo-center, .countdown {
+            display: flex;
+            align-items: center;
+        }
+
+            .logo-left img, .logo-center img {
+                height: 70px;
+            }
+
+        .countdown {
+            text-align: center;
+            background-color: #444;
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid grey;
+        }
+
+        .firstnumber {
+            color: #000000;
+            position: absolute;
+            top: 50px;
+            right: 90px;
+            font-size: 30px;
+        }
+
+        .secondnumber {
+            position: absolute;
+            color: #000000;
+            right: 45px;
+            top: 50px;
+            font-size: 30px;
+        }
+
+        .countdown .days {
+            font-size: 35px;
+            color: gold;
+        }
+
+        .countdown p {
+            margin: 0;
+        }
+
+        .countdown .text {
+            font-size: 16px;
+        }
+
+        a {
+            word-break: break-all;
+        }
+
+        iframe,img {
+            max-width: 100%;
+        }
+
+        @media(max-width:1199px) {
+            .firstnumber {
+                top: 40px;
+                right: 72px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 35px;
+                top: 40px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:990px) {
+            .firstnumber {
+                top: 25px;
+                right: 54px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 25px;
+                top: 25px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:768px) {
+            .countdown, .days {
+                font-size: 12px !important;
+            }
+
+
+            .firstnumber {
+                top: 25%;
+                right: 8%;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 4.5%;
+                top: 25%;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:475px) {
+            .countdown, .days {
+                font-size: 10px !important;
+                top: 20%;
+            }
+
+            .bannerimgdiv {
+                padding: 0 !important;
+            }
+
+            .bannerimg {
+                width: 108% !important;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("[id*=printPDF]").click(function () {
+                $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+            });
+        });
+        $(function () {
+            $("[id*=printPDFEvent]").click(function () {
+                $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+            });
+        });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'UA-112591026-1');
+
+    </script>
+
+<meta property="og:title" content="Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=2161803" /><meta property="og:description" content=" 
+
+
+
+Shri Akash Tripathi, IAS, Additional Secretary, Ministry of Power and Director General, Bur" /><meta property="og:image" content="https://164.100.158.168/images/indian-emblem.png" />
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="b2f3bayxfqfnw2frotea-f-8646c1acf-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":69,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"9d604b6","ak.r":37659,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.bpcip":"14.139.176.0","ak.cport":60685,"ak.gh":"23.44.10.207","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1756460232","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Z+WhZDFaEaOo1eNCSpXn4GWH/GGeaAk5FBvsJpL4WZGvOgn+gK3vcb+rf5OZRiZbvlouN8ukUmqRhDR35m0h5KyGg19XlBln6n3+dTxjx79gSK0eJAoQgSIyXTO4LNIL+k+jiGrCoOj3kncoPgRvx4Ph8HQydrazUGGmKBaHBawvmwVp5yaUObM+NtjwUMMKcj3kfYaELf1CjVkKzDFNV7Hao5IOsXwMRj9ATR+q2I2hmeWLU3ZCQClaBA70X/vrIlMTQpkoXrx9Kvc/tAN023f1VOVTDcvUTxQ5sA6EQnQINpGpvbGKFmTApyImC0G9gcoVzaNC5fL7IP74WVyxK3DiZ7nN1T5lBnXinqwdoYPSzgzl5XZwV6083ry6uo7MulwF+taStYUlZGW9mk+RKau+8y4BH+Sm76L7KTx1RSY=","ak.pv":"8","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+    <form method="post" action="./PressReleasePage.aspx?PRID=2161803" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=b94hX14NMWluUQ9a73g0LYFvtKhY52TK8cbDkYB_F2GuPre4tdh-ebiiI4xuhXnRu6Q5dQjaQA4oN3PEeL0GrtKEyEY1&amp;t=638568802371266408" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=AnEgHj6YJqZvwVR6vFCtcrQ_QNqWxZh46jdzSXi1vzltWYmOPxQAm1NKLCm5N820SLwVss5RgRgtZPZdsW-zOmHh1FqxNDphBt5rYJp50C_5_kTOpGYeY_JdmG6_hVz3y6oUwA2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=8IziBj-lMplsBrLCeuCY_J0jyAqTieuDK1cBeYDsHWvOwQExNttD30TJwLWnxuC_la4gKd1gb-Bzr7s3th3FiazUYdOY6GNJelPLKO5bk8BNTOb5IeFWxDQiZr90QNWJeU1DWg2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="btIHDyiyUfArd591hsztOouVjNMuGWXywEV6kgOOX7AciwTqmr0fmIITvFJZ8XVdirgRYY4QtxCraNganB7+xRrzCxqfcGRVkdVm0PJO/unYVVh4F98yXXp8EL2fC6hittyM9ucgFrpADxYbfx8Zw+MVY3H4qTq7yDr12IJysXbywYJ2v7F3P792jKEGd87BSekGpOViYi4eqCfqAi0fsMzT3eDxsflRE/kf3Q62A5d1KYStmX3atovZnVjWumxfKGK9+6vhGAngBg0YmAANlMxFnDc5J7ysmtamwkYpyJyZW8LhwDgEmr3nYqd6mySHmC1b4w==" />
+</div>
+        <div id="templateCss"></div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+        <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+        <div class="container" style='margin-bottom: 50px;'>
+            <div id="accessories">
+
+                <input type="image" name="printPDF" id="printPDF" title="Download in PDF" src="images/downloadicon1.png" alt="pdf" />
+                <div class="pull-right" style="display: flex">
+                    <div id="voll"></div>
+                    <div id="vollDT"></div>
+                    
+                    
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" src="images/printer_icon.png" />
+</div>
+                </div>
+            </div>
+            <input type="hidden" name="hydpermid" id="hydpermid" value="2161803" />
+            
+            <div class="innner-page-main-about-us-content-right-part">
+
+                <div id="MinistryName" class="MinistryNameSubhead text-center">
+                    Ministry of Power
+                </div>
+                
+                <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2021/aug/ph202183101.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+
+                
+
+
+                <div class="text-center event-heading-background">
+                    
+                    <h2 id="Titleh2">
+                        Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers
+                    </h2>
+                    <h3 id="Subtitleh3">
+                        <span id="ltrSubtitle"></span>
+                    </h3>
+                </div>
+
+                <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                    Posted On:
+                29 AUG 2025 2:27PM by PIB Delhi
+                </div>
+                
+                <div class='pt20'>
+                </div>
+                <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                
+                <p style="text-align:justify">&nbsp;</p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0010NV1.jpg" style="height:251px; width:596px" /></span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>Shri Akash Tripathi, IAS</strong>, Additional Secretary, Ministry of Power and Director General, Bureau of Energy Efficiency (BEE), released the <strong>State Energy Efficiency Index (SEEI) 2024</strong>, an initiative by BEE in association with the Alliance for an Energy Efficient Economy (AEEE). The SEEI 2024 assesses the energy efficiency performance of 36 Indian States and Union Territories (UTs) for FY 2023-24. The Index plays a pivotal role in institutionalising state-level data monitoring, tracking energy footprint management, promoting best practices, and fostering competitive improvements in energy efficiency across states.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Speaking at the launch, <strong>Shri Tripathi</strong> said, <em>&quot;India&rsquo;s energy transition is not just a response to climate imperatives &ndash; it is a strategic opportunity to foster innovation, resilience, and inclusive growth. As we chart our path toward achieving net-zero emissions by 2070 and a 45% reduction in emissions intensity by 2030, energy efficiency emerges as a foundational pillar, offering impactful, low-cost solutions that cut across all sectors. The State Energy Efficiency Index (SEEI) 2024 is a significant milestone in this journey. This edition brings a sharper focus on ground-level implementation, sectoral outcomes, and measurable progress. By evaluating states across critical domains, such as buildings, industry, transport, DISCOMs, and agriculture, it reflects the growing maturity of India&rsquo;s energy efficiency ecosystem.&rdquo;</em></span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The sixth edition of the Index features an <strong>enhanced implementation-focused framework</strong> with <strong>66 indicators</strong> across seven key demand sectors: <strong>Buildings, Industry, Municipal Services, Transport, Agriculture, Electricity Distribution Companies (DISCOMs)</strong>, and <strong>Cross-Sector initiatives</strong>. The new framework reflects evolving national priorities such as the <strong>Energy Service Companies (ESCO) model</strong>, <strong>star rating for buildings</strong>, <strong>MSME cluster profiling</strong>, <strong>PAT scheme expansion</strong>, <strong>EV demand-side incentives</strong>, and <strong>DISCOMs&#39; demand-side management efforts</strong>. The framework emphasises <strong>on-ground implementation</strong> by assessing state-led initiatives like <strong>energy audits, retrofits, technology demonstrations</strong>, and <strong>capacity-building programmes</strong>.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">States are categorised as <strong>Front Runners</strong> (&gt;60% of the total evaluation score), <strong>Achievers</strong> (50-60%), <strong>Contenders</strong> (30-50%), and <strong>Aspirants</strong> (&lt;30%), with further grouping based on their <strong>total final energy consumption (TFEC)</strong>. The <strong>top-performing states</strong> in each group are:</span></span></p>
+
+<ul style="margin-left:40px">
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 1 (&gt; 15 MToE): <strong>Maharashtra</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 2 (5-15 MToE): <strong>Andhra Pradesh</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 3 (1-5 MToE): <strong>Assam</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 4 (&lt; 1 MToE): <strong>Tripura</strong></span></span></li>
+</ul>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Compared to SEEI 2023, the number of <strong>Front Runner</strong> states has reduced from seven to five, with <strong>Andhra Pradesh, Karnataka, Maharashtra, Telangana, and Tamil Nadu </strong>maintaining this status. Two states &ndash; <strong>Assam and Kerala</strong> &ndash; feature in the <strong>Achiever</strong> category, while <strong>Haryana, Punjab, Rajasthan, Odisha, and Uttar Pradesh</strong> are classified as <strong>Contenders</strong>.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">SEEI highlights progress across sectors and shows notable advancements in energy efficiency. In the <strong>Buildings </strong>sector, 24 states have notified the Energy Conservation Building Code (ECBC) 2017, with 20 states integrating it into municipal by-laws. </span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The <strong>Industry </strong>sector has seen 10 states adopt MSME energy efficiency policies, while seven states mandate Mandatory Energy Audits (MEA) for non-PAT industries. In <strong>municipal sustainability</strong>, 25 states have developed Climate Action Plans or Heat Action Plans, with 12 reporting collaborations between State Designated Agencies and Urban Local Bodies. The <strong>Transport </strong>sector has seen widespread adoption, with 31 states implementing State Electric Mobility Policies and 14 mandating EV charging infrastructure in buildings. In <strong>Agriculture</strong>, 13 states promote integrated cold storage and solar-powered agricultural pumps, with Kerala achieving 74% adoption of energy-efficient or solar-powered agricultural pumps.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Index also highlights the increasing adoption of <strong>demand-side management (DSM)</strong> strategies, with <strong>11 states</strong> incorporating DSM action plans into their Aggregate Revenue Requirement (ARR). As a mark of significant development, all <strong>36 States and UTs</strong> have developed <strong>State Energy Efficiency Action Plans (SEEAPs)</strong>, whereas 31 States/UTs have reported the formation of <strong>State-Level Steering Committees (SLSC) on Energy Transition under the chairmanship of Chief Secretary</strong>, aligning with India&#39;s national climate and energy efficiency goals. </span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>SEEI 2024</strong> continues to serve as a crucial policy tool, guiding sub-national energy efficiency actions and supporting India&#39;s energy transition. The Index provides actionable insights to help states improve their energy efficiency performance, contributing to India&#39;s broader climate and energy security targets.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*****</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>SK</strong></span></span></p>
+
+
+                
+                <div id="reel_pic">
+                </div>
+
+
+
+                
+                <br />
+                <span id="ReleaseId">(Release ID: 2161803)</span>
+                <span id="lblViews">Visitor Counter : 91</span>
+                
+
+                <span id="lblRefPhoto"></span>
+
+                <div class="BackgroundRelease">
+                    
+                </div>
+                <div>
+                    
+                </div>
+                
+                
+                
+
+                <div class="RelTag">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div class="clear">
+                </div>
+                <div class="RelLink">
+                    <ul>
+                        
+                        
+                    </ul>
+                </div>
+                <center>
+                    
+                </center>
+            </div>
+
+            <div id="update12">
+	
+                    
+                    <input type="hidden" name="Hidden" id="Hidden" />
+                    <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                        <div>
+                            <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                        </div>
+                        <div id="description">
+                        </div>
+                        <div class="text-center">
+                            <h2>
+                                
+                                <br>
+                                
+                            </h2>
+                        </div>
+                        <br />
+                        <div class="clear">
+                        </div>
+                        
+                    
+	</div>
+                
+</div>
+        </div>
+        
+        <div id="PdfDiv" style="display: none;">
+            <table width="100%">
+                <tr>
+                    <td style="font-weight: 200; text-align: center">
+                        Ministry of Power
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="text-align: center; font-size: 14px;">
+                            Posted On:
+                        29 AUG 2025 2:27PM by PIB Delhi
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                            <p style="text-align:justify">&nbsp;</p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image0010NV1.jpg" style="height:251px; width:596px" /></span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>Shri Akash Tripathi, IAS</strong>, Additional Secretary, Ministry of Power and Director General, Bureau of Energy Efficiency (BEE), released the <strong>State Energy Efficiency Index (SEEI) 2024</strong>, an initiative by BEE in association with the Alliance for an Energy Efficient Economy (AEEE). The SEEI 2024 assesses the energy efficiency performance of 36 Indian States and Union Territories (UTs) for FY 2023-24. The Index plays a pivotal role in institutionalising state-level data monitoring, tracking energy footprint management, promoting best practices, and fostering competitive improvements in energy efficiency across states.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Speaking at the launch, <strong>Shri Tripathi</strong> said, <em>&quot;India&rsquo;s energy transition is not just a response to climate imperatives &ndash; it is a strategic opportunity to foster innovation, resilience, and inclusive growth. As we chart our path toward achieving net-zero emissions by 2070 and a 45% reduction in emissions intensity by 2030, energy efficiency emerges as a foundational pillar, offering impactful, low-cost solutions that cut across all sectors. The State Energy Efficiency Index (SEEI) 2024 is a significant milestone in this journey. This edition brings a sharper focus on ground-level implementation, sectoral outcomes, and measurable progress. By evaluating states across critical domains, such as buildings, industry, transport, DISCOMs, and agriculture, it reflects the growing maturity of India&rsquo;s energy efficiency ecosystem.&rdquo;</em></span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The sixth edition of the Index features an <strong>enhanced implementation-focused framework</strong> with <strong>66 indicators</strong> across seven key demand sectors: <strong>Buildings, Industry, Municipal Services, Transport, Agriculture, Electricity Distribution Companies (DISCOMs)</strong>, and <strong>Cross-Sector initiatives</strong>. The new framework reflects evolving national priorities such as the <strong>Energy Service Companies (ESCO) model</strong>, <strong>star rating for buildings</strong>, <strong>MSME cluster profiling</strong>, <strong>PAT scheme expansion</strong>, <strong>EV demand-side incentives</strong>, and <strong>DISCOMs&#39; demand-side management efforts</strong>. The framework emphasises <strong>on-ground implementation</strong> by assessing state-led initiatives like <strong>energy audits, retrofits, technology demonstrations</strong>, and <strong>capacity-building programmes</strong>.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">States are categorised as <strong>Front Runners</strong> (&gt;60% of the total evaluation score), <strong>Achievers</strong> (50-60%), <strong>Contenders</strong> (30-50%), and <strong>Aspirants</strong> (&lt;30%), with further grouping based on their <strong>total final energy consumption (TFEC)</strong>. The <strong>top-performing states</strong> in each group are:</span></span></p>
+
+<ul style="margin-left:40px">
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 1 (&gt; 15 MToE): <strong>Maharashtra</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 2 (5-15 MToE): <strong>Andhra Pradesh</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 3 (1-5 MToE): <strong>Assam</strong></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Group 4 (&lt; 1 MToE): <strong>Tripura</strong></span></span></li>
+</ul>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Compared to SEEI 2023, the number of <strong>Front Runner</strong> states has reduced from seven to five, with <strong>Andhra Pradesh, Karnataka, Maharashtra, Telangana, and Tamil Nadu </strong>maintaining this status. Two states &ndash; <strong>Assam and Kerala</strong> &ndash; feature in the <strong>Achiever</strong> category, while <strong>Haryana, Punjab, Rajasthan, Odisha, and Uttar Pradesh</strong> are classified as <strong>Contenders</strong>.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">SEEI highlights progress across sectors and shows notable advancements in energy efficiency. In the <strong>Buildings </strong>sector, 24 states have notified the Energy Conservation Building Code (ECBC) 2017, with 20 states integrating it into municipal by-laws. </span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The <strong>Industry </strong>sector has seen 10 states adopt MSME energy efficiency policies, while seven states mandate Mandatory Energy Audits (MEA) for non-PAT industries. In <strong>municipal sustainability</strong>, 25 states have developed Climate Action Plans or Heat Action Plans, with 12 reporting collaborations between State Designated Agencies and Urban Local Bodies. The <strong>Transport </strong>sector has seen widespread adoption, with 31 states implementing State Electric Mobility Policies and 14 mandating EV charging infrastructure in buildings. In <strong>Agriculture</strong>, 13 states promote integrated cold storage and solar-powered agricultural pumps, with Kerala achieving 74% adoption of energy-efficient or solar-powered agricultural pumps.</span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Index also highlights the increasing adoption of <strong>demand-side management (DSM)</strong> strategies, with <strong>11 states</strong> incorporating DSM action plans into their Aggregate Revenue Requirement (ARR). As a mark of significant development, all <strong>36 States and UTs</strong> have developed <strong>State Energy Efficiency Action Plans (SEEAPs)</strong>, whereas 31 States/UTs have reported the formation of <strong>State-Level Steering Committees (SLSC) on Energy Transition under the chairmanship of Chief Secretary</strong>, aligning with India&#39;s national climate and energy efficiency goals. </span></span></p>
+
+<p style="margin-left:0in; margin-right:0in; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>SEEI 2024</strong> continues to serve as a crucial policy tool, guiding sub-national energy efficiency actions and supporting India&#39;s energy transition. The Index provides actionable insights to help states improve their energy efficiency performance, contributing to India&#39;s broader climate and energy security targets.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*****</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>SK</strong></span></span></p>
+
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                        <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                            (Release ID: 2161803)
+                        </div>
+                        <div style="height: 30px; width: 100%;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="clearfix">
+        </div>
+
+        
+
+        <div class="section1">
+            <div id="frst_t">
+                <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803&text=Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803&title=Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+            </div>
+            <div id="second_t">
+                <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803&text=Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161803&title=Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+            </div>
+        </div>
+        <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Ministry of Power released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers" />
+        <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+        <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;img src=&quot;https://static.pib.gov.in/WriteReadData/userfiles/image/image0010NV1.jpg&quot; style=&quot;height:251px; width:596px&quot; />&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Shri Akash Tripathi, IAS&lt;/strong>, Additional Secretary, Ministry of Power and Director General, Bureau of Energy Efficiency (BEE), released the &lt;strong>State Energy Efficiency Index (SEEI) 2024&lt;/strong>, an initiative by BEE in association with the Alliance for an Energy Efficient Economy (AEEE). The SEEI 2024 assesses the energy efficiency performance of 36 Indian States and Union Territories (UTs) for FY 2023-24. The Index plays a pivotal role in institutionalising state-level data monitoring, tracking energy footprint management, promoting best practices, and fostering competitive improvements in energy efficiency across states.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Speaking at the launch, &lt;strong>Shri Tripathi&lt;/strong> said, &lt;em>&amp;quot;India&amp;rsquo;s energy transition is not just a response to climate imperatives &amp;ndash; it is a strategic opportunity to foster innovation, resilience, and inclusive growth. As we chart our path toward achieving net-zero emissions by 2070 and a 45% reduction in emissions intensity by 2030, energy efficiency emerges as a foundational pillar, offering impactful, low-cost solutions that cut across all sectors. The State Energy Efficiency Index (SEEI) 2024 is a significant milestone in this journey. This edition brings a sharper focus on ground-level implementation, sectoral outcomes, and measurable progress. By evaluating states across critical domains, such as buildings, industry, transport, DISCOMs, and agriculture, it reflects the growing maturity of India&amp;rsquo;s energy efficiency ecosystem.&amp;rdquo;&lt;/em>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The sixth edition of the Index features an &lt;strong>enhanced implementation-focused framework&lt;/strong> with &lt;strong>66 indicators&lt;/strong> across seven key demand sectors: &lt;strong>Buildings, Industry, Municipal Services, Transport, Agriculture, Electricity Distribution Companies (DISCOMs)&lt;/strong>, and &lt;strong>Cross-Sector initiatives&lt;/strong>. The new framework reflects evolving national priorities such as the &lt;strong>Energy Service Companies (ESCO) model&lt;/strong>, &lt;strong>star rating for buildings&lt;/strong>, &lt;strong>MSME cluster profiling&lt;/strong>, &lt;strong>PAT scheme expansion&lt;/strong>, &lt;strong>EV demand-side incentives&lt;/strong>, and &lt;strong>DISCOMs&amp;#39; demand-side management efforts&lt;/strong>. The framework emphasises &lt;strong>on-ground implementation&lt;/strong> by assessing state-led initiatives like &lt;strong>energy audits, retrofits, technology demonstrations&lt;/strong>, and &lt;strong>capacity-building programmes&lt;/strong>.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>States are categorised as &lt;strong>Front Runners&lt;/strong> (&amp;gt;60% of the total evaluation score), &lt;strong>Achievers&lt;/strong> (50-60%), &lt;strong>Contenders&lt;/strong> (30-50%), and &lt;strong>Aspirants&lt;/strong> (&amp;lt;30%), with further grouping based on their &lt;strong>total final energy consumption (TFEC)&lt;/strong>. The &lt;strong>top-performing states&lt;/strong> in each group are:&lt;/span>&lt;/span>&lt;/p>
+
+&lt;ul style=&quot;margin-left:40px&quot;>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Group 1 (&amp;gt; 15 MToE): &lt;strong>Maharashtra&lt;/strong>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Group 2 (5-15 MToE): &lt;strong>Andhra Pradesh&lt;/strong>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Group 3 (1-5 MToE): &lt;strong>Assam&lt;/strong>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Group 4 (&amp;lt; 1 MToE): &lt;strong>Tripura&lt;/strong>&lt;/span>&lt;/span>&lt;/li>
+&lt;/ul>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Compared to SEEI 2023, the number of &lt;strong>Front Runner&lt;/strong> states has reduced from seven to five, with &lt;strong>Andhra Pradesh, Karnataka, Maharashtra, Telangana, and Tamil Nadu &lt;/strong>maintaining this status. Two states &amp;ndash; &lt;strong>Assam and Kerala&lt;/strong> &amp;ndash; feature in the &lt;strong>Achiever&lt;/strong> category, while &lt;strong>Haryana, Punjab, Rajasthan, Odisha, and Uttar Pradesh&lt;/strong> are classified as &lt;strong>Contenders&lt;/strong>.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>SEEI highlights progress across sectors and shows notable advancements in energy efficiency. In the &lt;strong>Buildings &lt;/strong>sector, 24 states have notified the Energy Conservation Building Code (ECBC) 2017, with 20 states integrating it into municipal by-laws. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The &lt;strong>Industry &lt;/strong>sector has seen 10 states adopt MSME energy efficiency policies, while seven states mandate Mandatory Energy Audits (MEA) for non-PAT industries. In &lt;strong>municipal sustainability&lt;/strong>, 25 states have developed Climate Action Plans or Heat Action Plans, with 12 reporting collaborations between State Designated Agencies and Urban Local Bodies. The &lt;strong>Transport &lt;/strong>sector has seen widespread adoption, with 31 states implementing State Electric Mobility Policies and 14 mandating EV charging infrastructure in buildings. In &lt;strong>Agriculture&lt;/strong>, 13 states promote integrated cold storage and solar-powered agricultural pumps, with Kerala achieving 74% adoption of energy-efficient or solar-powered agricultural pumps.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>The Index also highlights the increasing adoption of &lt;strong>demand-side management (DSM)&lt;/strong> strategies, with &lt;strong>11 states&lt;/strong> incorporating DSM action plans into their Aggregate Revenue Requirement (ARR). As a mark of significant development, all &lt;strong>36 States and UTs&lt;/strong> have developed &lt;strong>State Energy Efficiency Action Plans (SEEAPs)&lt;/strong>, whereas 31 States/UTs have reported the formation of &lt;strong>State-Level Steering Committees (SLSC) on Energy Transition under the chairmanship of Chief Secretary&lt;/strong>, aligning with India&amp;#39;s national climate and energy efficiency goals. &lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;margin-left:0in; margin-right:0in; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>SEEI 2024&lt;/strong> continues to serve as a crucial policy tool, guiding sub-national energy efficiency actions and supporting India&amp;#39;s energy transition. The Index provides actionable insights to help states improve their energy efficiency performance, contributing to India&amp;#39;s broader climate and energy security targets.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>*****&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>SK&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+" />
+        <script type="text/javascript">
+            var mPlayer = document.getElementById("background_music");
+            var mPlayAction = document.getElementById("playbutton");
+
+            var isPlaying = false;
+
+            function playAudio() {
+                mPlayer.play();
+                isPlaying = true;
+                document.getElementById('stopA').style.display = "block";
+                document.getElementById('playA').style.display = "none";
+            }
+
+            function pauseAudio() {
+                mPlayer.pause();
+                isPlaying = false;
+                document.getElementById('playA').style.display = "block";
+                document.getElementById('stopA').style.display = "none";
+            }
+            //function HandleAudio() {
+            //    if (isPlaying == true) {
+            //        //Playing already Pause it
+            //        pauseAudio();
+            //    } else {
+            //        //Play the music
+            //        playAudio();
+            //    }
+            //}
+        </script>
+        <script type="text/javascript">
+            var synth = window.speechSynthesis;
+
+            
+            function stripHtml(html) {
+                let tmp = document.createElement("DIV");
+                tmp.innerHTML = html;
+                return tmp.textContent || tmp.innerText || "";
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //for responsive tables
+                $("table").each(function () {
+                    if (!$(this).closest(".table-responsive").length) {
+                        $(this).wrap("<div class='table-responsive'></div>");
+                    }
+                });
+
+                var width = $(window).width();
+                if (width < 768) {
+
+                    // Extra Small Device
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+
+                } else if (width < 991) {
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+                    // Small Device
+
+                } else if (width < 1199) {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Medium Device
+
+                } else {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Large Device
+
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var width = $(window).width();
+                if (width < 768) {
+
+                    // Extra Small Device
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+
+                } else if (width < 991) {
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+                    // Small Device
+
+                } else if (width < 1199) {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Medium Device
+
+                } else {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Large Device
+
+                }
+            });
+        </script>
+        
+        <style type="text/css">
+            @media print {
+                .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                    display: none !important;
+                }
+            }
+
+            .f_vl {
+                padding-right: 30px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            .log_oo {
+                // width: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .log_oo img {
+                    width: 150px;
+                    /*width: 100%;
+                    height: auto;*/
+                }
+
+            .sticky-social_mb {
+                position: fixed;
+                bottom: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+            }
+
+            .social_mb {
+                list-style: none;
+                display: flex;
+                width: 100%;
+                margin-bottom: -8px;
+            }
+
+                .social_mb a {
+                    padding: 8px 0px;
+                    font-size: 30px;
+                    transition: all 0.8s ease-in-out;
+                    width: 20% !important;
+                    text-align: center;
+                }
+        </style>
+        <style type="text/css">
+            .section1 {
+                position: relative;
+                padding: 10px 0px;
+                width: 100%;
+            }
+
+
+
+            .sticky-social {
+                position: fixed;
+                top: 20px;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .social {
+                list-style: none;
+            }
+
+                .social a li {
+                    padding: 8px 12px;
+                    font-size: 25px;
+                    transition: all 0.8s ease-in-out;
+                }
+
+                    .social a li:hover {
+                        margin-right: -30px;
+                        box-shadow: 2px 5px 10px grey;
+                    }
+
+                        .social a li:hover .fa {
+                            margin-left: 20px;
+                        }
+
+            .fb_b {
+                /* background-color: rgb(59, 89, 152);*/
+                background-color: rgba(65,103,178,255);
+            }
+
+            .twitter_r {
+                /* background-color: rgb(29, 161, 242);*/
+                background-color: #000000;
+            }
+
+            .whatsapp_r {
+                /* background-color: rgb(77, 194, 71);*/
+                background-color: rgba(13,191,67,255);
+            }
+
+            .fa-envelope_r {
+                /* background-color: rgb(219, 68, 55);*/
+                background-color: #e2123d;
+            }
+
+            .fa-linkedin_r {
+                background-color: rgb(0, 119, 181);
+            }
+        </style>
+        <style type="text/css">
+            @media only screen and (max-device-width: 767px) {
+                p span img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                p img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                h2 {
+                    font-size: 20px !important;
+                    font-weight: 600 !important;
+                }
+
+                h3 {
+                    font-size: 18px !important;
+                    font-weight: 600 !important;
+                }
+            }
+        </style>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>
+
