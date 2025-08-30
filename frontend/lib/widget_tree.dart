@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/data/notifiers.dart';
-import 'package:frontend/views/pages/bookmarks_page.dart';
-import 'package:frontend/views/pages/chatbot_page.dart';
-import 'package:frontend/views/pages/home_page.dart';
-import 'package:frontend/views/widgets/bottom_navbar.dart';
+import 'package:frontend/providers/notifiers.dart';
+import 'package:frontend/screens/bookmarks_page.dart';
+import 'package:frontend/screens/chatbot_page.dart';
+import 'package:frontend/screens/home_page.dart';
+import 'package:frontend/widgets/bottom_navbar.dart';
 
 List<Widget> pages = [const HomePage(), const ChatbotPage(), const BookmarksPage()];
 
