@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/data/notifiers.dart';
+import 'package:frontend/views/pages/login.dart';
 import 'package:frontend/views/widget_tree.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-void main() {
+void main() async {
+   WidgetsFlutterBinding.ensureInitialized();  
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   runApp(const MyApp());
 }
 
@@ -23,7 +31,20 @@ class MyApp extends StatelessWidget {
               brightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
           ),
-          home: const WidgetTree(),
+          home: StreamBuilder(
+            stream: FirebaseAuth.instance.authStateChanges(), // Here we can use things like userChanges(), 
+            builder: (context, snapshot) {
+              if(snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              if(snapshot.data != null)  {
+                return const WidgetTree();
+              }
+              return const LoginScreen();
+            }
+          ),
         );
       }
     );
