@@ -5,7 +5,7 @@ import modules.scraper as scraper
 import modules.uploader as uploader
 
 #getting all the links for the specified date
-date = "25"
+date = "27"
 category_ids_dict = get_ids.get_ids_by_categories(date)
 
 ref = firebase_config.init_firebase()

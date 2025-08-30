@@ -7,7 +7,8 @@ def upload_post(ref, id: int, category: str, title: str, body: str, date: str, i
                 "title": title,
                 "body": body,
                 "date": date,
-                "image_link": image_link
+                "image_link": image_link,
+                "likes": 0
             }
         }
         
