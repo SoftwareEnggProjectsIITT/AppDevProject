@@ -10,7 +10,7 @@ def init_firebase():
     cred = credentials.Certificate(key_path)
 
     firebase_admin.initialize_app(cred, {
-        "databaseURL": "https://fir-test-417bb-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        "databaseURL": "https://se-app-dev-9e20f-default-rtdb.asia-southeast1.firebasedatabase.app/"
     })
 
-    return db.reference('/')
+    return db.reference('/posts/')
