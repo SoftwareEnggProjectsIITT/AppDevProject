@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/data/notifiers.dart';
+import 'package:frontend/providers/notifiers.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({super.key});
