@@ -1,34 +1,209 @@
 
-<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="public" http-equiv="Cache-control"/>
-<meta content="Press Information Bureau (PIB) is the nodal agency of the Government of India to disseminate information to the print and electronic media on government policies, programmes, initiatives and achievements." name="description">
-<meta content="Press Information Bureau, PIB, Government of India, Indian Government news, press releases, government updates, official news, India policies, national events, government schemes, Indian news portal" name="keywords"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1"><title>
-	All Press Release: Press Information Bureau
-</title><meta content="930300783691811" property="fb:app_id"/><link href="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/apr/ph20224636301.jpg" rel="icon" type="image/jpg"/><link href="/css/style3.1.css" rel="stylesheet" type="text/css"/>
-<!-- Color Theme CSS -->
-<link href="https://static.pib.gov.in/writereaddata/css/change.css" media="screen" rel="alternate stylesheet" title="change"/><link href="https://static.pib.gov.in/writereaddata/css/green2.css" media="screen" rel="alternate stylesheet" title="green"/><link href="https://static.pib.gov.in/writereaddata/css/yellow.css" media="screen" rel="alternate stylesheet" title="yellow"/><link href="https://static.pib.gov.in/writereaddata/css/prtint.css" media="print" rel="stylesheet" type="text/css"/>
-<script src="/js/scrolljs/myscolljs.js" type="text/javascript"></script>
-<script src="/js/jquery.meanmenu.js" type="text/javascript"></script>
-<style media="screen" type="text/css">
- html, body{
+	Press Release:Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="css/change.css" media="screen" rel="alternate stylesheet" title="change"/><link href="css/green.css" media="screen" rel="alternate stylesheet" title="green"/><link href="css/yellow.css" media="screen" rel="alternate stylesheet" title="yellow"/><link href="css/prtint.css" media="print" rel="stylesheet" type="text/css"/><link href="css/style3.1.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="true" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<script type="text/javascript">
+        $(window).load(function () {
+            // executes when complete page is fully loaded, including all frames, objects and images
+            var varPermId = $('[id*=hydpermid').val();
+            $.ajax({
+                type: "POST",
+                url: "AjaxMethod.aspx/UpdateHitCount",
+                async: false,
 
-font-size:100%;
-}
-</style>
-<script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="b2f3ba3acdgms2frvjuq-f-740dc152e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":18,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"11c8d868","ak.r":42687,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.bpcip":"14.139.176.0","ak.cport":52023,"ak.gh":"96.16.204.197","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1756473961","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==rKkqrKh6zzOolEgdmuifuXM0bfyegPvlGrPmcyPxqBZna3mwYU2+zdHVKHN/tlwmgix24GgwCyqT9IKLgZxfp1UUihfNnoepXXBjpa1H0UUlADI7GIUe0/EufLAc2dr77yj6hSZFedWXHiv4Vroo/tKpMzP5Hg3Ns5HDqrCRTvlc1U94Ay2gUsj/sMIgDuoTbawccGHvctW/ZA6oQBDC5cW+Pqz0nMZ2h7rRR7bfKwPUnjGgXkKHXKmPQqvLFzKy1zcxjlHdsjHP7RBLtn8UNVfV2oRDtByxilwtiZp15MQg06uGdEyWXJeOBb3ktPmkwTJZcs+ID/d4WwwDDyS3haPBZ7Zj4eMLietVytWaKJJtX0HnN7rZx/qnakbSEyJMuZ4+Qk3Yqwrg4/P3zHc8INKqzkp0pcfCeUbZgr1jml0=","ak.pv":"8","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
-<body id="fontSize">
-<form action="./allRel.aspx" id="form1" method="post">
+                data: JSON.stringify({ 'PermId': varPermId }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+
+                    // var trecord = JSON.parse(response.d).length;
+
+
+                },
+                failure: function (request, error) {
+
+                    alert(" Can't do because: " + error);
+                }
+            });
+
+        });
+
+    </script>
+<style type="text/css">
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        full-width {
+            width: 100%;
+        }
+
+        .logo-left, .logo-center, .countdown {
+            display: flex;
+            align-items: center;
+        }
+
+            .logo-left img, .logo-center img {
+                height: 70px;
+            }
+
+        .countdown {
+            text-align: center;
+            background-color: #444;
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid grey;
+        }
+
+        .firstnumber {
+            color: #000000;
+            position: absolute;
+            top: 50px;
+            right: 90px;
+            font-size: 30px;
+        }
+
+        .secondnumber {
+            position: absolute;
+            color: #000000;
+            right: 45px;
+            top: 50px;
+            font-size: 30px;
+        }
+
+        .countdown .days {
+            font-size: 35px;
+            color: gold;
+        }
+
+        .countdown p {
+            margin: 0;
+        }
+
+        .countdown .text {
+            font-size: 16px;
+        }
+
+        a {
+            word-break: break-all;
+        }
+
+        iframe,img {
+            max-width: 100%;
+        }
+
+        @media(max-width:1199px) {
+            .firstnumber {
+                top: 40px;
+                right: 72px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 35px;
+                top: 40px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:990px) {
+            .firstnumber {
+                top: 25px;
+                right: 54px;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 25px;
+                top: 25px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:768px) {
+            .countdown, .days {
+                font-size: 12px !important;
+            }
+
+
+            .firstnumber {
+                top: 25%;
+                right: 8%;
+                font-size: 30px;
+            }
+
+            .secondnumber {
+                right: 4.5%;
+                top: 25%;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:475px) {
+            .countdown, .days {
+                font-size: 10px !important;
+                top: 20%;
+            }
+
+            .bannerimgdiv {
+                padding: 0 !important;
+            }
+
+            .bannerimg {
+                width: 108% !important;
+            }
+        }
+    </style>
+<script type="text/javascript">
+        $(function () {
+            $("[id*=printPDF]").click(function () {
+                $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+            });
+        });
+        $(function () {
+            $("[id*=printPDFEvent]").click(function () {
+                $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+            });
+        });
+    </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
+<script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+
+
+        gtag('config', 'UA-112591026-1');
+
+    </script>
+<meta content="SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA" property="og:title"/><meta content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=2161649" property="og:url"/><meta content="Lok Sabha Speaker Shri Om Birla today met a 24-member high level delegation of the Sri Lanka–India P" property="og:description"/><meta content="https://164.100.158.168/images/indian-emblem.png" property="og:image"/>
+<script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="b2f3ba3acdgms2frz4jq-f-0666bde35-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":6,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"14ba829c","ak.r":42687,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.bpcip":"14.139.176.0","ak.cport":53876,"ak.gh":"96.16.204.197","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1756483347","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==GwJ4EPLRfUR6eRoY+UKhpDl2NjJRE3JKhxfqU/alKj7/b8ZMuuPVAJFhB9hMH8ZoB8wkwL2JAwVUO6pFhaKr/tqFmeRnbEMGcx1rlChP+5e7Ixhq87dMzWsC2t5zs+zvFX2QfPmuorBHIAPRixdOmYJFbeUFz/4yj+YpgwXkkqDWyjk28/q7K7FH0dIA45ApVZWjg6LX88f+jHqZFP0RAFleOUiRJz06VyCs5wHbOoA3D5n8FiCikn+0YNkBtdZ3jYtjGg7RKgJLiNHg84YQtSoiTAbz1b3oXCySZ5JYykPabjIYR05KY8Kratf0oSwGvzovtRL9xWpjjJiwGUC1OM2uXXS18vp5IBJuiPXtAmGV+md//gQ4QTdWLPGoYkx6FKftR49yqZrzu/oboTpQmAQYJIFzawGD5DeYxbX/eXY=","ak.pv":"8","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+<form action="./PressReleasePage.aspx?PRID=2161649" id="form1" method="post">
 <div class="aspNetHidden">
-<input id="script_HiddenField" name="script_HiddenField" type="hidden" value=""/>
+<input id="sc_HiddenField" name="sc_HiddenField" type="hidden" value=""/>
 <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
 <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
-<input id="__LASTFOCUS" name="__LASTFOCUS" type="hidden" value=""/>
-<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -46,656 +221,478 @@ function __doPostBack(eventTarget, eventArgument) {
 //]]>
 </script>
 <script src="/WebResource.axd?d=b94hX14NMWluUQ9a73g0LYFvtKhY52TK8cbDkYB_F2GuPre4tdh-ebiiI4xuhXnRu6Q5dQjaQA4oN3PEeL0GrtKEyEY1&amp;t=638568802371266408" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=YwOa_0w_u3oCLFqmIIOf-XEz4GWZ1DuyQIpxIA4LVkywj39sZSps12NbK5wNl5XN9JF3m7d-ey7BFDgj6i0380qRQ5IMWCL54sYNVU1IjMmiOWpp0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
-<script src="/ScriptResource.axd?d=_shmykYI80CxCNR43Ii1nLy9PBGhuSe6SPp3CEYu0wDEuLqDAuIcsXVNhTIgQn0iyiwPorMflXuK31FftDX9GnB0m366MCEoOmY-eKQ3YAO9xRL0gIigzgRbtbVOgSQkJbJpFg2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
-<div class="aspNetHidden">
-<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="CBED066B"/>
-<input id="__VIEWSTATEENCRYPTED" name="__VIEWSTATEENCRYPTED" type="hidden" value=""/>
-<input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="Nnunziuma9laZTNobfr7NhO6V6uFMOI1kzDguCal7LZ5eRVhwARFzTqpUpXZ5VOYsfTRRAYKgNlEdUxDNYIjhpVOh1PvpWjbY1gSWuZehZUQ0dFWwyQ1c2vUJA+V4neGz3vGGnf4FzFoaRLfmuMrGSdT541lDIsFra8+3YqKy2uLpYmar/UvpiyDStuJ0DHZNU50MRLxPQlqxmeTgLmrThfkAwskLiLytarj+Jtq5OHo/KNZv9PEH5q/ITtJGlM7x76LqQamgfilttN91htKDto9YbEWsYVcs5WSvW3HBA7O7fONZfyoGHmRJ82OslpjLLWAoNo6mlTXIe2jkMn6ufy5MAwv/lTKKkhj3FdTTVgqKs1JL1UuwEsaPTj+LPKbrefvt9bhcBIXOLEOw2lUx16jAQl4csd/YUvlrfQ3E11JY+fEpeYPLSIKAZ8V5E0rf65omLcKUf4AEnyDy0bfoDD1V28SeaKxin+JUIe6x/PQxxQeLR14tjJuXfkbbz4cIkQs+JqbxhU557nTpV1VNt+BJ0CPL04HCmFdW1Se5tPNyD3KJ+bA4QHLtDQFEvYHwasxbIvz+wNHbYzND0ERwVntLy+A1Ob5V6stpWnOxy5qxh1BCLx2FS5pX8kB1aOAb8a/+AeLKGrgaNaXZSTPqbazjeq0xA6yGfluzG63poxQBmNmT0esptLkdlsfZH6zErR/+AwNkVASujN25EDEpLgMxrlcYwGXi969vQCtQZycyDjFlxVLeYFJh0QcWLywfnrA/su11cO58NFcqSaNf+sPdYg2R/XOyK1+y6mHwT7WPqeeuKg5R4Pd5wN4RedMA2YBcMVEbC9FGQ3PbLzn5JSc2dPqwxW+wuyHRLdzTPQV/mH1jOMK+oy9qL2Kd76eRaUuQpUMzZtaebJ/9SSBhMhv++jtqxkwqLzVihNqynqB5ngVqloFv7e4JlESHSAwMV3sBCLMj2xDg1V6HAAxarSn6CUOcOUurIbhqQZTWNNFZfn2Bmlm1x5nSnOFA237UMWuG5gj3r2F6OG0mSyzH17X8tz2snDWllV6kps5gKDuIHTKDblL8raUkA7fkZqcVndFhkHqb7J2FbHFrCNfkv6n7qedTApl3VpQisxckzgs+nGZyTUmrNQEw9AqQIMlJ6LrjvCOiEAUVVPs1MWeRD0U1i4Gpfr7PMcJ8AoBmgcu/uqN7klLBZUXVQGHqLPWy3TzjQIrKg0prawD0FdnK8ZE68DtKngBqtlOltoC5VNSNqjS+T8CJ6osLSaz9tVPOhm4A7iGwIMgsevWfu8dR5PABSphzHy6nr2qntuQBwKuguAi3xc3hq6DsZ1LfcWz2FHb4YzSqx7gcThuWVep06OD2lnpQWsz0uPpl6yC+i+MbPHfl3X9Q519LcLx45G/J7owRuy1/TGWyKX9iobZyNVofpqPbSWl9TDvd4YrQ7i+rbEy3p57sDgWRyf7ARRawp8H3GOtxsK3sl/WDM+LqVjaP2j7/EIT7dyGsckyJhpM3XCLpQIWMOdNHMQQNhWEWlONPBgfM45IOJoQSJoF0P216QSdW4uKzu4l5rNsOggDpZoOK3Pv/G5I5VJW73wT9fO+nPOpZfiM/Woc7qLssHd89tblJttQ12C3rnpuavJtu8dp6yDtI9bmvkLEOKqbVoGK3/i3WuQTwHbQBgYxt4Wir+DgAuifB6R1QcFaBcMkfsNW7hzvjUZTx/mdVngq9yJMVDm6PLP7/R4snb+YQs7xGxq+VeLBb/5PyfNnDF5A8tsSR6lLynySCoGQ/H3dZWSHLSQAzTCB7OgLQMU8lPZyfbiiM1a0fArtnKfAubdsV71wrhU5kWPWNdp/JUhFkJg6iP6lKzzWoiaG1uaIRf23Ufv/tRvCyoDr1HM9iupSDJL9vm0udYZPfiLL8V5sTlXKZc6QWwlCyeVZTigqaQIo2p+guj3uIjRp2B78iGaWGDwz4R6HAfwG8/dKXd6v4rt/gyOWu+SVu/qYXC1TXYJnq1VB++Ooxxvff3rqeM15KuYontSl2JZ141SQvc+Ri3b1III+TcFvRfyGZ6oNUO2K/Xlfv0FY4Qt7adDg1D3K+6d2XXQ6bVYJnqOuzgfO+2az+LbWi2xe7D9NdERDhRgygxx5Hm6chsVHO5vZ4maKgFOfP/8HTD1d9YxXb8rKcF6q1xw+ahdf/84hQt9KTuUTkeazuBqD3qkvKR5rvE2P0Mfu9zQosaj13KBe/sphMJDXCyjc31177+zF1z9mCQfZiR1LV8rDuXVuKd30XOS5hapfe89kKLAgZuECtM7zTm2F7EBonc4olU0Jgt2JYp+PBpDPsCIvuHne8bgGfQERJaZG+E4vioZG4F690VQ9USjME6bd8eyvF2OOAMSFe8M0PMc28QjK/DwrUmKJxf9FWSEOjRcN0TO8GFhlts6BjnltUkv+1RknBRmyszXi8yt9rfT54ExNZD/OWQh96VvZ6uVytTy5I5aMRo5Ds4kL8rZaD2pnNWIaKDIjcc0m9VjqWMBKEs6wvsNJ6w2B/HWCh97aM56m6KmKvb44UKdW5i/2oP5LHaMeOuDxGGtZAdgpon/a6Kr00QXz/FQx+YpIJDP74KQ5yMR1o6KdIm6d8BMpcSMcyYG2V+no68l38EqI+4jKumJAVXblAmlVzAXLvcN6GOQ7FtrKvqDrxesCVzIxfOrzxoa5WmaQv8Yvflfk8Nm4NJVDo7zPn0PkFJlWVEZGq15rkqT2lJt/3v0kyIeYw+k9rPMssux1rzW98VfNnq9DV4+oeEcrs0vrYLW1xxPdQq2oN5qZ+eCdEaoaDTPYhhm3IBgcw0DUS2DMtv6s+WXfxoKADaFgFPLejW3gKwT/fTd6OIKeTpTUV6hxB9ly3EtcfGcpmMXrMwyFiHrhKVvNiByCiDWrkOQpoxTHaOKdpSZWTL6CYpWzeDcLMtlP/MZ4zpmif7MKqE9COGByYCtPW2z+LX6B5herExPJ8uYtml1i3PBFTfo4Wt2Vpr6f6jOWRr1e+2N9scnH+NXS9Gk5WJNeV81kQ4guUnhqijGLAMuLCasOOr61v1Fv4S3B5va5b/RtuJ6MJm8eMHUlfo/9glWesOb5SthArodRhT+PyS5ptQUbjSbh+2qZ6+TJgazmg3i9AFOK/DY0H6J/EEOQWjHY7/uNn6QRLzPszF0i5cIpny0TjGoeavpwOLbyHQqSBDNuI2S6aXT/Hk/chwBefbKJM1a1JjUWCkzFtEUOD5en+OT3odV9pOEYJjLGl2nKcEhDQkyPiOqAPzsl4FxDbRlQZtkBV0fmaaxJsyBi86SC105tW39swPMTqdLEhqLo6YPYgKx+TKgPmrssRB7bLlcS+cY4tI5z+GMcW3LClkLSXX6Sv91wg7X6PLK6xwOAPXPbHJTgnJmMoWdXhnQU/eb8m5OuR3P3xAsi9aEtQiSVlUWPhEbvk7WZLNDQBaEi6L0ShQ/qkkolOaMBpm3TJ/PUIy+heVotqI6mQtEHUZJHmcXWnIvTJ1kHrRG4Od9G2Xv+jb+TgexpFAZ1LtrkIX2gc68yedPHZmMV17G0L2SOCmzBEIrcTcvK4IijgKvyEZ/qwyaB6eRIptjQ9q6aCg/YN6XO3Iophj1BE3mbLg3Nwn3mLMq4W/4AJi1XE+SnZwEA3hLR+NZNT3gLU0Xj6v9yZ5//C0y52AZepd337Mwduyhm4XpP6v7PAXJDWNG3UEvMCz5PCS7NCSP2vBMw3QgUZdurGv4ZeS+XyqUXFyLb2uzFzHVWj49nRu05OLXKr19NlgHcL3bzVA1R/w9ha/SHLxt07Gj+fmPdRjTOm45snxGFAe7hYvf3GfeFq+nqeQgtZxrsQPanV/+75HAzHauX6DQtOkVyBkrjShJhnEqpunRD9ggAvmNc0vwZj74Vces3nL2x2HWJoQbAexJ9xukyOjp4Vux/oGA31bH/DLPVtutrC+t1jqaDsclTmbtAWFnKhn+zuMmP18ciPoKbTLp+nM5Mif0dkuxjB7Y2VjnXh0/9yDhonRqUGpRyvWQdF8qkfTA6UXOM0UgCH8Jw/57gwncaXEJVnSr8+XwH7No1bR1WyYacZBcSJM4FjQ=="/>
-</div>
-<noscript>
-<div class="nos">
-<p>
-                JavaScript must be enabled in order for you to use the Site in standard view. However,
-                it seems JavaScript is either disabled or not supported by your browser. To use
-                standard view, enable JavaScript by changing your browser options.</p>
-</div>
-</noscript>
+<script src="/ScriptResource.axd?d=AnEgHj6YJqZvwVR6vFCtcrQ_QNqWxZh46jdzSXi1vzltWYmOPxQAm1NKLCm5N820SLwVss5RgRgtZPZdsW-zOmHh1FqxNDphBt5rYJp50C_5_kTOpGYeY_JdmG6_hVz3y6oUwA2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
 <script type="text/javascript">
 //<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$script', 'form1', [], [], [], 90, 'ctl00');
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
 //]]>
 </script>
-<header>
-<div class="top_head">
-<div class="container">
-<div class="row">
-<div class="col-md-12 top-acess">
-<div class="pull-left hidden-xs hidden-sm res_pb5">
-<a aria-label="Home" href="/index.aspx" title="Home"><span class="home"></span></a>
-<a aria-label="Subscribe Release Form" href="/SubscribeRelease/SubscribeReleaseForm.aspx" title="Subscribe Release">
-<span class="subscribe"></span></a>
-<a aria-label="View RSS Feeds" href="/ViewRss.aspx" target="_blank" title="RSS"><span class="rss"></span></a>
+<script src="/ScriptResource.axd?d=8IziBj-lMplsBrLCeuCY_J0jyAqTieuDK1cBeYDsHWvOwQExNttD30TJwLWnxuC_la4gKd1gb-Bzr7s3th3FiazUYdOY6GNJelPLKO5bk8BNTOb5IeFWxDQiZr90QNWJeU1DWg2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="59B53027"/>
+<input id="__VIEWSTATEENCRYPTED" name="__VIEWSTATEENCRYPTED" type="hidden" value=""/>
+<input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="xK7502cdEBSAnZTGszw88Zx8rgiYG97t0gZEU3aZNYDWyeHRYYXt2t6TvV11EwnD18trx6kLO1k1U5mzrwV6WGTqME0nevyIR9kVixGW+47coae78wlI3LtVEyQM+L9yZPiq47rxtY3zHVJm7q7+yevojMjWzFy0i2JWblYzo+/pOQhCmbF+c5N9rCd0DJF66R1V8JFCyeAllUxsnQE4sC+DR++aSS2VUG2trqD4XQEtRR4Gh9pd74NH0Qxx8OG9b7wZugU/U2WFxozA2KqDfz8BDtOeFBFLa86UtKYjI9hnu73yf2BlmehD6nkFFYFEIRBV+A=="/>
 </div>
-<div class="pull-right">
-<ul id="example1">
-<li class="skin-reader hidden-xs"><a aria-label="Screen Reader Access" href="/screenReaderAcces.aspx" title="Screen Reader Access ">Screen Reader Access  </a></li>
-<li class="regional res_pb5">
-<select aria-label="Region Selection" class="classic form-control" id="Bar1_ddlregion" name="ctl00$Bar1$ddlregion" onchange="javascript:setTimeout('__doPostBack(\'ctl00$Bar1$ddlregion\',\'\')', 0)">
-<option selected="selected" value="3">PIB Delhi</option>
-<option value="1">PIB Mumbai</option>
-<option value="5">PIB Hyderabad</option>
-<option value="6">PIB Chennai</option>
-<option value="17">PIB Chandigarh</option>
-<option value="19">PIB Kolkata</option>
-<option value="20">PIB Bengaluru</option>
-<option value="21">PIB Bhubaneswar</option>
-<option value="22">PIB Ahmedabad</option>
-<option value="23">PIB Guwahati</option>
-<option value="24">PIB Thiruvananthpuram</option>
-<option value="30">PIB Imphal</option>
-<option value="31">PIB Aizawl</option>
-<option value="32">PIB Agartala</option>
-<option value="33">PIB Gangtok</option>
-<option value="34">PIB Kohima</option>
-<option value="35">PIB Shillong</option>
-<option value="36">PIB Itanagar</option>
-<option value="37">PIB Lucknow</option>
-<option value="38">PIB Bhopal</option>
-<option value="39">PIB Jaipur</option>
-<option value="40">PIB Patna</option>
-<option value="41">PIB Ranchi</option>
-<option value="42">PIB Shimla</option>
-<option value="43">PIB Raipur</option>
-<option value="44">PIB Jammu &amp; Kashmir</option>
-<option value="45">PIB Vijayawada</option>
-<option value="46">PIB Dehradun</option>
-</select>
-</li>
-<li class="language res_pb5">
-<select aria-label="Language Selection" class="form-control" id="Bar1_ddlLang" name="ctl00$Bar1$ddlLang" onchange="javascript:setTimeout('__doPostBack(\'ctl00$Bar1$ddlLang\',\'\')', 0)">
-<option selected="selected" value="1">English</option>
-<option value="2">Hindi</option>
-<option value="3">Urdu</option>
-</select>
-</li>
-<li class="icon res_icon"><a aria-label="Home" href="/index.aspx" title="Home"><span class="home"></span></a></li>
-<li class="icon res_icon"><a aria-label="Subscribe Release Form" href="/SubscribeRelease/SubscribeReleaseForm.aspx" title="Subscribe Release"><span class="subscribe"></span></a></li>
-<li class="icon res_icon"><a aria-label="View Rss Feeds" href="/ViewRss.aspx" title="RSS"><span class="rss"></span></a></li>
-<li class="icon"><a aria-label="Skip to Content" href="#main-nav" title="Skip to Content"><img alt="Skip to Content" src="/images/skip-icon.png"/></a></li>
-<li class="icon dropdown"><a href="javascript:void(0)"><img alt="Handicape" src="/images/handicape-icon.png" title="Handicape"/></a>
-<ul class="dropdown-content">
-<li><a aria-label="Decrease Font Size" href="javascript:void(0)" onclick="set_font_size('decrease')" title="Decrease Font Size"><img alt="Normal Font Size" src="/images/decrease-font-size.png" title="Decrease Font Size"/></a></li>
-<li><a aria-label="Normal Font Size" class="" href="javascript:void(0)" onclick="set_font_size('')" title="Normal Font Size"><img alt="Normal Font Size" src="/images/standard-view.png" title="Normal Font Size"/></a></li>
-<li><a aria-label="Increase Font Size" href="javascript:void(0)" onclick="set_font_size('increase')" title="Increase Font Size"><img alt="Normal Font Size" src="/images/increase-text-size.png" title="Increase Font Size"/></a></li>
-<li class=""><a aria-label="High Contrast" href="javascript:void(0)" onclick="setActiveStyleSheet('change'); return false;" title="High Contrast"><img alt="High Contrast" src="/images/high-contrast.png" title="High Contrast"/></a></li>
-<li class=""><a aria-label="Normal Theme" href="javascript:void(0)" onclick="setActiveStyleSheet('normal'); return false;" title="Normal Theme"><img alt="Normal Theme" src="/images/standard-view.png" title="Normal Theme"/></a></li>
-</ul>
-</li>
-<li class="icon dropdown"><a href="javascript:void(0)"><img alt="Color Theme" src="/images/theme.png" title="Color Theme"/></a>
-<ul class="dropdown-content">
-<li><a aria-label="Green Theme" href="javascript:void(0)" onclick="setActiveStyleSheet('green'); return false;" title="Green"><img alt="Green Theme" src="/images/green.png" title="Green Theme"/></a></li>
-<li><a aria-label="Orange Theme" href="javascript:void(0)" onclick="setActiveStyleSheet('orange'); return false;" title="Orange"><img alt="Orange Theme" src="/images/yello.png" title="Orange Theme"/></a></li>
-</ul>
-</li>
-<li class="icon"><a aria-label="Sitemap" href="/SiteMap.aspx"><img alt="Sitemap" src="/images/sitemap.png" title="Sitemap"/></a></li>
-<li class="icon"><a aria-label="Advance Search" href="/AdvanceSearch.aspx"><img alt="Advance Search" src="/images/search.png" title="Advance Search"/></a>
-</li>
-<!-- 
-<li class="icon dropdown"><a href=""><img src="images/language-icon.png" alt="Language" title="Language"></a>
-<ul class="dropdown-content">
-		<li><a href="#" title="Red" onclick="setActiveStyleSheet('red'); return false;"><img src="images/hindi.png" alt="Hindi" title="Hindi"></a></li>
-		<li><a href="#" title="Green" onclick="setActiveStyleSheet('green'); return false;"><img src="images/english.png" alt="English" title="English"></a></li>
-	</ul>
-</li> -->
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mid-head">
-<div class="container">
-<div class="row">
-<div class="col-md-5">
-<div class="indian-emblem"> <a href="/index.aspx"> <img alt="Indian Emblem" src="/images/indian-emblem.png" title="Indian Emblem"/></a> </div>
-<div class="logo">
-<h2>Government of India</h2>
-<h1><a href="/index.aspx" title="Press Information Bureau">Press Information Bureau</a> </h1>
-</div>
-</div>
-<div class="col-md-3">
-</div>
-<div class="col-md-4" style="
-    				text-align: right;float:right;">
-<a href="https://www.cooperation.gov.in" style="margin-right: 15px;" target="_blank">
-<img alt="International Year of Cooperatives" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2025/jan/ph202513480201.png" style="width: 50%;" title="International Year of Cooperatives"/>
-</a>
-<a href="https://pib.gov.in/">
-<img alt="Press Information Bureau" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2024/jun/ph2024624343601.jpg" style="width: 25%;" title="Press Information Bureau"/>
-</a>
-</div>
-<!--
-<div class="col-md-3">
-           <a href="https://pib.gov.in/newsite/g20india.aspx" target="_blank">
-  <img src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2022/nov/ph20221121131401.png" style="  width: 50%;  " title="g20-india-2023" alt="g20-india-2023">
- </a>
-</div> -->
-<div class="col-md-1">
-</div>
-<!--  factcheck start link -->
-<!--  factcheck end link -->
-</div>
-</div>
-</div>
-
-</header>
-<div class="mean-container">
-</div>
-<div class="navigation-bg" id="main-nav" style="display: none;">
-<nav>
-<div class="container">
-<ul class="clearfix sf-menu" id="example"><li><a aria-label="Home" href="/index.aspx" title="Home"><i class="fa-home_r"></i></a></li><li class="has-sub"><a href="#" title="About Us">About Us</a><ul><li><a href="aboutpibn.aspx" target="_self" title="About PIB">About PIB</a></li><li><a href="mainfunctions.aspx" target="_self" title="Main Functions">Main Functions</a></li><li><a href="organisationalsetup.aspx" target="_self" title="Organizational Setup">Organizational Setup</a></li><li><a href="headsofpib.aspx" target="_self" title="Photo Gallery of PrDGs/PIOs">Photo Gallery of PrDGs/PIOs</a></li><li><a href="https://pib.gov.in/content/3714_5_Pib.gov.in.aspx?reg=3&amp;lang=1" target="_self" title="Telephone Nos of PIB Officers of Hqrs">Telephone Nos of PIB Officers of Hqrs</a></li></ul></li><li class="has-sub"><a class="has-sub" href="#" title="Press Releases">Press Releases</a><ul><li><a href="/allRel.aspx" title="All Releases">All Releases</a></li><li><a href="/PMContents/PMContents.aspx?menuid=1" target="_blank" title="PMO Releases">PMO Releases</a></li><li><a href="https://archive.pib.gov.in/archive2/erelease.aspx" target="_blank" title="All Releases 2004 to 2017">All Releases 2004 to 2017</a></li></ul></li><li class="has-sub"><a href="#" title="Gallery">Gallery</a><ul><li><a href="PhotogalleryNew.aspx" title="Photos">Photos</a></li><li><a href="/VideoGallery.aspx?MenuId=714" title="Videos">Videos</a></li><li><a href="/ViewAllEbooklet.aspx?MenuId=715" title="E-Booklets">E-Booklets</a></li><li><a href="/AllInfographics.aspx?MenuId=716" title="InfoGraphics">InfoGraphics</a></li><li><a href="WebcastMore.aspx" title="Webcast Videos">Webcast Videos</a></li><li><a href="Events.aspx" title="All Events">All Events</a></li><li><a href="/EventDetail.aspx?ID=1189®=3&amp;lang=1" title="YEAR END REVIEW - 2024">YEAR END REVIEW - 2024</a></li></ul></li><li class="has-sub"><a href="#" title="Explainers">Explainers</a><ul><li><a href="ViewBackgrounder.aspx?MenuId=51" target="_self" title="Backgrounder">Backgrounder</a></li><li><a href="AllFactsheet.aspx?MenuId=12" target="_self" title="Factsheets">Factsheets</a></li><li><a href="Viewfaq.aspx?MenuId=709" target="_self" title="FAQ">FAQ</a></li><li><a href="ViewFeatures.aspx?MenuId=5" target="_self" title="Features">Features</a></li><li><a href="akam_factsheet.aspx" target="_self" title="Amrit Yatra ">Amrit Yatra </a></li><li><a href="VBSY_Explainer.aspx" target="_self" title="Viksit Bharat Sankalp Yatra">Viksit Bharat Sankalp Yatra</a></li></ul></li><li class="has-sub"><a href="#" title="Media Facilitation">Media Facilitation</a><ul><li><a href="ViewAccriditionList.aspx?AccredationID=2725" target="_self" title="Accreditations">Accreditations</a></li><li><a href="AllMediafacilitation.aspx?MenuId=16" target="_self" title="Facilities">Facilities</a></li><li><a href="AllMediaInvitation.aspx" target="_self" title="Media Invitations">Media Invitations</a></li><li><a href="https://accreditation.pib.gov.in/acridexsrch.aspx" target="_self" title="Media List">Media List</a></li><li><a href="https://accreditation.pib.gov.in/jws/default.aspx" target="_self" title="JWS">JWS</a></li></ul></li><li class="has-sub"><a href="#" title="Archives">Archives</a><ul><li><a href="Aboutarchive.aspx" target="_self" title="About Archives">About Archives</a></li><li><a href="https://archive.pib.gov.in/archive/phase2/archiveministry.aspx?phase=3" target="_self" title="1947-2001">1947-2001</a></li><li><a href="https://archive.pib.gov.in/newsite/archivepage.aspx" target="_self" title="2002-2003">2002-2003</a></li><li><a href="https://archive.pib.gov.in/archive2/" target="_self" title="2004 Onwards">2004 Onwards</a></li></ul></li><li class="has-sub"><a href="#" title="Fact Check Unit">Fact Check Unit</a><ul><li><a href="aboutfactchecke.aspx" target="_self" title="About Fact Check Unit">About Fact Check Unit</a></li><li><a href="https://factcheck.pib.gov.in" target="_self" title="Submit for Fact Check">Submit for Fact Check</a></li><li><a href="FAQ_fact.aspx" target="_self" title="FAQ">FAQ</a></li><li><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/aug/doc202581597401.pdf" target="_blank" title="Fact Check in Numbers">Fact Check in Numbers</a></li><li><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/oct/doc2024104408901.pdf" target="_blank" title="Fact Check Done">Fact Check Done</a></li><li><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/mar/doc2025324525501.pdf" target="_blank" title="Fraudulent Websites">Fraudulent Websites</a></li><li><a href="https://www.pib.gov.in/factcheckupdates.aspx?reg=3&amp;lang=1" target="_self" title="Fact Checks Operation Sindoor ">Fact Checks Operation Sindoor </a></li></ul></li></ul>
-<style type="text/css">
-    .menuchang {
-        background-image:url('images/new.gif')  ;
-        background-repeat: no-repeat;
-        padding-right:5px;
-        background-position:top;
-    }
-     .fa-home_r::after {
-        content: url(https://static.pib.gov.in/WriteReadData/userfiles/f_hom.png);
-        position: relative;
-        z-index: 100000;
-        top: 0;
-        bottom: 0;
-    }
-    </style>
-<script type="text/javascript">
-    // Function to close all open dropdown menus
-    function closeDropdowns() {
-        // Select all open dropdowns by checking if 'display: block;' or similar CSS is applied
-        var openDropdowns = document.querySelectorAll('.has-sub > ul[style*="display: block"]');
-
-        // Loop through each open dropdown and set display to 'none'
-        openDropdowns.forEach(function (dropdown) {
-            dropdown.style.display = 'none';
-        });
-    }
-
-    // Event listener for keydown event to close dropdowns with Escape key
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-            closeDropdowns();  // Close all dropdowns when Escape is pressed
-        }
-    });
-</script>
-</div>
-</nav>
-</div>
-<!-- Menu Part End -->
-<div class="clearfix">
-</div>
-<div class="clearfix">
-</div>
-<section class="pt20">
-<div class="container">
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a class="active" href="/index.aspx">Home</a></li>
-<li class="breadcrumb-item active"><a href="#">All  Press Release </a></li>
-<li class="pull-right">
-<div class="print-icons">
-<input id="ContentPlaceHolder1_Print1_print" name="ctl00$ContentPlaceHolder1$Print1$print" src="images/printer_icon.png" type="image"/>
-</div></li>
-</ol>
-</div>
-</section>
-<section class="pb40">
-<div class="container">
-<div class="clearfix"></div>
-<input id="ContentPlaceHolder1_hydregionid" name="ctl00$ContentPlaceHolder1$hydregionid" type="hidden" value="3"/>
-<input id="ContentPlaceHolder1_hydLangid" name="ctl00$ContentPlaceHolder1$hydLangid" type="hidden" value="1"/>
-<div class="text-center"> <h2><span id="ContentPlaceHolder1_lblheadeing">All  Releases</span></h2></div>
-<div class="search_box">
-<div class="col-md-4">
-<label for="ContentPlaceHolder1_ddlMinistry"> Ministry :</label>
-<div class="col-md-9">
-<select class="form-control" id="ContentPlaceHolder1_ddlMinistry" name="ctl00$ContentPlaceHolder1$ddlMinistry" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlMinistry\',\'\')', 0)">
-<option selected="selected" value="0">All Ministry </option>
-<option value="1">President's Secretariat</option>
-<option value="2">Vice President's Secretariat</option>
-<option value="3">Prime Minister's Office</option>
-<option value="2608">Lok Sabha Secretariat</option>
-<option value="2934">Rajya Sabha Secretariat</option>
-<option value="61">Cabinet</option>
-<option value="62">Cabinet Committee Decisions</option>
-<option value="63">Cabinet Committee on Economic Affairs (CCEA)</option>
-<option value="68">Cabinet Secretariat</option>
-<option value="70">Cabinet Committee on Infrastructure</option>
-<option value="71">Cabinet Committee on Price</option>
-<option value="75">Cabinet Committee on Investment</option>
-<option value="80">AYUSH</option>
-<option value="72">Other Cabinet Committees</option>
-<option value="14">Department of Space</option>
-<option value="45">Department of Ocean Development</option>
-<option value="56">Department of Atomic Energy</option>
-<option value="35">Election Commission</option>
-<option value="1330">Finance Commission </option>
-<option value="27">Ministry of Agriculture &amp;
-Farmers Welfare</option>
-<option value="58">Ministry of Agro &amp; Rural Industries</option>
-<option value="41">Ministry of Chemicals and Fertilizers</option>
-<option value="26">Ministry of Civil Aviation</option>
-<option value="42">Ministry of Coal</option>
-<option value="16">Ministry of Commerce &amp; Industry</option>
-<option value="24">Ministry of Communications</option>
-<option value="60">Ministry of Company Affairs</option>
-<option value="39">Ministry of Consumer Affairs, Food &amp; Public Distribution</option>
-<option value="1440">Ministry of Cooperation</option>
-<option value="66">Ministry of Corporate Affairs</option>
-<option value="17">Ministry of Culture</option>
-<option value="33">Ministry of Defence</option>
-<option value="57">Ministry of Development of North-East Region</option>
-<option value="48">Ministry of Disinvestment</option>
-<option value="73">Ministry of Drinking Water &amp; Sanitation</option>
-<option value="67">Ministry of Earth Sciences</option>
-<option value="8">Ministry of Education</option>
-<option value="1323">Ministry of Electronics &amp; IT</option>
-<option value="30">Ministry of Environment, Forest and Climate Change</option>
-<option value="4">Ministry of External Affairs</option>
-<option value="15">Ministry of Finance</option>
-<option value="1340">Ministry of Fisheries, Animal Husbandry &amp; Dairying</option>
-<option value="40">Ministry of Food Processing Industries</option>
-<option value="31">Ministry of Health and Family Welfare</option>
-<option value="53">Ministry of Heavy Industries </option>
-<option value="5">Ministry of Home Affairs</option>
-<option value="47">Ministry of Housing &amp; Urban Affairs</option>
-<option value="11">Ministry of Information &amp; Broadcasting</option>
-<option value="1336">Ministry of Jal Shakti</option>
-<option value="21">Ministry of Labour &amp; Employment</option>
-<option value="7">Ministry of Law and Justice</option>
-<option value="51">Ministry of Micro,Small &amp; Medium Enterprises</option>
-<option value="44">Ministry of Mines </option>
-<option value="65">Ministry of Minority Affairs</option>
-<option value="28">Ministry of New and Renewable Energy </option>
-<option value="59">Ministry of Overseas Indian Affairs</option>
-<option value="10">Ministry of Panchayati Raj</option>
-<option value="12">Ministry of Parliamentary Affairs</option>
-<option value="6">Ministry of Personnel, Public Grievances &amp; Pensions</option>
-<option value="20">Ministry of Petroleum &amp; Natural Gas</option>
-<option value="79">Ministry of Planning</option>
-<option value="52">Ministry of Power</option>
-<option value="23">Ministry of Railways</option>
-<option value="69">Ministry of Road Transport &amp; Highways</option>
-<option value="43">Ministry of Rural Development</option>
-<option value="13">Ministry of Science &amp; Technology</option>
-<option value="46">Ministry of Ports, Shipping and Waterways</option>
-<option value="77">Ministry of Skill Development and Entrepreneurship</option>
-<option value="50">Ministry of Social Justice &amp; Empowerment</option>
-<option value="55">Ministry of Statistics &amp; Programme Implementation</option>
-<option value="18">Ministry of Steel</option>
-<option value="25">Ministry of Surface Transport</option>
-<option value="19">Ministry of Textiles</option>
-<option value="36">Ministry of Tourism</option>
-<option value="49">Ministry of Tribal Affairs</option>
-<option value="32">Ministry of Urban Development</option>
-<option value="38">Ministry of  Water Resources, River Development and Ganga Rejuvenation</option>
-<option value="64">Ministry of Women and Child Development</option>
-<option value="9">Ministry of Youth Affairs and Sports</option>
-<option value="78">NITI Aayog</option>
-<option value="1325">PM Speech</option>
-<option value="74">EAC-PM</option>
-<option value="34">UPSC</option>
-<option value="37">Special Service and Features</option>
-<option value="1005">PIB Headquarters</option>
-<option value="1406">Office of Principal Scientific Advisor to GoI</option>
-<option value="1454">National Financial Reporting Authority</option>
-<option value="1458">Competition Commission of India</option>
-<option value="1470">IFSC Authority</option>
-<option value="1484">National Security Council Secretariat </option>
-<option value="2586">National Human Rights Commission</option>
-<option value="2611">Lokpal of India</option>
-<option value="2936">home</option>
-</select>
-</div>
-</div>
-<div class="col-md-8">
-<div class="form-group">
-<label for="ContentPlaceHolder1_ddlday">Date: </label>
-<div class="col-md-3">
-<select class="form-control" id="ContentPlaceHolder1_ddlday" name="ctl00$ContentPlaceHolder1$ddlday" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlday\',\'\')', 0)">
-<option value="0">All</option>
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option selected="selected" value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-</select>
-</div>
-<div class="col-md-3">
-<select class="form-control" id="ContentPlaceHolder1_ddlMonth" name="ctl00$ContentPlaceHolder1$ddlMonth" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlMonth\',\'\')', 0)">
-<option value="1">January</option>
-<option value="2">February</option>
-<option value="3">March</option>
-<option value="4">April</option>
-<option value="5">May</option>
-<option value="6">June</option>
-<option value="7">July</option>
-<option selected="selected" value="8">August</option>
-<option value="9">September</option>
-<option value="10">October</option>
-<option value="11">November</option>
-<option value="12">December</option>
-</select>
-</div>
-<div class="col-md-3">
-<select class="form-control" id="ContentPlaceHolder1_ddlYear" name="ctl00$ContentPlaceHolder1$ddlYear" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddlYear\',\'\')', 0)">
-<option selected="selected" value="2025">2025</option>
-<option value="2024">2024</option>
-<option value="2023">2023</option>
-<option value="2022">2022</option>
-<option value="2021">2021</option>
-<option value="2020">2020</option>
-<option value="2019">2019</option>
-<option value="2018">2018</option>
-<option value="2017">2017</option>
-</select>
-</div>
-<div class="col-md-2">
-</div>
-</div>
-</div>
-</div>
-<div class="clearfix"></div>
-<div class="search_box_result">Displaying  38 Press Releases  <span id="ContentPlaceHolder1_lblDate"></span> </div>
-<div class="clearfix"></div>
-<div class="row pt20">
-<div class="col-md-12 col-sm-9 col-xs-12">
-<div class="content-area">
-<ul><li><h3 class="font104">President's Secretariat</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161795" target="_blank" title="PRESIDENT OF INDIA PRESENTS SCOPE EMINENCE AWARDS">PRESIDENT OF INDIA PRESENTS SCOPE EMINENCE AWARDS </a></li></ul></li></ul><ul><li><h3 class="font104">Prime Minister's Office</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161945" target="_blank" title="List of Outcomes: Prime Minister’s Visit to Japan">List of Outcomes: Prime Minister’s Visit to Japan </a></li><li><a href="/PressReleasePage.aspx?PRID=2161882" target="_blank" title="English Translation of Press Statement by the Prime Minister during the Joint Press Statement with the Prime Minister of Japan">English Translation of Press Statement by the Prime Minister during the Joint Press Statement with the Prime Minister of Japan </a></li><li><a href="/PressReleasePage.aspx?PRID=2161864" target="_blank" title="Prime Minister receives a Daruma doll from Rev Seishi Hirose, Chief Priest of the Shorinzan Daruma-Ji temple">Prime Minister receives a Daruma doll from Rev Seishi Hirose, Chief Priest of the Shorinzan Daruma-Ji temple </a></li><li><a href="/PressReleasePage.aspx?PRID=2161799" target="_blank" title="Prime Minister attends India-Japan Economic Forum">Prime Minister attends India-Japan Economic Forum </a></li><li><a href="/PressReleasePage.aspx?PRID=2161765" target="_blank" title="English Translation of Prime Ministers address during the India - Japan Economic Forum ">English Translation of Prime Minister's address during the India - Japan Economic Forum  </a></li><li><a href="/PressReleasePage.aspx?PRID=2161734" target="_blank" title="PM Extends Greetings on National Sports Day, Pays Tribute to Major Dhyan Chand">PM Extends Greetings on National Sports Day, Pays Tribute to Major Dhyan Chand </a></li></ul></li></ul><ul><li><h3 class="font104">Lok Sabha Secretariat</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161913" target="_blank" title="LOK SABHA SPEAKER URGES LAWMAKERS TO RISE ABOVE PARTY LINES ON ISSUES OF NATIONAL INTEREST">LOK SABHA SPEAKER URGES LAWMAKERS TO RISE ABOVE PARTY LINES ON ISSUES OF NATIONAL INTEREST </a></li></ul></li></ul><ul><li><h3 class="font104">AYUSH</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161886" target="_blank" title="Union Minister Shri Prataprao Jadhav presides over BRICS CCI Healthcare Summit 2025 in New Delhi">Union Minister Shri Prataprao Jadhav presides over BRICS CCI Healthcare Summit 2025 in New Delhi </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Agriculture &amp;
-Farmers Welfare</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161921" target="_blank" title="Agriculture Ministry to Showcase Organic Products at Biofach India 2025">Agriculture Ministry to Showcase Organic Products at Biofach India 2025 </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Commerce &amp; Industry</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161844" target="_blank" title="India and Africa to work to double bilateral trade by 2030: Union Commerce &amp; Industry Minister Delivers Keynote Address at Valedictory Session of 20th CII India-Africa Business Conclave">India and Africa to work to double bilateral trade by 2030: Union Commerce &amp; Industry Minister Delivers Keynote Address at Valedictory Session of 20th CII India-Africa Business Conclave </a></li><li><a href="/PressReleasePage.aspx?PRID=2161809" target="_blank" title="Have bold goals for growth, use government’s Research Development and  Innovation Scheme: Shri Piyush Goyal at Global MedTech Summit">Have bold goals for growth, use government’s Research Development and Innovation Scheme: Shri Piyush Goyal at Global MedTech Summit </a></li><li><a href="/PressReleasePage.aspx?PRID=2161777" target="_blank" title="Commerce and Industry Minister Shri Piyush Goyal unveils the Bharat Buildcon 2026 Curtain Raiser">Commerce and Industry Minister Shri Piyush Goyal unveils the 'Bharat Buildcon 2026' Curtain Raiser </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Communications</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161931" target="_blank" title="Highlights of Telecom Subscription Data as on 31st July 2025">Highlights of Telecom Subscription Data as on 31st July 2025 </a></li><li><a href="/PressReleasePage.aspx?PRID=2161823" target="_blank" title="Union Minister of Communications Shri Jyotiraditya M. Scindia Enthralls Youth at IIIT-Delhi Tech Fest with Call to Build ‘Vishwaguru Bharat’">Union Minister of Communications Shri Jyotiraditya M. Scindia Enthralls Youth at IIIT-Delhi Tech Fest with Call to Build ‘Vishwaguru Bharat’ </a></li><li><a href="/PressReleasePage.aspx?PRID=2161820" target="_blank" title=" TRAI Assesses Quality of Mobile Network   across Vadodara City (Gujarat)"> TRAI Assesses Quality of Mobile Network across Vadodara City (Gujarat) </a></li><li><a href="/PressReleasePage.aspx?PRID=2161818" target="_blank" title="TRAI Registers First Eight Digital Connectivity Rating Agencies to Boost In-Building Network Quality">TRAI Registers First Eight Digital Connectivity Rating Agencies to Boost In-Building Network Quality </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Consumer Affairs, Food &amp; Public Distribution</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161910" target="_blank" title="Centre increases usage charges of Gunny Bags by nearly 40%, bringing financial relief to State Governments/UTs: Union Food and Consumer Affairs Minister">Centre increases usage charges of Gunny Bags by nearly 40%, bringing financial relief to State Governments/UTs: Union Food and Consumer Affairs Minister </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Defence</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161896" target="_blank" title="Raksha Rajya Mantri Shri Sanjay Seth inaugurates Job Fair for Ex-Servicemen in Delhi">Raksha Rajya Mantri Shri Sanjay Seth inaugurates Job Fair for Ex-Servicemen in Delhi </a></li><li><a href="/PressReleasePage.aspx?PRID=2161893" target="_blank" title="CONCLUSION OF ‘EMERGING LEADERS PANEL DISCUSSION’ HELD UNDER THE AEGIS OF INDIAN OCEAN NAVAL SYMPOSIUM (IONS-2025)">CONCLUSION OF ‘EMERGING LEADERS PANEL DISCUSSION’ HELD UNDER THE AEGIS OF INDIAN OCEAN NAVAL SYMPOSIUM (IONS-2025) </a></li><li><a href="/PressReleasePage.aspx?PRID=2161838" target="_blank" title="Government extends ECHS Facilities for Medically Boarded-Out Officer Cadets from military training">Government extends ECHS Facilities for Medically Boarded-Out Officer Cadets from military training </a></li><li><a href="/PressReleasePage.aspx?PRID=2161817" target="_blank" title="INDIAN NAVAL SHIPS TAMAL AND SURAT ARRIVED AT JEDDAH, SAUDI ARABIA">INDIAN NAVAL SHIPS TAMAL AND SURAT ARRIVED AT JEDDAH, SAUDI ARABIA </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Education</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161875" target="_blank" title="Ministry of Education Approves ₹385.27 Crore Funding Under HEFA for major infrastructure expansion at Central University of Tamil Nadu">Ministry of Education Approves ₹385.27 Crore Funding Under HEFA for major infrastructure expansion at Central University of Tamil Nadu </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Environment, Forest and Climate Change</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161892" target="_blank" title="India and Japan sign Memorandum of Cooperation on Joint Crediting Mechanism (JCM) under Article 6.2 of the Paris Agreement on Climate Change">India and Japan sign Memorandum of Cooperation on Joint Crediting Mechanism (JCM) under Article 6.2 of the Paris Agreement on Climate Change </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Finance</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161946" target="_blank" title="President of India confers SCOPE Eminence Awards to Public Sector Enterprises (PSEs)">President of India confers SCOPE Eminence Awards to Public Sector Enterprises (PSEs) </a></li><li><a href="/PressReleasePage.aspx?PRID=2161869" target="_blank" title="Monthly review of accounts of Government of India upto July 2025 (FY 2025-26)">Monthly review of accounts of Government of India upto July 2025 (FY 2025-26) </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Home Affairs</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161865" target="_blank" title="Union Home Minister and Minister of Cooperation, Shri Amit Shah, inaugurates Brahmaputra Wing at Raj Bhavan in Guwahati, Assam, and performs inauguration and foundation laying of eight projects worth ₹322 crore through virtual mode">Union Home Minister and Minister of Cooperation, Shri Amit Shah, inaugurates Brahmaputra Wing at Raj Bhavan in Guwahati, Assam, and performs inauguration and foundation laying of eight projects worth ₹322 crore through v... </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Jal Shakti</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161880" target="_blank" title="Conference on Swachh Bharat Mission-Grameen (SBM-G) Progress &amp; Brainstorming on SBM-G Next Phase">Conference on Swachh Bharat Mission-Grameen (SBM-G) Progress &amp; Brainstorming on SBM-G Next Phase </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Information &amp; Broadcasting</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161855" target="_blank" title="Government Initiates Dialogue on Live Event and Concert Economy; Secretary, MIB chairs First Meeting of Joint Working Group (JWG) Held in New Delhi ">Government Initiates Dialogue on Live Event and Concert Economy; Secretary, MIB chairs First Meeting of Joint Working Group (JWG) Held in New Delhi  </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Law and Justice</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161905" target="_blank" title="India is steadily positioning itself as a global hub for arbitration with focus on establishing a network of credible arbitral institutions: Union Minister of State for Law and Justice (I/C) Shri Arjun Ram Meghwal">India is steadily positioning itself as a global hub for arbitration with focus on establishing a network of credible arbitral institutions: Union Minister of State for Law and Justice (I/C) Shri Arjun Ram Meghwal </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Personnel, Public Grievances &amp; Pensions</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161868" target="_blank" title="30th Webinar of the National Good Governance Webinar Series 2025-26 under the theme ‘Innovation – District’ held on 29thAugust 2025 for dissemination and replication of best practices">30th Webinar of the National Good Governance Webinar Series 2025-26 under the theme ‘Innovation – District’ held on 29thAugust 2025 for dissemination and replication of best practices </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Power</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161803" target="_blank" title="Bureau of Energy Efficiency (BEE) released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers">Bureau of Energy Efficiency (BEE) released State Energy Efficiency Index 2024: Maharashtra, Andhra Pradesh, Assam and Tripura Among Top Performers </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Railways</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161964" target="_blank" title="Indian Railways to Commemorate 350th Martyrdom Day of Guru Tegh Bahadur Ji to Aware The Younger Generation About His Teachings And Sacrifices">Indian Railways to Commemorate 350th Martyrdom Day of Guru Tegh Bahadur Ji to Aware The Younger Generation About His Teachings And Sacrifices </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Road Transport &amp; Highways</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161908" target="_blank" title="NHAI Undertakes Restoration of Kiratpur-Manali Section in Himachal Pradesh Following Damage Due to Severe Floods and Cloudbursts">NHAI Undertakes Restoration of Kiratpur-Manali Section in Himachal Pradesh Following Damage Due to Severe Floods and Cloudbursts </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Statistics &amp; Programme Implementation</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161834" target="_blank" title="QUARTERLY ESTIMATES OF GROSS DOMESTIC PRODUCT FOR THE  FIRST QUARTER (APRIL-JUNE) OF 2025-26">QUARTERLY ESTIMATES OF GROSS DOMESTIC PRODUCT FOR THE FIRST QUARTER (APRIL-JUNE) OF 2025-26 </a></li></ul></li></ul><ul><li><h3 class="font104">Ministry of Youth Affairs and Sports</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161947" target="_blank" title="Union Sports Minister, Dr. Mansukh Mandaviya Leads Bharat’s Biggest-Ever National Sports Day (NSD) Celebrations">Union Sports Minister, Dr. Mansukh Mandaviya Leads Bharat’s Biggest-Ever National Sports Day (NSD) Celebrations </a></li><li><a href="/PressReleasePage.aspx?PRID=2161917" target="_blank" title="Union Minister of State for Youth Affairs and Sports, Smt. Raksha Khadse Joins Sports Day Celebrations at SAI NCoE, Chhatrapati Sambhajinagar ">Union Minister of State for Youth Affairs and Sports, Smt. Raksha Khadse Joins Sports Day Celebrations at SAI NCoE, Chhatrapati Sambhajinagar  </a></li></ul></li></ul><ul><li><h3 class="font104">NITI Aayog</h3><ul class="num"><li><a href="/PressReleasePage.aspx?PRID=2161750" target="_blank" title="High-Level Workshop by CSEP-NITI Aayog-CEEW Highlights Need for India to Evaluate Research, Risks, and Governance of Geoengineering">High-Level Workshop by CSEP-NITI Aayog-CEEW Highlights Need for India to Evaluate Research, Risks, and Governance of Geoengineering </a></li></ul></li></ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div class="clearfix">
-</div>
-<div class="container" style="padding:5px 0">
-<div class="col-md-6 s_padd">
-<center>
-<img alt="Link mygov.in" height="80px" id="Img1" onclick="javascript:window.open('https://cbpssubscriber.mygov.in/aff/To159l5GKG3cPNYR')" onload="javascript:(function(){if(typeof _done == 'undefined' || !_done){this.setAttribute('src', this.getAttribute('src')+'?'+Math.floor((Math.random() * 100) + 1)); _done=true;}}).call(this)" src="https://cbpssubscriber.mygov.in/assets/uploads/X0qP81f7lg3YqNFI" style="cursor: pointer; margin-top: 10px;" title="Link mygov.in" width="100%"/>
-</center>
-</div>
-<div class="col-md-3 s_padd">
-<center>
-<img alt="National Portal Of India" height="70%" id="Img2" onclick="javascript:window.open('https://www.india.gov.in/')" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2024/sep/ph2024923399701.png" style="cursor: pointer;" title="National Portal Of India" width="100%">
-</img></center>
-</div>
-<div class="col-md-3 s_padd">
-<center>
-<img alt="STQC Certificate" height="70%" id="Img2" onclick="javascript:window.open('https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/feb/doc2025217503701.pdf')" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2025/feb/ph2025217503601.png" style="cursor: pointer;" title="STQC Certificate" width="100%"/>
-</center>
-</div>
-</div>
-<style type="text/css">
-	.nbs-flexisel-nav-left:before {
-    content: '\2B9C'; /* Unicode for leftwards arrow */
-}
-	
-
-.nbs-flexisel-nav-right:before {
-    content: '\2B9E'; /* Unicode for rightwards arrow */
-}
-</style>
-<section class="logos_scroller">
-<div class="container">
-<ul id="flexiselDemo3">
-<li><a href="https://eci.gov.in/" onclick="return confirm('This link will take you to a webpage outside this websiteinteractive page. Click OK to continue.Click Cancel to stop')" target="_blank"><img alt="Election Commission of India " src="https://static.pib.gov.in/WriteReadData/RelatedLink/Images/eci_0.png" title="Election Commission of India "/> </a></li> <li><a href="https://egazette.gov.in/" onclick="return confirm('This link will take you to a webpage outside this websiteinteractive page. Click OK to continue.Click Cancel to stop')" target="_blank"><img alt="E Gazette India " src="https://static.pib.gov.in/WriteReadData/RelatedLink/Images/e-gazette_0.png" title="E Gazette India "/> </a></li> <li><a href="https://pmnrf.gov.in/" onclick="return confirm('This link will take you to a webpage outside this websiteinteractive page. Click OK to continue.Click Cancel to stop')" target="_blank"><img alt="Prime Minister's National Relief Fund " src="https://static.pib.gov.in/WriteReadData/RelatedLink/Images/pmnrf.png" title="Prime Minister's National Relief Fund "/> </a></li> <li><a href="https://www.makeinindia.com/home" onclick="return confirm('This link will take you to a webpage outside this websiteinteractive page. Click OK to continue.Click Cancel to stop')" target="_blank"><img alt="Make in India " src="https://static.pib.gov.in/WriteReadData/RelatedLink/Images/makeinindia_0.png" title="Make in India "/> </a></li> <li><a href="https://pgportal.gov.in/" onclick="return confirm('This link will take you to a webpage outside this websiteinteractive page. Click OK to continue.Click Cancel to stop')" target="_blank"><img alt="Grievance Redress Mechanism in Government " src="https://static.pib.gov.in/WriteReadData/RelatedLink/Images/pg-portal_0.png" title="Grievance Redress Mechanism in Government "/> </a></li> <li><a href="https://goidirectory.nic.in/" onclick="return confirm('This link will take you to a webpage outside this websiteinteractive page. Click OK to continue.Click Cancel to stop')" target="_blank"><img alt="Goi Web Directory " src="https://static.pib.gov.in/WriteReadData/RelatedLink/Images/goidirectory_0.png" title="Goi Web Directory "/> </a></li> 
-</ul>
-</div>
-</section>
-<footer>
-<div class="footer-top">
-<div class="container">
-<div class="row">
-<div class="col-md-8 col-xs-12"><h4>RTI and Contact Us</h4><ul class="ulfooter"><li><a href="/content/3714_5_Pib.gov.in.aspx" title="Telephone Nos of PIB Officers of Hqrs">Telephone Nos of PIB Officers of Hqrs</a></li><li><a href="/content/3663_5_pib.gov.in.aspx" title="WHO’S WHO AT PIB">WHO’S WHO AT PIB</a></li><li><a href="/content/3664_5_pib.gov.in.aspx" title="Telephone Number of Regional Branch Offices of PIB ">Telephone Number of Regional Branch Offices of PIB </a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc202552549601.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Public Grievance Officer</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/aug/doc2025828622501.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">CPIOs Appellate Authority List</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/apr/doc2024416331001.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Information Manual</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc202559552801.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Citizen Charter</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc2025513553901.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Transparency Audit</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/apr/doc2025417541401.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Allocation Budget</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/feb/doc2025214501901.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Internal Complaints Committee</a></li><li><a href="/content/3705_5_pib.nic.in.aspx" title="Liaison Officer">Liaison Officer</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jul/doc2025716588201.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Work Allocation</a></li><li><a href="/content/3709_5_pib.nic.in.aspx" title="Web Information Manager ">Web Information Manager </a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc202558552001.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">RTI Transparency Audit Compliance</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/apr/doc2025417541601.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Delegation of financial powers</a></li><li class="col-md-0"><a href="https://www.davp.nic.in/writereaddata/announce/Adv165810112023.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Link for RFP uploaded on CBC website for Printing Publishing PIB handbook General Elections 2024  </a></li><li class="col-md-0"><a href="https://pgportal.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Portal for Public Grievance Submission</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc2025529559801.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Amendment of RRs for Group C Posts</a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/apr/doc202445328601.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Amendment of RRs for Group A and Group B posts </a></li><li class="col-md-0"><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/dec/doc20241220475101.pdf" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Transfer Policy for CG-II &amp; MTS of PIB Regional, Branch Offices</a></li></ul><span class="more"><a href="/content/24_5_more.aspx">More</a></span></div><div class="col-md-4 col-xs-12 firstulfooter"><h4>GOI Links</h4><ul class="ulfooter"><li class="col-md-0"><a href="https://mib.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Information and Broadcasting</a></li><li class="col-md-0"><a href="https://agriwelfare.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Agriculture &amp; Farmers Welfare</a></li><li class="col-md-0"><a href="http://ministryoftextiles.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Textiles</a></li><li class="col-md-0"><a href="https://commerce.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Commerce &amp; Industry </a></li><li class="col-md-0"><a href="https://mod.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Defence</a></li><li class="col-md-0"><a href="https://finmin.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Finance</a></li><li class="col-md-0"><a href="https://www.mohfw.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Health and Family Welfare</a></li><li class="col-md-0"><a href="https://mha.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Home Affairs</a></li><li class="col-md-0"><a href="http://mohua.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Housing and Urban Affairs</a></li><li class="col-md-0"><a href="https://www.education.gov.in/" onclick="javascript:return confirm( 'This link shall take you to an external website. Click OK to continue.Click Cancel to stop');" target="_blank" title="This link shall take you to an external website">Ministry of Education</a></li></ul><span class="more"><a href="/content/25_5_more.aspx">More</a></span></div>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<div class="container">
-<ul>
-<li><a href="/content/99_2_Tenders.aspx" title="Tenders">Tenders</a></li><li><a href="https://archive.pib.gov.in/archivem/" target="_blank" title="Archives">Archives</a></li><li><a href="/content/101_2_Terms-and-Conditions.aspx" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li><li><a href="/content/102_2_Copyright-Policy.aspx" title="Copyright Policy">Copyright Policy</a></li><li><a href="/content/103_2_Privacy-Policy.aspx" title="Privacy Policy">Privacy Policy</a></li><li><a href="/content/104_2_Hyperlinking-Policy.aspx" title="Hyperlinking Policy">Hyperlinking Policy</a></li><li><a href="/content/105_2_Help.aspx" title="Help">Help</a></li><li><a href="https://factcheck.pib.gov.in/feedbacklogin.aspx" target="_blank" title="FeedBack">FeedBack</a></li>
-</ul>
-<p class="text-center"><span class="footer-nic">Site is hosted by National Informatics Centre (NIC). Information is provided and updated by Press Information Bureau “A” wing, Shastri Bhawan, Dr. Rajendra Prasad Road, New Delhi – 110001, Phone: 23389338.</span></p>
-<div class="clearfix"></div>
-<div class="pull-left"><b>Visitor Counter: </b><span>32986</span></div>
-<div class="pull-right">Last Updated On: <strong><span id="ctl08_lblUpdated">29 Aug 2025 18:44:00 PM</span></strong></div>
-</div>
-</div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-110683570-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-110683570-1');
-</script>
-</footer>
+<div id="templateCss"></div>
 <script type="text/javascript">
 //<![CDATA[
-updateURLWithoutReload(3,1,"http://www.pib.gov.in/allRel.aspx")(function() {var fn = function() {$get("script_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+<input id="hfGridHtml" name="hfGridHtml" type="hidden"/>
+<div class="container" style="margin-bottom: 50px;">
+<div id="accessories">
+<input alt="pdf" id="printPDF" name="printPDF" src="images/downloadicon1.png" title="Download in PDF" type="image"/>
+<div class="pull-right" style="display: flex">
+<div id="voll"></div>
+<div id="vollDT"></div>
+<div class="print-icons">
+<input id="Print1_print" name="Print1$print" src="images/printer_icon.png" type="image"/>
+</div>
+</div>
+</div>
+<input id="hydpermid" name="hydpermid" type="hidden" value="2161649"/>
+<div class="innner-page-main-about-us-content-right-part">
+<div class="MinistryNameSubhead text-center" id="MinistryName">
+                    Lok Sabha Secretariat
+                </div>
+<div id="lg_g"><div class="log_oo"> <img alt="azadi ka amrit mahotsav" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2021/aug/ph202183101.png"/> </div></div>
+<div class="text-center event-heading-background">
+<h2 id="Titleh2">
+                        SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA
+                    </h2>
+<h3 id="Subtitleh3">
+<span id="ltrSubtitle"><br/>BOTH INDIA AND SRI LANKA WELCOME THE FORMATION OF SRI LANKA-INDIA PARLIAMENTARY FRIENDSHIP ASSOCIATION AS A POSITIVE INITIATIVE<br/><br/>SRI LANKA APPRECIATES INDIA’S ROLE IN ENSURING PEACE AND STABILITY IN THE INDIAN OCEAN REGION AND EXPRESSES GRATITUDE FOR INDIA’S ASSISTANCE DURING ITS ECONOMIC CRISIS<br/><br/>LOK SABHA SPEAKER HIGHLIGHTS ADOPTION OF DIGITAL INNOVATIONS AND USE OF AI TECHNOLOGY IN PARLIAMENT OF INDIA, ENHANCING TRANSPARENCY, EFFICIENCY, AND ACCESSIBILITY<br/><br/>SRILANKAN PARLIAMENTARY DELEGATION LED BY SRI LANKA’S MINISTER OF HEALTH AND MASS COMMUNICATION DR. NALINDA JAYATISSA CALLS ON LOK SABHA SPEAKER AT PARLIAMENT HOUSE</span>
+</h3>
+</div>
+<div class="ReleaseDateSubHeaddateTime text-center pt20" id="PrDateTime">
+                    Posted On:
+                28 AUG 2025 7:22PM by PIB Delhi
+                </div>
+<div class="pt20">
+</div>
+<input id="hydphotoUrl" name="hydphotoUrl" type="hidden"/>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Lok Sabha Speaker Shri Om Birla today met a 24-member high level delegation of the Sri Lanka–India Parliamentary Friendship Association at the Parliament House complex. The delegation was led by Dr. Nalinda Jayatissa, Minister of Health and Mass Communication of Sri Lanka and President of the Sri Lanka–India Parliamentary Friendship Association.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Welcoming the delegation, Speaker Shri Om Birla said: “India and Sri Lanka share deep historical, cultural and civilisational ties. Today, these bonds have evolved into a strong, multi-dimensional partnership. Sri Lanka holds a special place in India’s ‘Neighbourhood First’ policy and ‘Vision SAGAR’.”</span></span></p>
+<center><blockquote class="twitter-tweet"><p dir="ltr" lang="en">Pleased to meet the distinguished Parliamentary Delegation from Sri Lanka, visiting India for a special training programme organised by <a href="https://twitter.com/LokSabha_PRIDE?ref_src=twsrc%5Etfw">@LokSabha_PRIDE</a>. Such exchanges strengthen parliamentary diplomacy and deepen our democratic cooperation.<a href="https://twitter.com/hashtag/IndiaSriLanka?src=hash&amp;ref_src=twsrc%5Etfw">#IndiaSriLanka</a> <a href="https://twitter.com/hashtag/ParliamentaryDiplomacy?src=hash&amp;ref_src=twsrc%5Etfw">#ParliamentaryDiplomacy</a> <a href="https://t.co/HZoDUJb2B1">pic.twitter.com/HZoDUJb2B1</a></p>— Om Birla (@ombirlakota) <a href="https://twitter.com/ombirlakota/status/1961037746375688205?ref_src=twsrc%5Etfw">August 28, 2025</a></blockquote> <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></center>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Referring to recent high-level exchanges, Shri Birla described Prime Minister Shri Narendra Modi’s visit to Sri Lanka in April 2025 and Sri Lankan President Anura Kumara Dissanayake’s visit to India in December 2024 as milestones in bilateral relations.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Speaker Birla welcomed the establishment of the India–Sri Lanka Parliamentary Friendship Association in the Sri Lankan Parliament, calling it a testament to the strength of bilateral ties. He emphasized the need for institutional cooperation and regular dialogue between the parliaments of both countries to share democratic practices and the experiences of elected representatives. Such exchanges, he said, will further reinforce democratic values.</span></span></p>
+<center><blockquote class="twitter-tweet"><p dir="ltr" lang="en">Underlined the deep cultural and people to people ties between India and Sri Lanka. Welcomed formation of Sri Lanka–India Parliamentary Friendship Group in Sri Lankan parliament. Sri Lanka holds a special place in India’s ‘Neighbourhood First’ policy and ‘Vision SAGAR’ <a href="https://t.co/j6Ot2my40h">pic.twitter.com/j6Ot2my40h</a></p>— Om Birla (@ombirlakota) <a href="https://twitter.com/ombirlakota/status/1961037761668169930?ref_src=twsrc%5Etfw">August 28, 2025</a></blockquote> <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></center>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Shri Birla underlined that the shared heritage of India and Sri Lanka goes back thousands of years, with deep-rooted cultural and people-to-people connections forming key pillars of bilateral relations. He stressed that the development of the Ramayana and Buddhist tourism circuits, along with cultural exchanges and growing people-to-people contact, provide a strong foundation for these relations.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">He noted that the use of AI technology and digital innovations in the Indian Parliament has enhanced transparency, efficiency and ease of functioning, promoting paperless proceedings. Shri Birla also shared PRIDE’s role in conducting capacity-building programmes for legislators from over 110 countries and expressed India’s readiness to share these innovations with other nations.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">On his part, Dr. Nalinda Jayatissa thanked India for being the first responder during Sri Lanka’s economic crisis. He also praised India’s role in ensuring peace and stability in the Indian Ocean region, while describing India’s cooperation in health and education as a lifeline for Sri Lanka.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">At present, India–Sri Lanka cooperation is increasingly focused on investment-led development, grant assistance, trade, tourism, education, and cultural exchanges. Both nations have also signed several agreements in areas such as defence, energy, health, communications, and religious tourism.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Sri Lankan parliamentary delegation is on a visit to India from 26–30 August 2025. It comprises 20 Members of Parliament and 4 parliamentary staff.</span></span></p>
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>***</strong></span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>AM</strong></span></span></p>
+<div id="reel_pic">
+</div>
+<br/>
+<span id="ReleaseId">(Release ID: 2161649)</span>
+<span id="lblViews">Visitor Counter : 1055</span>
+<span id="lblRefPhoto"></span>
+<div class="BackgroundRelease">
+</div>
+<div>
+</div>
+<div class="ReleaseLang">Read this release in: 
+                
+                        
+                        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2161651" target="_blank">
+                            Hindi </a>
+                    
+                        ,
+                    
+                        
+                        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2161681" target="_blank">
+                            Urdu </a>
+                    
+                        ,
+                    
+                        
+                        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2161708" target="_blank">
+                            Marathi </a>
+                    
+                        ,
+                    
+                        
+                        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2161827" target="_blank">
+                            Bengali </a>
+                    
+                        ,
+                    
+                        
+                        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2161720" target="_blank">
+                            Odia </a>
+                    
+                        ,
+                    
+                        
+                        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2161705" target="_blank">
+                            Malayalam </a>
+</div>
+<div class="RelTag">
+<ul>
+</ul>
+</div>
+<div class="clear">
+</div>
+<div class="RelLink">
+<ul>
+</ul>
+</div>
+<center>
+</center>
+</div>
+<div id="update12">
+<input id="Hidden" name="Hidden" type="hidden"/>
+<div class="ModalWindow" id="P_CategoryManagement" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+<div>
+<input id="btnClose" name="btnClose" src="images/close_flat_icon.png" type="image"/>
+</div>
+<div id="description">
+</div>
+<div class="text-center">
+<h2>
+<br/>
+</h2>
+</div>
+<br>
+<div class="clear">
+</div>
+</br></div>
+</div>
+</div>
+<div id="PdfDiv" style="display: none;">
+<table width="100%">
+<tr>
+<td style="font-weight: 200; text-align: center">
+                        Lok Sabha Secretariat
+                        <div style="height: 30px; width: 100%;">
+</div>
+<div style="font-weight: 200; text-align: center; font-size: 30px;">
+                            SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA
+                        </div>
+<div style="height: 30px; width: 100%;">
+</div>
+<div style="font-weight: 200; text-align: center; font-size: 30px;">
+<div style="height:30px;width:100%;"></div>BOTH INDIA AND SRI LANKA WELCOME THE FORMATION OF SRI LANKA-INDIA PARLIAMENTARY FRIENDSHIP ASSOCIATION AS A POSITIVE INITIATIVE<div style="height:30px;width:100%;"></div><div style="height:30px;width:100%;"></div>SRI LANKA APPRECIATES INDIA’S ROLE IN ENSURING PEACE AND STABILITY IN THE INDIAN OCEAN REGION AND EXPRESSES GRATITUDE FOR INDIA’S ASSISTANCE DURING ITS ECONOMIC CRISIS<div style="height:30px;width:100%;"></div><div style="height:30px;width:100%;"></div>LOK SABHA SPEAKER HIGHLIGHTS ADOPTION OF DIGITAL INNOVATIONS AND USE OF AI TECHNOLOGY IN PARLIAMENT OF INDIA, ENHANCING TRANSPARENCY, EFFICIENCY, AND ACCESSIBILITY<div style="height:30px;width:100%;"></div><div style="height:30px;width:100%;"></div>SRILANKAN PARLIAMENTARY DELEGATION LED BY SRI LANKA’S MINISTER OF HEALTH AND MASS COMMUNICATION DR. NALINDA JAYATISSA CALLS ON LOK SABHA SPEAKER AT PARLIAMENT HOUSE
+                        </div>
+<div style="height: 30px; width: 100%;">
+</div>
+<div style="text-align: center; font-size: 14px;">
+                            Posted On:
+                        28 AUG 2025 7:22PM by PIB Delhi
+                        </div>
+<div style="height: 30px; width: 100%;">
+</div>
+<div style="font-weight: 200; text-align: left; font-size: 16px;">
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Lok Sabha Speaker Shri Om Birla today met a 24-member high level delegation of the Sri Lanka–India Parliamentary Friendship Association at the Parliament House complex. The delegation was led by Dr. Nalinda Jayatissa, Minister of Health and Mass Communication of Sri Lanka and President of the Sri Lanka–India Parliamentary Friendship Association.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Welcoming the delegation, Speaker Shri Om Birla said: “India and Sri Lanka share deep historical, cultural and civilisational ties. Today, these bonds have evolved into a strong, multi-dimensional partnership. Sri Lanka holds a special place in India’s ‘Neighbourhood First’ policy and ‘Vision SAGAR’.”</span></span></p>
+<center><blockquote class="twitter-tweet"><p dir="ltr" lang="en">Pleased to meet the distinguished Parliamentary Delegation from Sri Lanka, visiting India for a special training programme organised by <a href="https://twitter.com/LokSabha_PRIDE?ref_src=twsrc%5Etfw">@LokSabha_PRIDE</a>. Such exchanges strengthen parliamentary diplomacy and deepen our democratic cooperation.<a href="https://twitter.com/hashtag/IndiaSriLanka?src=hash&amp;ref_src=twsrc%5Etfw">#IndiaSriLanka</a> <a href="https://twitter.com/hashtag/ParliamentaryDiplomacy?src=hash&amp;ref_src=twsrc%5Etfw">#ParliamentaryDiplomacy</a> <a href="https://t.co/HZoDUJb2B1">pic.twitter.com/HZoDUJb2B1</a></p>— Om Birla (@ombirlakota) <a href="https://twitter.com/ombirlakota/status/1961037746375688205?ref_src=twsrc%5Etfw">August 28, 2025</a></blockquote> <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></center>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Referring to recent high-level exchanges, Shri Birla described Prime Minister Shri Narendra Modi’s visit to Sri Lanka in April 2025 and Sri Lankan President Anura Kumara Dissanayake’s visit to India in December 2024 as milestones in bilateral relations.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Speaker Birla welcomed the establishment of the India–Sri Lanka Parliamentary Friendship Association in the Sri Lankan Parliament, calling it a testament to the strength of bilateral ties. He emphasized the need for institutional cooperation and regular dialogue between the parliaments of both countries to share democratic practices and the experiences of elected representatives. Such exchanges, he said, will further reinforce democratic values.</span></span></p>
+<center><blockquote class="twitter-tweet"><p dir="ltr" lang="en">Underlined the deep cultural and people to people ties between India and Sri Lanka. Welcomed formation of Sri Lanka–India Parliamentary Friendship Group in Sri Lankan parliament. Sri Lanka holds a special place in India’s ‘Neighbourhood First’ policy and ‘Vision SAGAR’ <a href="https://t.co/j6Ot2my40h">pic.twitter.com/j6Ot2my40h</a></p>— Om Birla (@ombirlakota) <a href="https://twitter.com/ombirlakota/status/1961037761668169930?ref_src=twsrc%5Etfw">August 28, 2025</a></blockquote> <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></center>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Shri Birla underlined that the shared heritage of India and Sri Lanka goes back thousands of years, with deep-rooted cultural and people-to-people connections forming key pillars of bilateral relations. He stressed that the development of the Ramayana and Buddhist tourism circuits, along with cultural exchanges and growing people-to-people contact, provide a strong foundation for these relations.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">He noted that the use of AI technology and digital innovations in the Indian Parliament has enhanced transparency, efficiency and ease of functioning, promoting paperless proceedings. Shri Birla also shared PRIDE’s role in conducting capacity-building programmes for legislators from over 110 countries and expressed India’s readiness to share these innovations with other nations.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">On his part, Dr. Nalinda Jayatissa thanked India for being the first responder during Sri Lanka’s economic crisis. He also praised India’s role in ensuring peace and stability in the Indian Ocean region, while describing India’s cooperation in health and education as a lifeline for Sri Lanka.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">At present, India–Sri Lanka cooperation is increasingly focused on investment-led development, grant assistance, trade, tourism, education, and cultural exchanges. Both nations have also signed several agreements in areas such as defence, energy, health, communications, and religious tourism.</span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">The Sri Lankan parliamentary delegation is on a visit to India from 26–30 August 2025. It comprises 20 Members of Parliament and 4 parliamentary staff.</span></span></p>
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>***</strong></span></span></p>
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>AM</strong></span></span></p>
+</div>
+<div style="height: 30px; width: 100%;">
+</div>
+<div style="height: 30px; width: 100%;">
+</div>
+<div style="font-weight: 100; text-align: left; font-size: 16px;">
+                            (Release ID: 2161649)
+                        </div>
+<div style="height: 30px; width: 100%;">
+</div>
+</td>
+</tr>
+<tr>
+<td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+</tr>
+</table>
+</div>
+<div class="clearfix">
+</div>
+<div class="section1">
+<div id="frst_t">
+<div id="arr_rm"><div class="sticky-social_mb"><ul class="social_mb"><a href="http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649" target="_blank"><li class="fb_b"><img alt="Share on facebook" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg" width="40"/></li></a><a href="https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649&amp;text=SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA" target="_blank"><li class="twitter_r"><img alt="Share on twitter" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg" width="40"/> </li></a><a href="https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649" target="_blank"><li class="whatsapp_r"><img alt="Share on whatsapp" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png" width="40"/></li></a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA&amp;body=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649&amp;ui=2&amp;tf=1&amp;pli=1" target="_blank" title="Share by Email"><li class="fa-envelope_r"><img alt="Share on email" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png" width="40"/></li></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649&amp;title=SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA&amp;summary=My%20favorite%20developer%20program&amp;source=LinkedIn" target="_blank"><li class="fa-linkedin_r"><img alt="Share on linkedin" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png" width="40"/></li></a></ul></div></div>
+</div>
+<div id="second_t">
+<div id="sndr_rm"><div class="sticky-social"><ul class="social"><a href="http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649" target="_blank"><li class="fb_b"><img alt="Share on facebook" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg" width="35"/></li></a><a href="https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649&amp;text=SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA" target="_blank"><li class="twitter_r"><img alt="Share on twitter" src="https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg" width="35"/> </li></a><a href="https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649" target="_blank"><li class="whatsapp_r"><img alt="Share on whatsapp" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png" width="35"/></li></a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=&amp;su=SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA&amp;body=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649&amp;ui=2&amp;tf=1&amp;pli=1" target="_blank" title="Share by Email"><li class="fa-envelope_r"><img alt="Share on email" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png" width="35"/></li></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pib.gov.in/PressReleasePage.aspx?PRID=2161649&amp;title=SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA&amp;summary=My%20favorite%20developer%20program&amp;source=LinkedIn" target="_blank"><li class="fa-linkedin_r"><img alt="Share on linkedin" src="https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png" width="35"/></li></a></ul></div></div>
+</div>
+</div>
+<input id="ltrTitlee" name="ltrTitlee" type="hidden" value="SRI LANKA IS A KEY PARTNER IN INDIA’S ‘NEIGHBOURHOOD FIRST’ POLICY AND ‘VISION SAGAR’: LOK SABHA SPEAKER SHRI OM BIRLA"/>
+<input id="ltrSubtitlee" name="ltrSubtitlee" type="hidden" value="&lt;br/&gt;BOTH INDIA AND SRI LANKA WELCOME THE FORMATION OF SRI LANKA-INDIA PARLIAMENTARY FRIENDSHIP ASSOCIATION AS A POSITIVE INITIATIVE&lt;br/&gt;&lt;br/&gt;SRI LANKA APPRECIATES INDIA’S ROLE IN ENSURING PEACE AND STABILITY IN THE INDIAN OCEAN REGION AND EXPRESSES GRATITUDE FOR INDIA’S ASSISTANCE DURING ITS ECONOMIC CRISIS&lt;br/&gt;&lt;br/&gt;LOK SABHA SPEAKER HIGHLIGHTS ADOPTION OF DIGITAL INNOVATIONS AND USE OF AI TECHNOLOGY IN PARLIAMENT OF INDIA, ENHANCING TRANSPARENCY, EFFICIENCY, AND ACCESSIBILITY&lt;br/&gt;&lt;br/&gt;SRILANKAN PARLIAMENTARY DELEGATION LED BY SRI LANKA’S MINISTER OF HEALTH AND MASS COMMUNICATION DR. NALINDA JAYATISSA CALLS ON LOK SABHA SPEAKER AT PARLIAMENT HOUSE"/>
+<input id="ltrDescriptionn" name="ltrDescriptionn" type="hidden" value='&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;Lok Sabha Speaker Shri Om Birla today met a 24-member high level delegation of the Sri Lanka&amp;ndash;India Parliamentary Friendship Association at the Parliament House complex. The delegation was led by Dr. Nalinda Jayatissa, Minister of Health and Mass Communication of Sri Lanka and President of the Sri Lanka&amp;ndash;India Parliamentary Friendship Association.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;Welcoming the delegation, Speaker Shri Om Birla said: &amp;ldquo;India and Sri Lanka share deep historical, cultural and civilisational ties. Today, these bonds have evolved into a strong, multi-dimensional partnership. Sri Lanka holds a special place in India&amp;rsquo;s &amp;lsquo;Neighbourhood First&amp;rsquo; policy and &amp;lsquo;Vision SAGAR&amp;rsquo;.&amp;rdquo;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Pleased to meet the distinguished Parliamentary Delegation from Sri Lanka, visiting India for a special training programme organised by &lt;a href="https://twitter.com/LokSabha_PRIDE?ref_src=twsrc%5Etfw"&gt;@LokSabha_PRIDE&lt;/a&gt;. Such exchanges strengthen parliamentary diplomacy and deepen our democratic cooperation.&lt;a href="https://twitter.com/hashtag/IndiaSriLanka?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#IndiaSriLanka&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/ParliamentaryDiplomacy?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#ParliamentaryDiplomacy&lt;/a&gt; &lt;a href="https://t.co/HZoDUJb2B1"&gt;pic.twitter.com/HZoDUJb2B1&lt;/a&gt;&lt;/p&gt;&amp;mdash; Om Birla (@ombirlakota) &lt;a href="https://twitter.com/ombirlakota/status/1961037746375688205?ref_src=twsrc%5Etfw"&gt;August 28, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/center&gt;
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;Referring to recent high-level exchanges, Shri Birla described Prime Minister Shri Narendra Modi&amp;rsquo;s visit to Sri Lanka in April 2025 and Sri Lankan President Anura Kumara Dissanayake&amp;rsquo;s visit to India in December 2024 as milestones in bilateral relations.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;Speaker Birla welcomed the establishment of the India&amp;ndash;Sri Lanka Parliamentary Friendship Association in the Sri Lankan Parliament, calling it a testament to the strength of bilateral ties. He emphasized the need for institutional cooperation and regular dialogue between the parliaments of both countries to share democratic practices and the experiences of elected representatives. Such exchanges, he said, will further reinforce democratic values.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Underlined the deep cultural and people to people ties between India and Sri Lanka. Welcomed formation of Sri Lanka–India Parliamentary Friendship Group in Sri Lankan parliament. Sri Lanka holds a special place in India’s ‘Neighbourhood First’ policy and ‘Vision SAGAR’ &lt;a href="https://t.co/j6Ot2my40h"&gt;pic.twitter.com/j6Ot2my40h&lt;/a&gt;&lt;/p&gt;&amp;mdash; Om Birla (@ombirlakota) &lt;a href="https://twitter.com/ombirlakota/status/1961037761668169930?ref_src=twsrc%5Etfw"&gt;August 28, 2025&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/center&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;Shri Birla underlined that the shared heritage of India and Sri Lanka goes back thousands of years, with deep-rooted cultural and people-to-people connections forming key pillars of bilateral relations. He stressed that the development of the Ramayana and Buddhist tourism circuits, along with cultural exchanges and growing people-to-people contact, provide a strong foundation for these relations.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;He noted that the use of AI technology and digital innovations in the Indian Parliament has enhanced transparency, efficiency and ease of functioning, promoting paperless proceedings. Shri Birla also shared PRIDE&amp;rsquo;s role in conducting capacity-building programmes for legislators from over 110 countries and expressed India&amp;rsquo;s readiness to share these innovations with other nations.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;On his part, Dr. Nalinda Jayatissa thanked India for being the first responder during Sri Lanka&amp;rsquo;s economic crisis. He also praised India&amp;rsquo;s role in ensuring peace and stability in the Indian Ocean region, while describing India&amp;rsquo;s cooperation in health and education as a lifeline for Sri Lanka.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;At present, India&amp;ndash;Sri Lanka cooperation is increasingly focused on investment-led development, grant assistance, trade, tourism, education, and cultural exchanges. Both nations have also signed several agreements in areas such as defence, energy, health, communications, and religious tourism.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;The Sri Lankan parliamentary delegation is on a visit to India from 26&amp;ndash;30 August 2025. It comprises 20 Members of Parliament and 4 parliamentary staff.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:center"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;&lt;strong&gt;***&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style="text-align:justify"&gt;&lt;span style="font-family:Times New Roman,Times,serif"&gt;&lt;span style="font-size:16px"&gt;&lt;strong&gt;AM&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+'/>
+<script type="text/javascript">
+            var mPlayer = document.getElementById("background_music");
+            var mPlayAction = document.getElementById("playbutton");
+
+            var isPlaying = false;
+
+            function playAudio() {
+                mPlayer.play();
+                isPlaying = true;
+                document.getElementById('stopA').style.display = "block";
+                document.getElementById('playA').style.display = "none";
+            }
+
+            function pauseAudio() {
+                mPlayer.pause();
+                isPlaying = false;
+                document.getElementById('playA').style.display = "block";
+                document.getElementById('stopA').style.display = "none";
+            }
+            //function HandleAudio() {
+            //    if (isPlaying == true) {
+            //        //Playing already Pause it
+            //        pauseAudio();
+            //    } else {
+            //        //Play the music
+            //        playAudio();
+            //    }
+            //}
+        </script>
+<script type="text/javascript">
+            var synth = window.speechSynthesis;
+
+            
+            function stripHtml(html) {
+                let tmp = document.createElement("DIV");
+                tmp.innerHTML = html;
+                return tmp.textContent || tmp.innerText || "";
+            }
+        </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                //for responsive tables
+                $("table").each(function () {
+                    if (!$(this).closest(".table-responsive").length) {
+                        $(this).wrap("<div class='table-responsive'></div>");
+                    }
+                });
+
+                var width = $(window).width();
+                if (width < 768) {
+
+                    // Extra Small Device
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+
+                } else if (width < 991) {
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+                    // Small Device
+
+                } else if (width < 1199) {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Medium Device
+
+                } else {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Large Device
+
+                }
+            });
+        </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                var width = $(window).width();
+                if (width < 768) {
+
+                    // Extra Small Device
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+
+                } else if (width < 991) {
+                    document.getElementById('frst_t').style.display = "block";
+                    document.getElementById('second_t').style.display = "none";
+                    // Small Device
+
+                } else if (width < 1199) {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Medium Device
+
+                } else {
+                    document.getElementById('frst_t').style.display = "none";
+                    document.getElementById('second_t').style.display = "block";
+                    // Large Device
+
+                }
+            });
+        </script>
+<style type="text/css">
+            @media print {
+                .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                    display: none !important;
+                }
+            }
+
+            .f_vl {
+                padding-right: 30px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+            .log_oo {
+                // width: 20%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .log_oo img {
+                    width: 150px;
+                    /*width: 100%;
+                    height: auto;*/
+                }
+
+            .sticky-social_mb {
+                position: fixed;
+                bottom: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+            }
+
+            .social_mb {
+                list-style: none;
+                display: flex;
+                width: 100%;
+                margin-bottom: -8px;
+            }
+
+                .social_mb a {
+                    padding: 8px 0px;
+                    font-size: 30px;
+                    transition: all 0.8s ease-in-out;
+                    width: 20% !important;
+                    text-align: center;
+                }
+        </style>
+<style type="text/css">
+            .section1 {
+                position: relative;
+                padding: 10px 0px;
+                width: 100%;
+            }
+
+
+
+            .sticky-social {
+                position: fixed;
+                top: 20px;
+                left: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .social {
+                list-style: none;
+            }
+
+                .social a li {
+                    padding: 8px 12px;
+                    font-size: 25px;
+                    transition: all 0.8s ease-in-out;
+                }
+
+                    .social a li:hover {
+                        margin-right: -30px;
+                        box-shadow: 2px 5px 10px grey;
+                    }
+
+                        .social a li:hover .fa {
+                            margin-left: 20px;
+                        }
+
+            .fb_b {
+                /* background-color: rgb(59, 89, 152);*/
+                background-color: rgba(65,103,178,255);
+            }
+
+            .twitter_r {
+                /* background-color: rgb(29, 161, 242);*/
+                background-color: #000000;
+            }
+
+            .whatsapp_r {
+                /* background-color: rgb(77, 194, 71);*/
+                background-color: rgba(13,191,67,255);
+            }
+
+            .fa-envelope_r {
+                /* background-color: rgb(219, 68, 55);*/
+                background-color: #e2123d;
+            }
+
+            .fa-linkedin_r {
+                background-color: rgb(0, 119, 181);
+            }
+        </style>
+<style type="text/css">
+            @media only screen and (max-device-width: 767px) {
+                p span img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                p img {
+                    max-width: 90% !important;
+                    height: auto !important;
+                }
+
+                h2 {
+                    font-size: 20px !important;
+                    font-weight: 600 !important;
+                }
+
+                h3 {
+                    font-size: 18px !important;
+                    font-weight: 600 !important;
+                }
+            }
+        </style>
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
 </script>
 </form>
-<script src="https://static.pib.gov.in/writereaddata/js/jquery-3.7.1.min_all.js" type="text/javascript"></script>
-<script type="text/javascript">
-        jQuery(document).ready(function () {
-            jQuery('#main-nav nav').meanmenu()
-        });
-        
-    </script>
-<script src="https://static.pib.gov.in/writereaddata/js/custom.js" type="text/javascript"></script>
-<style type="text/css">
-        .s_padd
-        {
-            padding-left: 0px !important;
-            padding-right: 0px !important;
-        }
-        
-        .link_ss
-        {
-            /*background: #f99426;*/
-            background: #B55D00;
-            color: #fff;
-            text-align: center;
-            font-size: 144%;
-            padding: 2px 2px;
-            border-radius: 7px;
-            text-decoration: none;
-            margin-top: 9px;
-            width: 40%;
-            border-bottom: 5px solid red;
-        }
-        .link_s
-        {
-            background: black;
-            color: #fff;
-            text-align: center;
-            font-size: 144%;
-            padding: 2px 2px;
-            border-radius: 7px;
-            text-decoration: none;
-            margin-top: 9px;
-        }
-        @media only screen and (max-device-width:767px)
-        {
-            .img_d
-            {
-                display: none;
-            }
-            #pnlsearch
-            {
-                display: none;
-            }
-            .navigation-bg
-            {
-                display: none !important;
-            }
-            .link_ss
-            {
-                width: 63% !important;
-            }
-        }
-        @media only screen and (min-device-width:768px)
-        {
-            .img_d
-            {
-                display: block !important;
-            }
-            .navigation-bg
-            {
-                display: block !important;
-            }
-        }
-    </style>
-<script async="" src="https://static.pib.gov.in/WriteReadData/js/googletagmanager-UA-112591026-1.js"></script>
-<script>
-
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() { dataLayer.push(arguments); }
-
-        gtag('js', new Date());
-
-
-
-        gtag('config', 'UA-112591026-1');
-
-    </script>
-<script type="text/javascript">
-        $(document).ready(function () {
-            $("#rmhover").click(function () {
-                $(this).fadeOut();
-                $("#rmpopup").fadeOut();
-            });
-
-            $("#rmclose").click(function () {
-                $("#rmhover").fadeOut();
-                $("#rmpopup").fadeOut();
-            });
-            setTimeout(function () { $("#rmhover").fadeOut() }, 15000);
-            setTimeout(function () { $("#rmpopup").fadeOut() }, 15000);
-
-        });
-    </script>
-<style type="text/css">
-        
-
-        .fea_B
-        {
-            display: inline-block;
-            position: relative;
-            background: none;
-            border: none;
-            width: 100%;
-            padding: 6px 9px;
-            color: #fff;
-            cursor: pointer;
-            background: #ff9d1e;
-            margin-bottom: 20px;
-            transition: 0.2s;
-            margin-top: 7px;
-            text-align: center;
-            margin-bottom: 0px;
-        }
-        
-        .fea_B::before, .fea_B::after
-        {
-            content: "";
-            width: 0;
-            height: 2px;
-            position: absolute;
-            transition: all 0.2s linear;
-            background: #ff9d1e;
-        }
-        
-        .fea_B span::before, .fea_B span::after
-        {
-            content: "";
-            width: 2px;
-            height: 0;
-            position: absolute;
-            transition: all 0.2s linear;
-            background: #ff9d1e;
-        }
-        .fea_B:hover
-        {
-            width: 100%;
-            background: #ffffff;
-            color: #525252;
-        }
-        .fea_B:hover::before, .fea_B:hover::after
-        {
-            width: 100%;
-        }
-        .fea_B:hover span::before, .fea_B:hover span::after
-        {
-            height: 100%;
-        }
-        
-        
-        .fea_B::after
-        {
-            left: 0;
-            bottom: 0;
-            transition-duration: 0.4s;
-        }
-        .fea_B span::after
-        {
-            right: 0;
-            top: 0;
-            transition-duration: 0.4s;
-        }
-        .fea_B::before
-        {
-            right: 0;
-            top: 0;
-            transition-duration: 0.4s;
-        }
-        .fea_B span::before
-        {
-            left: 0;
-            bottom: 0;
-            transition-duration: 0.4s;
-        }
-    </style>
 </body>
-</meta></html>
+</html>
