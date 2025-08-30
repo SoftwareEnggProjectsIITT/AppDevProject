@@ -34,6 +34,21 @@ class _WidgetTreeState extends State<WidgetTree> {
           ),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text('menu')),
+            ListTile(
+              title: Text('Item 1'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Item 2'),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: ValueListenableBuilder(
           valueListenable: selectedPageNotifier,
