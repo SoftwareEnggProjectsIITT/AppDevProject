@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/data/notifiers.dart';
-import 'package:frontend/views/pages/login.dart';
+import 'package:frontend/providers/notifiers.dart';
+import 'package:frontend/screens/login.dart';
 import 'package:frontend/views/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
