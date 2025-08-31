@@ -4,7 +4,7 @@ import 'package:frontend/providers/notifiers.dart';
 import 'package:frontend/screens/login.dart';
 import 'package:frontend/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'package:frontend/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {
@@ -19,33 +19,30 @@ void main() async {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return ValueListenableBuilder<bool>(
-      valueListenable: isDarkModeNotifier,
-      builder: (context, isDarkMode, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: ThemeData.light().copyWith(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.teal,
-              brightness: Brightness.light,
-            ),
-          ),
-          darkTheme: ThemeData.dark().copyWith(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.teal,
-              brightness: Brightness.dark,
-            ),
-          ),
-          themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-          home: const FirebaseAuthWrapper(),
-        );
-      },
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isDarkMode = ref.watch(darkModeProvider);
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData.light().copyWith(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal,
+          brightness: Brightness.light,
+        ),
+      ),
+      darkTheme: ThemeData.dark().copyWith(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal,
+          brightness: Brightness.dark,
+        ),
+      ),
+      themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      home: const FirebaseAuthWrapper(),
     );
   }
 }
