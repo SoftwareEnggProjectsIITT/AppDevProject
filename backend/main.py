@@ -21,6 +21,6 @@ for category in category_ids_dict:
         title = parser_utils.parse_title(html)
         body = parser_utils.parse_body(html)
         date = parser_utils.parse_date(html)
-        image_link = parser_utils.parse_image(html)
+        image_link = parser_utils.parse_image(html, category)
         
         uploader.upload_post(ref, id, category, title, body, date, image_link)
