@@ -1,3 +1,0 @@
-pip install firebase_admin
-pip install selenium
-pip install bs4
