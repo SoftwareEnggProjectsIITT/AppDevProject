@@ -98,8 +98,9 @@ chain = (
 )
 
 # STEP 11: Test the pipeline
-user_question = "What is the Preamble of the Constitution, and what are its key words?"
-answer = chain.invoke(user_question)
+prompt = "What is the Preamble of the Constitution, and what are its key words?"
+back_prompt = "Explain your reasoning and tell section or page number where it can be found"
+answer = chain.invoke(prompt+back_prompt)
 
-print("\nQ:", user_question)
+print("\nQ:", prompt)
 print("A:", answer)
