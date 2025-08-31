@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:frontend/providers/notifiers.dart';
 import 'package:frontend/screens/bookmarks_page.dart';
 import 'package:frontend/screens/chatbot_page.dart';
@@ -22,16 +23,16 @@ class _WidgetTreeState extends State<WidgetTree> {
       appBar: AppBar(
         title: const Text('Home Page'),
         actions: [
-          IconButton(
-            onPressed: () {
-              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+          Consumer(
+            builder: (context, ref, _) {
+              final isDarkMode = ref.watch(darkModeProvider);
+              return IconButton(
+                icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
+                onPressed: () {
+                  ref.read(darkModeProvider.notifier).toggleTheme();
+                },
+              );
             },
-            icon: ValueListenableBuilder(
-              valueListenable: isDarkModeNotifier,
-              builder: (context, isDarkMode, child) {
-                return Icon(isDarkMode ? Icons.light_mode :Icons.dark_mode);
-              },
-            ),
           ),
         ],
       ),
