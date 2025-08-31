@@ -14,18 +14,18 @@ class _ChatbotPageState extends State<ChatbotPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-      children: [
-        Expanded(child: Container()), // Your chat list here
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: MessageBox(
-            onSend: (msg) {
-              print("User sent: $msg");
-              // 👉 Save to Firestore or send to AI here
-            },
-          ),
-        ),
-      ],
+          children: [
+            Expanded(child: Container()), // Your chat list here
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MessageBox(
+                onSend: (msg) {
+                  print("User sent: $msg");
+                  // 👉 Save to Firestore or send to AI here
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
