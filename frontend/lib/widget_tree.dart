@@ -36,13 +36,11 @@ class _WidgetTreeState extends State<WidgetTree> {
         ],
       ),
       drawer: MainDrawer(),
-      body: SingleChildScrollView(
-        child: ValueListenableBuilder(
-          valueListenable: selectedPageNotifier,
-          builder: (context, selectedPage, child) {
-            return pages.elementAt(selectedPage);
-          },
-        ),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        },
       ),
       bottomNavigationBar: BottomNavbar(),
     );
