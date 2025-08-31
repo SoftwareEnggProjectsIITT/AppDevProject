@@ -38,7 +38,7 @@ else:
     print("PDF file not uploaded")
 
 #Split into chunks
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
 chunks = text_splitter.split_documents(all_docs)
 
 #Embeddings with Gemini too
@@ -58,7 +58,7 @@ vector_db = Chroma.from_documents(
 llm = ChatGoogleGenerativeAI(
     model = "gemini-2.5-flash",
     google_api_key = GEMINI_API_KEY,
-    temperature = 0.2
+    temperature = 1
 )
 
 QUERY_PROMPT = PromptTemplate(
