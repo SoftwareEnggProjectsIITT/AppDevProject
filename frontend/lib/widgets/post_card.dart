@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:frontend/models/post_data.dart';
+import 'package:frontend/widgets/bookmark_button.dart';
+import 'package:frontend/widgets/like_button.dart';
 
-class PostCard extends StatelessWidget {
+class PostCard extends StatefulWidget {
   const PostCard({super.key, required this.post});
   final PostData post;
+
+  @override
+  State<PostCard> createState() => _PostCardState();
+}
+
+class _PostCardState extends State<PostCard> {
+
+  bool isLiked = false;
 
   Widget buildPostImage(String url, BuildContext context) {
     if (url.toLowerCase().endsWith('.svg')) {
@@ -38,6 +48,7 @@ class PostCard extends StatelessWidget {
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -53,11 +64,11 @@ class PostCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Image
-            buildPostImage(post.image_link, context),
+            buildPostImage(widget.post.image_link, context),
 
             // Title
             Text(
-              post.title.trim(),
+              widget.post.title.trim(),
               style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -68,7 +79,7 @@ class PostCard extends StatelessWidget {
 
             // Category
             Text(
-              post.category,
+              widget.post.category,
               style: const TextStyle(
                 fontSize: 14,
                 color: Colors.blueGrey,
@@ -77,22 +88,29 @@ class PostCard extends StatelessWidget {
 
             const SizedBox(height: 8),
 
-            // Body
-            // Text(
-            //   post.body,
-            //   style: const TextStyle(fontSize: 16),
-            // ),
-            //
-            // const SizedBox(height: 12),
-
-            // Footer row: likes + data
+            // Like, bookmark
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(Icons.favorite, size: 25, color: Colors.red),
-                const SizedBox(width: 4),
-                Text("${post.likes}"),
-                const SizedBox(width: 4),
-                const Icon(Icons.bookmark, size: 25, color: Colors.blue),
+                // Like button
+                Row(
+                  children: [
+                    LikeButton(
+                      isLiked: isLiked,
+                      onTap: () {
+                        setState(() {
+                          isLiked = !isLiked;
+                        });
+                      },
+                    ),
+                    Text("${widget.post.likes + (isLiked ? 1 : 0)}"),
+                  ],
+                ),
+
+                const SizedBox(width: 20),
+
+                // Bookmark button
+                BookmarkButton(post: widget.post),
               ],
             ),
           ],

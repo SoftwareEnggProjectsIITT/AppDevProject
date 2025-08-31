@@ -1,52 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:frontend/models/post_data.dart';
+import 'package:frontend/providers/bookmarks_provider.dart';
+import 'package:frontend/widgets/post_card.dart';
 
-class BookmarksPage extends StatefulWidget {
+class BookmarksPage extends ConsumerWidget {
   const BookmarksPage({super.key});
 
   @override
-  State<BookmarksPage> createState() => _BookmarksPageState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<PostData> bookmarks = ref.watch(bookmarksProvider);
 
-class _BookmarksPageState extends State<BookmarksPage> {
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
-            height: 200,
-            color: Colors.red,
-            child: const Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bookmarked Posts'),
+      ),
+      body: bookmarks.isEmpty
+          ? const Center(
               child: Text(
-                'Bookmarks Page',
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                "No bookmarks yet",
+                style: TextStyle(fontSize: 16),
               ),
+            )
+          : ListView.builder(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              itemCount: bookmarks.length,
+              itemBuilder: (context, index) {
+                final post = bookmarks[index];
+                return PostCard(post: post); // Uses your existing PostCard
+              },
             ),
-          ),
-          const SizedBox(height: 20),
-          Container(
-            height: 200,
-            color: Colors.purple,
-            child: const Center(
-              child: Text(
-                'Your Bookmarked Items',
-                style: TextStyle(color: Colors.white, fontSize: 24),
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Container(
-            height: 200,
-            color: Colors.teal,
-            child: const Center(
-              child: Text(
-                'Manage your bookmarks here!',
-                style: TextStyle(color: Colors.white, fontSize: 24),
-              ),
-            ),
-          ),
-        ],
-      )
     );
   }
 }
+
