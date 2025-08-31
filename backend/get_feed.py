@@ -1,4 +1,4 @@
-from generate_feed import generate_feed
+from modules.generate_feed import generate_feed
 from fastapi import FastAPI
 
 app = FastAPI()
