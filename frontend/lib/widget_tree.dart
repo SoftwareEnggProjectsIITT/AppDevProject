@@ -4,6 +4,7 @@ import 'package:frontend/screens/bookmarks_page.dart';
 import 'package:frontend/screens/chatbot_page.dart';
 import 'package:frontend/screens/home_page.dart';
 import 'package:frontend/widgets/bottom_navbar.dart';
+import 'package:frontend/widgets/main_drawer.dart';
 
 List<Widget> pages = [const HomePage(), const ChatbotPage(), const BookmarksPage()];
 
@@ -34,6 +35,7 @@ class _WidgetTreeState extends State<WidgetTree> {
           ),
         ],
       ),
+      drawer: MainDrawer(),
       body: SingleChildScrollView(
         child: ValueListenableBuilder(
           valueListenable: selectedPageNotifier,
