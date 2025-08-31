@@ -133,6 +133,8 @@ def ask_constitution(query: str) -> str:
         str: Formatted answer from the RAG pipeline.
     """
     try:
+        back_prompt = "Explain your reasoning and tell section or page number where it can be found"
+        query = query + back_prompt
         answer = chain.invoke(query)
         return answer.strip()
     except Exception as e:
