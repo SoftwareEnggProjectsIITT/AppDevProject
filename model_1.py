@@ -15,6 +15,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain.chains import RetrievalQA
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain.retrievers.multi_query import MultiQueryRetriever
 
 # STEP 2: Configure Gemini API
 load_dotenv()
@@ -26,12 +27,15 @@ genai.configure(api_key=GEMINI_API_KEY)
 local_path = ["consti.pdf"]
 all_docs = []
 
-for path in local_path:
-    loader = UnstructuredPDFLoader(file_path=path)
-    data = loader.load()
-    all_docs.extend(data)
+if local_path:
+    for path in local_path:
+        loader = UnstructuredPDFLoader(file_path=path)
+        data = loader.load()
+        all_docs.extend(data)
 
-print(f"Total documents loaded: {len(all_docs)}")
+    print(f"Total documents loaded: {len(all_docs)}")
+else:
+    print("PDF file not uploaded")
 
 # STEP 4: Split into chunks
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
@@ -50,8 +54,21 @@ vector_db = Chroma.from_documents(
     collection_name="gemini-rag"
 )
 
+# STEP 9: Setup Gemini LLM
+llm = genai.GenerativeModel("gemini-2.5-flash")
+
+QUERY_PROMPT = PromptTemplate(
+    input_variables=["question"],
+    template="""You are an AI assistant who only answers based on the given context. Help me resolve my doubts from the Indian Constitution, give an answer in no more than 100 characters: 
+    Original question: {question}"""
+)
+
 # STEP 7: Define Retriever
-retriever = vector_db.as_retriever(search_kwargs={"k": 3})
+retriever = MultiQueryRetriever.from_llm(
+    vector_db.as_retriever(),
+    llm,
+    prompt=QUERY_PROMPT
+)
 
 # STEP 8: Define custom RAG prompt
 template = """
@@ -67,20 +84,19 @@ Question: {question}
 
 prompt = ChatPromptTemplate.from_template(template)
 
-# STEP 9: Setup Gemini LLM
-llm = genai.GenerativeModel("gemini-pro")
 
 # STEP 10: RAG chain
 chain = (
     {"context": retriever, "question": RunnablePassthrough()}
     | prompt
-    | (lambda x: llm.generate_content(x))  # Gemini inference
-    | (lambda x: x.candidates[0].content.parts[0].text if x.candidates else "No answer found")
+    | llm
+    | StrOutputParser()
 )
 
 # STEP 11: Test the pipeline
 user_question = "What is the Preamble of the Constitution, and what are its key words?"
-answer = chain.invoke(user_question)
+back_prompt = "Explain your reasoning and tell section or page number where it can be found"
+answer = chain.invoke(user_question+back_prompt)
 
 print("\nQ:", user_question)
 print("A:", answer)
