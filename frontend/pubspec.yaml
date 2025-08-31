@@ -41,6 +41,9 @@ dependencies:
   google_sign_in: ^6.1.0
   speech_to_text: ^7.3.0
   flutter_svg: ^2.2.0
+  flutter_riverpod: ^2.6.1
+  shared_preferences: ^2.5.3
+  liquid_pull_to_refresh: ^3.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:frontend/providers/notifiers.dart';
 import 'package:frontend/screens/login.dart';
 import 'package:frontend/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:frontend/widget_tree.dart';
 import 'firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {
-   WidgetsFlutterBinding.ensureInitialized();  
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform
+    options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -20,34 +24,51 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
+    return ValueListenableBuilder<bool>(
       valueListenable: isDarkModeNotifier,
       builder: (context, isDarkMode, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          theme: ThemeData(
+          theme: ThemeData.light().copyWith(
             colorScheme: ColorScheme.fromSeed(
               seedColor: Colors.teal,
-              brightness: isDarkMode ? Brightness.dark : Brightness.light,
+              brightness: Brightness.light,
             ),
           ),
-          home: StreamBuilder(
-            stream: FirebaseAuth.instance.authStateChanges(), // Here we can use things like userChanges(), 
-            builder: (context, snapshot) {
-              if(snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              }
-              if(snapshot.data != null)  {
-                return const WidgetTree();
-              }
-              return const WidgetTree();
-            }
+          darkTheme: ThemeData.dark().copyWith(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.teal,
+              brightness: Brightness.dark,
+            ),
           ),
+          themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
+          home: const FirebaseAuthWrapper(),
         );
-      }
+      },
     );
   }
 }
+
+class FirebaseAuthWrapper extends StatelessWidget {
+  const FirebaseAuthWrapper({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+        if (snapshot.data != null) {
+          return const WidgetTree();
+        }
+        return const WidgetTree(); 
+      },
+    );
+  }
+}
+
