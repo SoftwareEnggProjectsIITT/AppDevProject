@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
               if(snapshot.data != null)  {
                 return const WidgetTree();
               }
-              return const LoginScreen();
+              return const WidgetTree();
             }
           ),
         );
