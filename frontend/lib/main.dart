@@ -31,13 +31,13 @@ class MyApp extends ConsumerWidget {
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
+          seedColor: Colors.pinkAccent,
           brightness: Brightness.light,
         ),
       ),
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
+          seedColor: Colors.deepPurple,
           brightness: Brightness.dark,
         ),
       ),

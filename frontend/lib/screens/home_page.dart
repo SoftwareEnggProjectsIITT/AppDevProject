@@ -75,8 +75,8 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: LiquidPullToRefresh(
               onRefresh: _handleRefresh,
-              color: Colors.blue,
-              backgroundColor: Colors.white,
+              color: Theme.of(context).colorScheme.primary,
+              backgroundColor: Theme.of(context).colorScheme.onPrimary,
               showChildOpacityTransition: false,
               child: ListView.builder(
                 controller: _scrollController,
