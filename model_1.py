@@ -14,7 +14,7 @@ from langchain.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain.chains import RetrievalQA
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
 from langchain.retrievers.multi_query import MultiQueryRetriever
 
 # STEP 2: Configure Gemini API
@@ -55,7 +55,11 @@ vector_db = Chroma.from_documents(
 )
 
 # STEP 9: Setup Gemini LLM
-llm = genai.GenerativeModel("gemini-2.5-flash")
+llm = ChatGoogleGenerativeAI(
+    model = "gemini-2.5-flash",
+    google_api_key = GEMINI_API_KEY,
+    temperature = 0.2
+)
 
 QUERY_PROMPT = PromptTemplate(
     input_variables=["question"],
@@ -95,8 +99,7 @@ chain = (
 
 # STEP 11: Test the pipeline
 user_question = "What is the Preamble of the Constitution, and what are its key words?"
-back_prompt = "Explain your reasoning and tell section or page number where it can be found"
-answer = chain.invoke(user_question+back_prompt)
+answer = chain.invoke(user_question)
 
 print("\nQ:", user_question)
 print("A:", answer)
