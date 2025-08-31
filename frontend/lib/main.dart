@@ -66,7 +66,7 @@ class FirebaseAuthWrapper extends StatelessWidget {
         if (snapshot.data != null) {
           return const WidgetTree();
         }
-        return const WidgetTree(); 
+        return const LoginScreen(); 
       },
     );
   }
