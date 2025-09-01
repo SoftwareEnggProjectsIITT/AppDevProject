@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:frontend/models/post_data.dart';
-import 'package:frontend/widgets/like_button.dart';
 import 'package:frontend/widgets/bookmark_button.dart';
 import 'package:frontend/widgets/post_image.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PostPage extends StatefulWidget {
   const PostPage({super.key, required this.post});
@@ -13,13 +14,45 @@ class PostPage extends StatefulWidget {
 }
 
 class _PostPageState extends State<PostPage> {
-  bool isLiked = false;
 
+  String preprocessText(String input) {
+    return input
+      .replaceAll(RegExp(r'\[at\]', caseSensitive: false), '@')
+      .replaceAll(RegExp(r'\[dot\]', caseSensitive: false), '.');
+  }
+
+  Future<void> onLinkOpen(BuildContext context, String url) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final uri = Uri.parse(url);
+
+    if (uri.scheme == 'mailto') {
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri);
+      } else {
+        messenger.showSnackBar(
+          SnackBar(content: Text("Could not open email client for ${uri.path}")),
+        );
+      }
+    } 
+    else {
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      } else {
+        messenger.showSnackBar(
+          SnackBar(content: Text("Could not open $url")),
+        );
+      }
+    }  
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          BookmarkButton(post: widget.post),
+        ],
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -50,41 +83,28 @@ class _PostPageState extends State<PostPage> {
             const SizedBox(height: 16),
 
             // Body
-            Text(
-              widget.post.body,
-              style: const TextStyle(
-                fontSize: 16,
+            SelectableLinkify(
+              text: preprocessText("${widget.post.body} https://x.com/"),
+              style: const TextStyle(fontSize: 16),
+              linkStyle: const TextStyle(
+                color: Colors.blue,
+                decoration: TextDecoration.underline,
               ),
+              onOpen: (link) async {
+                onLinkOpen(context, link.url);
+              },
+              options: const LinkifyOptions(humanize: false),
+              contextMenuBuilder: (BuildContext context, EditableTextState editableTextState) {
+                return AdaptiveTextSelectionToolbar.editableText(
+                  editableTextState: editableTextState
+                );
+              },
             ),
             const SizedBox(height: 24),
 
-            // Footer: Likes + Bookmark
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    LikeButton(
-                      isLiked: isLiked,
-                      onTap: () {
-                        setState(() {
-                          isLiked = !isLiked;
-                        });
-                      },
-                    ),
-                    const SizedBox(width: 6),
-                    Text("${widget.post.likes + (isLiked ? 1 : 0)} likes"),
-                  ],
-                ),
-                BookmarkButton(post: widget.post),
-              ],
-            ),
-
-            const SizedBox(height: 12),
-
-            // Data field
+            // Date field
             Text(
-              "Posted on: ${widget.post.data}",
+              "Posted on: ${widget.post.date}",
               style: const TextStyle(
                 fontSize: 13,
                 color: Colors.grey,
@@ -96,4 +116,3 @@ class _PostPageState extends State<PostPage> {
     );
   }
 }
-

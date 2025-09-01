@@ -66,41 +66,37 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(12.0),
-            child: Text("Posts", style: TextStyle(fontSize: 20)),
-          ),
-          Expanded(
-            child: LiquidPullToRefresh(
-              onRefresh: _handleRefresh,
-              color: Theme.of(context).colorScheme.primary,
-              backgroundColor: Theme.of(context).colorScheme.onPrimary,
-              showChildOpacityTransition: false,
-              child: ListView.builder(
-                controller: _scrollController,
-                physics: const AlwaysScrollableScrollPhysics(),
-                itemCount: _posts.length,
-                itemBuilder: (context, index) {
-                  final post = _posts[index];
-                  return PostCard(post: post);
-                },
-              ),
-            ),
-          ),
-        ],
+      body: LiquidPullToRefresh(
+        onRefresh: _handleRefresh,
+        color: Theme.of(context).colorScheme.primary,
+        backgroundColor: Theme.of(context).colorScheme.onPrimary,
+        showChildOpacityTransition: false,
+        child: ListView.builder(
+          controller: _scrollController,
+          physics: const AlwaysScrollableScrollPhysics(),
+          itemCount: _posts.length + 1,
+          itemBuilder: (context, index) {
+            if (index == 0) {
+              return const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text("Posts", style: TextStyle(fontSize: 20)),
+              );
+            }
+            final post = _posts[index - 1];
+            return PostCard(post: post, needLike: true);
+          },
+        ),
       ),
+
       floatingActionButton: _showBackToTopButton
-          ? FloatingActionButton(
-              mini: true,
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
-              onPressed: _scrollToTop,
-              child: const Icon(Icons.arrow_upward, size: 20),
-            )
-          : null,
+      ? FloatingActionButton(
+        mini: true,
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+        onPressed: _scrollToTop,
+        child: const Icon(Icons.arrow_upward, size: 20),
+      )
+      : null,
     );
   }
 }
-
