@@ -81,7 +81,7 @@ MINISTRY_LOGOS_LINKS = {
     "NITI Aayog": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_India.svg",
     "PM Speech": "https://commons.wikimedia.org/wiki/Special:FilePath/PMO_India_Logo.svg",
     "EAC-PM": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_India.svg",
-    "UPSC": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_India.svg",
+    "UPSC": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Drishti_IAS_Logo.png",
     "Special Service and Features": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_India.svg",
     "PIB Headquarters": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_India.svg",
     "Office of Principal Scientific Advisor to Government of India": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem_of_India.svg",
