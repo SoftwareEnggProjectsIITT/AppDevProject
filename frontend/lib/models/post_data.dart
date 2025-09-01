@@ -2,7 +2,7 @@ class PostData {
   PostData({
     required this.body,
     required this.category,
-    required this.data,
+    required this.date,
     required this.image_link,
     required this.likes,
     required this.title,
@@ -10,16 +10,16 @@ class PostData {
 
   final String body;
   final String category;
-  final String data;
+  final String date;
   final String image_link;
-  final int likes;
+  int likes;
   final String title;
 
   factory PostData.fromJson(Map<dynamic, dynamic> json) {
     return PostData(
       body: json['body'] ?? '',
       category: json['category'] ?? '',
-      data: json['data'] ?? '',
+      date: json['date'] ?? '',
       image_link: json['image_link'] ?? '',
       likes: json['likes'] ?? 0,
       title: json['title'] ?? '',
@@ -30,7 +30,7 @@ class PostData {
     return {
       'body': body,
       'category': category,
-      'data': data,
+      'date': date,
       'image_link': image_link,
       'likes': likes,
       'title': title,
