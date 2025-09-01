@@ -37,10 +37,8 @@ class _BookmarkButtonState extends ConsumerState<BookmarkButton> {
           isAnimating = true;
         });
 
-        // Toggle bookmark in Riverpod state
         await ref.read(bookmarksProvider.notifier).toggleBookmark(widget.post);
 
-        // Simple animation delay
         await Future.delayed(const Duration(milliseconds: 200));
         if (mounted) {
           setState(() {
