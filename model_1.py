@@ -284,10 +284,7 @@ Do not answer the question, only produce the reformulated queries.
                  "data_for_rag\Labour_&_Employment\A2013-14.pdf",
                  "data_for_rag\Labour_&_Employment\A194863.pdf",
                  "data_for_rag\Labour_&_Employment\maternity_benefit.pdf",
-                 "data_for_rag\Labour_&_Employment\payment_of_wages_act_1936.pdf",
-                 "data_for_rag\Labour_&_Employment/the_code_on_wages_as_introduced.pdf",
-                 "data_for_rag\Labour_&_Employment/the_industrial_disputes_act.pdf",
-                 "data_for_rag\Labour_&_Employment/thepaymentofbonusact1965.pdf"],
+                 "data_for_rag\Labour_&_Employment\payment_of_wages_act_1936.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -462,4 +459,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 #Testing and improving
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 17))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 3))
