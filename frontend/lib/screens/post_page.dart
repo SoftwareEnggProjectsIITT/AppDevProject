@@ -59,7 +59,10 @@ class _PostPageState extends State<PostPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Image
-            PostImage(url: widget.post.image_link),
+            Hero(
+              tag: widget.post.image_link,
+              child: PostImage(url: widget.post.image_link)
+            ),
             const SizedBox(height: 12),
 
             // Category
