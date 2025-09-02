@@ -93,7 +93,6 @@ class _HomePageState extends State<HomePage> {
             return PostCard(
               post: post,
               needLike: true,
-              feed: feed,
               postService: _postService,
             );
           },
