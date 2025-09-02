@@ -34,6 +34,25 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    2: {
+        "pdfs": ["data_for_rag\Banking_&_Finance_Insurance_Security/a1934-2.pdf",
+                 "data_for_rag\Banking_&_Finance_Insurance_Security/A1999_41.pdf",
+                 "data_for_rag\Banking_&_Finance_Insurance_Security/A2002-54.pdf",
+                 "data_for_rag\Banking_&_Finance_Insurance_Security/A194910.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Banking, Finance Insurance Security in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -136,4 +155,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How does the Act define sugar and food-crops?", 1))
+print(ask_question("How do Indian banking laws empower banks to recover loans from defaulters under the RBI Act, Banking Regulation Act, DRT Act, and SARFAESI Act?", 2))
