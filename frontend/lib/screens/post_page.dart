@@ -60,7 +60,7 @@ class _PostPageState extends State<PostPage> {
           children: [
             // Image
             Hero(
-              tag: widget.post.image_link,
+              tag: '${widget.post.image_link} post page',
               child: PostImage(url: widget.post.image_link),
             ),
             const SizedBox(height: 12),

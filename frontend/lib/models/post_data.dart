@@ -6,6 +6,7 @@ class PostData {
     required this.image_link,
     required this.likes,
     required this.title,
+    this.isLiked = false,
   });
 
   final String body;
@@ -14,6 +15,9 @@ class PostData {
   final String image_link;
   int likes;
   final String title;
+  String? id;
+
+  bool isLiked;
 
   factory PostData.fromJson(Map<dynamic, dynamic> json) {
     return PostData(
@@ -38,3 +42,16 @@ class PostData {
   }
 }
 
+extension PostDataWithId on PostData {
+  Map<String, dynamic> toJsonWithId() {
+    final json = toJson();
+    json['id'] = id;
+    return json;
+  }
+
+  static PostData fromJsonWithId(Map<String, dynamic> json) {
+    final post = PostData.fromJson(json);
+    post.id = json['id'];
+    return post;
+  }
+}
