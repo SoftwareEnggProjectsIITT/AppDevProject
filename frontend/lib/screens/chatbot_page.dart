@@ -1,33 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:frontend/widgets/message_box.dart';
+import 'package:frontend/widgets/reply.dart';
 
-class ChatbotPage extends StatefulWidget {
+final messagesProvider = StateProvider<List<String>>((ref) => []);
+
+class ChatbotPage extends ConsumerWidget {
   const ChatbotPage({super.key});
 
   @override
-  State<ChatbotPage> createState() => _ChatbotPageState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final messages = ref.watch(messagesProvider);
 
-class _ChatbotPageState extends State<ChatbotPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Expanded(child: Container()), // Your chat list here
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MessageBox(
-                onSend: (msg) {
-                  print("User sent: $msg");
-                  // 👉 Save to Firestore or send to AI here
-                },
-              ),
+    return Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              reverse: true,
+              padding: const EdgeInsets.all(12),
+              itemCount: messages.length,
+              itemBuilder: (context, index) {
+                final msg = messages[messages.length - 1 - index];
+                return Align(
+                  alignment: (messages.length - 1 - index).isEven
+                      ? Alignment.centerRight
+                      : Alignment.centerLeft,
+                  child: (messages.length - 1 - index).isOdd
+                      ? Reply(reply: msg)
+                      : Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          gradient: LinearGradient(colors: [
+                            const Color.fromARGB(255, 48, 143, 51),
+                            const Color.fromARGB(255, 48, 143, 51),
+                          ])
+                        ),
+                        child: Text(msg, style: TextStyle(color: Colors.white),)
+                      )
+                );
+              },
             ),
-          ],
-        ),
-      ),
-    );
+          ),
+          MessageBox(
+            onSend: (text) {
+              if (text.trim().isNotEmpty) {
+                ref.read(messagesProvider.notifier).update((state) => [...state, text]);
+              }
+            },
+          ),
+        ],
+      );
   }
 }
