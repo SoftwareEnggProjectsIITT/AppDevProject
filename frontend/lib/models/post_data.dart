@@ -14,6 +14,7 @@ class PostData {
   final String image_link;
   int likes;
   final String title;
+  String? id;
 
   factory PostData.fromJson(Map<dynamic, dynamic> json) {
     return PostData(
