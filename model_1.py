@@ -90,7 +90,27 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
-    
+    5: {
+        "pdfs": ["data_for_rag\Consumer_Public_interest_Safety/200634_food_safety_and_standards_act,_2006.pdf",
+                 "data_for_rag\Consumer_Public_interest_Safety\drug_cosmeticsa1940-23.pdf",
+                 "data_for_rag\Consumer_Public_interest_Safety\eng201935.pdf",
+                 "data_for_rag\Consumer_Public_interest_Safety\essential_commodities_act_1955.pdf",
+                 "data_for_rag\Consumer_Public_interest_Safety\legalmetrology_act_2009.pdf",
+                 "data_for_rag\Consumer_Public_interest_Safety/right_yo_information_act.pdf",],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Consumer Public Interest Safety in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -193,4 +213,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 4))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 5))
