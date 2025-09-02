@@ -253,6 +253,31 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    13: {
+        "pdfs": ["data_for_rag\Juvenile_Family_Personal_law/189008.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\A1869-04.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\A1872-15.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\A1937-26.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\A1955-25.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law/a2016-2.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\AAA1956suc___30.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\protection_of_women_from_domestic_violence_act,_2005.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law\special_marriage_act.pdf",
+                 "data_for_rag\Juvenile_Family_Personal_law/the_hindu_adoptions_and_maintenance_act,1965.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Juvenile Family and Personal Laws in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
     
 
 }
@@ -356,4 +381,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 12))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 13))
