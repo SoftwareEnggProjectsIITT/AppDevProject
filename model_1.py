@@ -235,7 +235,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     12: {
-        "pdfs": ["data_for_rag\IT_Data_Telecom\2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+        "pdfs": ["data_for_rag\IT_Data_Telecom/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
                  "data_for_rag\IT_Data_Telecom\engaadhaar.pdf",
                  "data_for_rag\IT_Data_Telecom\indiantelegraphact_1885.pdf",
                  "data_for_rag\IT_Data_Telecom\it_act_2000_updated.pdf"],
@@ -243,7 +243,7 @@ Do not answer the question, only produce the reformulated queries.
             input_variables=["question"],
             template="""
 You are an expert query reformulator.  
-The user has asked the following question about Intellectual Property Laws in India:  
+The user has asked the following question about IT, Data and Telecom Laws in India:  
 
 Question: {question}  
 
@@ -253,6 +253,7 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    
 
 }
 
