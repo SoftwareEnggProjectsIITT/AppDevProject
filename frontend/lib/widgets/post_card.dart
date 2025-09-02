@@ -25,8 +25,6 @@ class PostCard extends StatefulWidget {
 
 class _PostCardState extends State<PostCard> {
 
-  bool isLiked = false;
-
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -47,7 +45,6 @@ class _PostCardState extends State<PostCard> {
               )
             )
           );
-          widget.postService?.increaseScoreRemote(widget.post.id!, 0.5);
         },
 
         child: Padding(
@@ -108,16 +105,18 @@ class _PostCardState extends State<PostCard> {
                   ? Row(
                     children: [
                       LikeButton(
-                        isLiked: isLiked,
+                        isLiked: widget.post.isLiked,
                         onTap: () {
                           setState(() {
-                            if (!isLiked) {
+                            if (!widget.post.isLiked) {
                               widget.post.likes++;
+                              widget.postService?.addRemoteLikes(widget.post.id!, 1);
                             }
                             else {
                               widget.post.likes--;
+                              widget.postService?.addRemoteLikes(widget.post.id!, -1);
                             }
-                            isLiked = !isLiked;
+                            widget.post.isLiked = !widget.post.isLiked;
                           });
                         },
                       ),

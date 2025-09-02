@@ -62,7 +62,7 @@ class PostService {
     return posts;
   }
 
-  Future<void> increaseScoreRemote(
+  Future<void> addRemoteLikes(
     String id,
     double delta,
   ) async {
