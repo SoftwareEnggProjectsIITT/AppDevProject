@@ -234,6 +234,25 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    12: {
+        "pdfs": ["data_for_rag\IT_Data_Telecom\2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+                 "data_for_rag\IT_Data_Telecom\engaadhaar.pdf",
+                 "data_for_rag\IT_Data_Telecom\indiantelegraphact_1885.pdf",
+                 "data_for_rag\IT_Data_Telecom\it_act_2000_updated.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Intellectual Property Laws in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -336,4 +355,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 11))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 12))
