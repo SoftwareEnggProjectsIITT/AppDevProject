@@ -134,6 +134,27 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    7: {
+        "pdfs": ["data_for_rag\Crime_Special_statutes\A1959_54.pdf",
+                 "data_for_rag\Crime_Special_statutes\A1967-37.pdf",
+                 "data_for_rag\Crime_Special_statutes\A2003-15.pdf",
+                 "data_for_rag\Crime_Special_statutes\corruptiona1988-49.pdf",
+                 "data_for_rag\Crime_Special_statutes\scheduled_castes_and_the_scheduled_tribes.pdf",
+                 "data_for_rag\Crime_Special_statutes/the_immoral_traffic_(prevention)_act,_1956.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Crime, Special Statutes Laws in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -236,4 +257,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 6))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 7))
