@@ -19,25 +19,36 @@ class _LoginScreenState extends State<LoginScreen> {
 
   /// Handles the Google Sign-in process and navigates to the next screen.
   Future<void> _handleGoogleSignIn() async {
+    if (!mounted) return;
+
     setState(() {
       _isLoading = true;
     });
 
     try {
       final user = await _auth.signInWithGoogle();
+
+      if (!mounted) return; // check again after await
+
       if (user != null) {
         userNotifier.value = user;
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const WidgetTree(),
-          ),
+          MaterialPageRoute(builder: (context) => const WidgetTree()),
         );
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Google Sign-in failed or was cancelled.')));
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Google Sign-in failed or was cancelled.'),
+          ),
+        );
       }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Authentication failed")));
+      if (!mounted) return;
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text("Authentication failed")));
     } finally {
+      if (!mounted) return;
       setState(() {
         _isLoading = false;
       });
@@ -47,28 +58,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-            children: [
-              LoginPageBuilder(),
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 10, right: 10, bottom: 20),
-                child: ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 50),
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.black,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(color: Colors.grey),
-                    ),
-                  ),
-                  onPressed:_isLoading ? null : _handleGoogleSignIn,
-                  icon: Image.asset('assets/images/google_logo.png', height: 24,),
-                  label: const Text("Sign in with Google"),
-                ),
-              ),
-            ],
-          )
-      );
+      body: LoginPageBuilder(
+        isLoading: _isLoading,
+        handleSignIn: _handleGoogleSignIn,
+      ),
+    );
   }
 }
