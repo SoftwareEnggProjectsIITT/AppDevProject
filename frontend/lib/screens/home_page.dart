@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/models/feed_entry.dart';
 import 'package:frontend/models/post_data.dart';
 import 'package:frontend/services/post_service.dart';
 import 'package:frontend/widgets/post_card.dart';
@@ -15,7 +16,10 @@ class _HomePageState extends State<HomePage> {
   final PostService _postService = PostService();
   final ScrollController _scrollController = ScrollController();
 
-  List<PostData> _posts = [];
+  List<PostData> posts = []; // This is the one that fetches from firebase
+  List<FeedEntry> feed = []; // This contains the order of posts a/c to user
+  List<PostData> _posts = []; // These are the posts that finally renders
+
   bool _showBackToTopButton = false;
 
   @override
@@ -43,7 +47,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _loadPosts() async {
-    List<PostData> posts = await _postService.fetchPosts();
+    posts = await _postService.fetchPosts();
+    feed = await _postService.fetchFeedOrder("Sarang");
+    posts = _postService.sortPostsByFeed(posts, feed);
+
     if (mounted) {
       setState(() {
         _posts = posts;
@@ -83,7 +90,12 @@ class _HomePageState extends State<HomePage> {
               );
             }
             final post = _posts[index - 1];
-            return PostCard(post: post, needLike: true);
+            return PostCard(
+              post: post,
+              needLike: true,
+              feed: feed,
+              postService: _postService,
+            );
           },
         ),
       ),

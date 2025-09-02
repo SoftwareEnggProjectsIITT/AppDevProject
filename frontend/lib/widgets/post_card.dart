@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/models/feed_entry.dart';
 import 'package:frontend/models/post_data.dart';
 import 'package:frontend/screens/post_page.dart';
+import 'package:frontend/services/post_service.dart';
 import 'package:frontend/widgets/bookmark_button.dart';
 import 'package:frontend/widgets/like_button.dart';
 import 'package:frontend/widgets/post_image.dart';
 
 class PostCard extends StatefulWidget {
-  const PostCard({super.key, required this.post, required this.needLike});
+  const PostCard({
+    super.key,
+    required this.post,
+    required this.needLike,
+    required this.feed,
+    required this.postService,
+  });
+
   final PostData post;
   final bool needLike;
+
+  final List<FeedEntry> feed; // This contains the order of posts a/c to user
+  final PostService postService;
 
   @override
   State<PostCard> createState() => _PostCardState();
@@ -38,6 +50,7 @@ class _PostCardState extends State<PostCard> {
               )
             )
           );
+          widget.postService.increaseScoreRemote("Sarang", widget.post.id!, 0.5);
         },
 
         child: Padding(
@@ -50,6 +63,7 @@ class _PostCardState extends State<PostCard> {
                 tag: widget.post.image_link,
                 child: PostImage(url: widget.post.image_link),
               ),
+              Text(widget.post.id!),
 
               const SizedBox(height: 12),
 
