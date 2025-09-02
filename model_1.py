@@ -286,8 +286,6 @@ Do not answer the question, only produce the reformulated queries.
                  "data_for_rag\Labour_&_Employment\maternity_benefit.pdf",
                  "data_for_rag\Labour_&_Employment\payment_of_wages_act_1936.pdf",
                  "data_for_rag\Labour_&_Employment/the_code_on_wages_as_introduced.pdf",
-                 "data_for_rag\Labour_&_Employment/the_employees_provident_funds_and_miscellaneous_provisions_act,_1952_no_19_of_1952_date_04.03.1952_.pdf",
-                 "data_for_rag\Labour_&_Employment/the_employees_state_insurance_act,_1948_no._34_of_1948_date_19.04.1948.pdf",
                  "data_for_rag\Labour_&_Employment/the_industrial_disputes_act.pdf",
                  "data_for_rag\Labour_&_Employment/thepaymentofbonusact1965.pdf"],
         "QUERY_PROMPT": PromptTemplate(
@@ -304,7 +302,25 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
-    
+    15: {
+        "pdfs": ["data_for_rag\Misc_Procedure_Governance\A1923-19.pdf",
+                 "data_for_rag\Misc_Procedure_Governance/a1972-52.pdf",
+                 "data_for_rag\Misc_Procedure_Governance/a1996-26.pdf",
+                 "data_for_rag\Misc_Procedure_Governance\A2005-53.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Miscellaneous Procedure Governance Laws in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -407,4 +423,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 14))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 15))
