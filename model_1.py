@@ -53,6 +53,44 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    3: {
+        "pdfs": ["data_for_rag\Civil_procedure_Civil_law_Property/189304.pdf",
+                 "data_for_rag\Civil_procedure_Civil_law_Property\A1948-56.pdf",
+                 "data_for_rag\Civil_procedure_Civil_law_Property/a1958-28.pdf",
+                 "data_for_rag\Civil_procedure_Civil_law_Property\A1963-47.pdf",
+                 "data_for_rag\Civil_procedure_Civil_law_Property/the_registration_act,1908.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Civil Procedure, Civil Law Property in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
+    4: {
+        "pdfs": ["data_for_rag\Constitutional_General/20240716890312078.pdf",
+                 "data_for_rag\Constitutional_General/the_general_clauses_act,_1897.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Civil Procedure, Civil Law Property in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
+    
 
 }
 
@@ -155,4 +193,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian banking laws empower banks to recover loans from defaulters under the RBI Act, Banking Regulation Act, DRT Act, and SARFAESI Act?", 2))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 4))
