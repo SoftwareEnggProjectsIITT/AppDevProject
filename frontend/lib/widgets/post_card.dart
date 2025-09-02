@@ -48,7 +48,7 @@ class _PostCardState extends State<PostCard> {
               // Image
               Hero(
                 tag: widget.post.image_link,
-                child: PostImage(url: widget.post.image_link)
+                child: PostImage(url: widget.post.image_link),
               ),
 
               const SizedBox(height: 12),

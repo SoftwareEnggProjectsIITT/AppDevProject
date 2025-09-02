@@ -1,0 +1,7 @@
+firebase_admin
+selenium
+bs4
+fastapi
+regex
+uvicorn
+playwright

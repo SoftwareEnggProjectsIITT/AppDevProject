@@ -47,25 +47,33 @@ class MyApp extends ConsumerWidget {
   }
 }
 
-class FirebaseAuthWrapper extends StatelessWidget {
+class FirebaseAuthWrapper extends StatefulWidget {
   const FirebaseAuthWrapper({super.key});
 
   @override
+  State<FirebaseAuthWrapper> createState() => _FirebaseAuthWrapperState();
+}
+
+class _FirebaseAuthWrapperState extends State<FirebaseAuthWrapper> {
+  @override
+  void initState() {
+    super.initState();
+    // Keep userNotifier in sync with Firebase user changes
+    FirebaseAuth.instance.authStateChanges().listen((user) {
+      userNotifier.value = user;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return StreamBuilder<User?>(
-      stream: FirebaseAuth.instance.authStateChanges(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
+    return ValueListenableBuilder<User?>(
+      valueListenable: userNotifier,
+      builder: (context, user, _) {
+        if (user == null) {
+          return const LoginScreen();
         }
-        if (snapshot.data != null) {
-          return const WidgetTree();
-        }
-        return const LoginScreen(); 
+        return const WidgetTree();
       },
     );
   }
 }
-
