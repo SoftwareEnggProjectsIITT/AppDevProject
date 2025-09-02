@@ -387,7 +387,7 @@ def build_chain(category_id: int):
     print(f"Total documents loaded: {len(all_docs)}")
 
     #Split into chunks
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=2500, chunk_overlap=400)
     chunks = text_splitter.split_documents(all_docs)
 
 
