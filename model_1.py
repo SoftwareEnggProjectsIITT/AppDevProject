@@ -193,6 +193,27 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    10: {
+        "pdfs": ["data_for_rag\Environment_Forest_Wildlife_Biodiversity/air_act-1981.pdf",
+                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity\ep_act_1986.pdf",
+                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_biological_diversity_act,_2002.pdf",
+                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_forest_(conservation)_act,_1980.pdf",
+                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
+                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_wild_life_(protection)_act,_1972.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Education Health Medical regulation Laws in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -295,4 +316,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 9))
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 10))
