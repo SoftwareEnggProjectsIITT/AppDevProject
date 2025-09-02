@@ -1,13 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# STEP 1: Install dependencies
-# pip install google-generativeai langchain langchain-community langchain-google-genai chromadb
-
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-from langchain_community.document_loaders import UnstructuredPDFLoader
+from langchain_community.document_loaders import UnstructuredPDFLoader, PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
@@ -19,40 +13,29 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 
 #Configure Gemini API
 load_dotenv()
-
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
-#Load PDF documents
-local_path = ["consti.pdf"]
-all_docs = []
+#Defining Categories for which pdf to pass to embed and corresponding QUERY_PROMPT for it
+categories = {
+    1: {
+        "pdfs": ["data_for_rag/Agriculture_Co-operatives_Farm_laws/essential_commodities_act_1955.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Agriculture, Co-operatives, and Farm Laws in India:  
 
-if local_path:
-    for path in local_path:
-        loader = UnstructuredPDFLoader(file_path=path)
-        data = loader.load()
-        all_docs.extend(data)
+Question: {question}  
 
-    print(f"Total documents loaded: {len(all_docs)}")
-else:
-    print("PDF file not uploaded")
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
-#Split into chunks
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
-chunks = text_splitter.split_documents(all_docs)
-
-#Embeddings with Gemini too
-embedding_model = GoogleGenerativeAIEmbeddings(
-    model="models/embedding-001",
-    google_api_key=GEMINI_API_KEY   #pass API key here
-)
-
-#Chroma vector DB
-vector_db = Chroma.from_documents(
-    documents=chunks,
-    embedding=embedding_model,
-    collection_name="gemini-rag"
-)
+}
 
 # Gemini LLM
 llm = ChatGoogleGenerativeAI(
@@ -61,68 +44,79 @@ llm = ChatGoogleGenerativeAI(
     temperature = 1
 )
 
-QUERY_PROMPT = PromptTemplate(
-    input_variables=["question"],
-    template="""
-You are an expert query reformulator.  
-The user has asked the following question about the Indian Constitution:  
-
-Question: {question}  
-
-Generate 3 alternative queries that may retrieve relevant passages from the documents.  
-Make sure they are semantically different but preserve the meaning.  
-Do not answer the question, only produce the reformulated queries.
-"""
+#Embeddings with Gemini too
+embedding_model = GoogleGenerativeAIEmbeddings(
+    model="models/embedding-001",
+    google_api_key=GEMINI_API_KEY
 )
 
+#Build a general pipeline for the selected documents and query
+def build_chain(category_id: int):
+    if category_id not in categories:
+        raise ValueError(f"Invalid category {category_id}. Choose from {list(categories.keys())}")
 
-#Retriever
-retriever = MultiQueryRetriever.from_llm(
-    vector_db.as_retriever(),
-    llm,
-    prompt=QUERY_PROMPT
-)
+    all_docs = []
+    for path in categories[category_id]["pdfs"]:
+        loader = UnstructuredPDFLoader(file_path=path)
+        data = loader.load()
+        all_docs.extend(data)
 
-#Define custom RAG prompt
-template = """
-You are an expert assistant. First, check if the provided context has the answer. 
-If yes, answer using context. 
-If not, use your own knowledge to answer accurately.
- 
+    print(f"Total documents loaded: {len(all_docs)}")
 
-Provide a concise explanation and include page or section numbers from the context if available.  
-
-Context:
-{context}
-
-Question: {question}
-
-Instructions:
-- Summarize clearly in 3–5 sentences.  
-- Highlight important keywords.  
-- Always cite the page/section numbers at the end.  
-"""
+    #Split into chunks
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
+    chunks = text_splitter.split_documents(all_docs)
 
 
-prompt = ChatPromptTemplate.from_template(template)
+    #Chroma vector DB
+    vector_db = Chroma.from_documents(
+        documents=chunks,
+        embedding=embedding_model,
+        collection_name="gemini-rag"
+    )
+
+    #Retriever
+    retriever = MultiQueryRetriever.from_llm(
+        vector_db.as_retriever(),
+        llm,
+        prompt=categories[category_id]["QUERY_PROMPT"]
+    )
+
+    #Define custom RAG prompt
+    template = """
+    You are an expert assistant. First, check if the provided context has the answer. 
+    If yes, answer using context. 
+    If not, use your own knowledge to answer accurately.
+    
+
+    Provide a concise explanation and include page or section or article numbers from the context if available.  
+
+    Context:
+    {context}
+
+    Question: {question}
+
+    Instructions:
+    - Summarize clearly in 3–5 sentences.  
+    - Highlight important keywords.  
+    - Always cite the page/section numbers at the end.  
+    """
 
 
-#RAG chain
-chain = (
-    {"context": retriever, "question": RunnablePassthrough()}
-    | prompt
-    | llm
-    | StrOutputParser()
-)
+    prompt = ChatPromptTemplate.from_template(template)
 
-#Test the pipeline
-'''
-prompt = "What is the Preamble of the Constitution, and what are its key words?"
-back_prompt = "Explain your reasoning and tell section or page number where it can be found"
-answer = chain.invoke(prompt+back_prompt)
-'''
 
-def ask_constitution(query: str) -> str:
+    #RAG chain
+    chain = (
+        {"context": retriever, "question": RunnablePassthrough()}
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+    return chain
+
+
+def ask_question(query: str, category_id: int) -> str:
     """
     Query the RAG pipeline with a user question.
     
@@ -133,9 +127,13 @@ def ask_constitution(query: str) -> str:
         str: Formatted answer from the RAG pipeline.
     """
     try:
+        chain = build_chain(category_id)
         back_prompt = "Explain your reasoning and tell section or page number where it can be found"
         query = query + back_prompt
         answer = chain.invoke(query)
         return answer.strip()
     except Exception as e:
         return f"Error: {str(e)}"
+
+
+print(ask_question("How does the Act define sugar and food-crops?", 1))
