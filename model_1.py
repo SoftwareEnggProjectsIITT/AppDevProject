@@ -215,11 +215,11 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     11: {
-        "pdfs": ["data_for_rag\Intellectual_Property\200016.pdf",
+        "pdfs": ["data_for_rag\Intellectual_Property/200016.pdf",
                  "data_for_rag\Intellectual_Property\A1970-39.pdf",
                  "data_for_rag\Intellectual_Property\A1999-48.pdf",
-                 "data_for_rag\Intellectual_Property\the_copyright_act,_1957.pdf",
-                 "data_for_rag\Intellectual_Property\the_trade_marks_act,_1999.pdf"],
+                 "data_for_rag\Intellectual_Property/the_copyright_act,_1957.pdf",
+                 "data_for_rag\Intellectual_Property/the_trade_marks_act,_1999.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
