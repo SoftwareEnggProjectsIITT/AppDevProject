@@ -341,6 +341,25 @@ Do not answer the question, only produce the reformulated queries.
 """
         )
     },
+    17: {
+        "pdfs": ["data_for_rag\Transport_Infrastructure/197833.pdf",
+                 "data_for_rag\Transport_Infrastructure/a1988-59.pdf",
+                 "data_for_rag\Transport_Infrastructure\AAA1956____48.pdf",
+                 "data_for_rag\Transport_Infrastructure/the_railways_act,_1989.pdf"],
+        "QUERY_PROMPT": PromptTemplate(
+            input_variables=["question"],
+            template="""
+You are an expert query reformulator.  
+The user has asked the following question about Taxation, Indirect Tax Laws in India:  
+
+Question: {question}  
+
+Generate 3 alternative queries that may retrieve relevant passages from the documents.  
+Make sure they are semantically different but preserve the meaning.  
+Do not answer the question, only produce the reformulated queries.
+"""
+        )
+    },
 
 }
 
@@ -442,5 +461,5 @@ def ask_question(query: str, category_id: int) -> str:
     except Exception as e:
         return f"Error: {str(e)}"
 
-
-print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 16))
+#Testing and improving
+print(ask_question("How do Indian property and registration laws regulate transfer, registration, and limitation of rights in immovable property under the Transfer of Property Act, Registration Act, and Limitation Act?", 17))
