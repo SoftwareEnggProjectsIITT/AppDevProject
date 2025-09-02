@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/models/feed_entry.dart';
 import 'package:frontend/models/post_data.dart';
 import 'package:frontend/screens/post_page.dart';
 import 'package:frontend/services/post_service.dart';
@@ -12,15 +11,13 @@ class PostCard extends StatefulWidget {
     super.key,
     required this.post,
     required this.needLike,
-    required this.feed,
-    required this.postService,
+    this.postService,
   });
 
   final PostData post;
   final bool needLike;
 
-  final List<FeedEntry> feed; // This contains the order of posts a/c to user
-  final PostService postService;
+  final PostService? postService;
 
   @override
   State<PostCard> createState() => _PostCardState();
@@ -50,7 +47,7 @@ class _PostCardState extends State<PostCard> {
               )
             )
           );
-          widget.postService.increaseScoreRemote("Sarang", widget.post.id!, 0.5);
+          widget.postService?.increaseScoreRemote(widget.post.id!, 0.5);
         },
 
         child: Padding(
@@ -60,10 +57,10 @@ class _PostCardState extends State<PostCard> {
             children: [
               // Image
               Hero(
-                tag: widget.post.image_link,
+                tag: '${widget.post.image_link} post card',
                 child: PostImage(url: widget.post.image_link),
               ),
-              Text(widget.post.id!),
+              if (widget.post.id != null) Text(widget.post.id!),
 
               const SizedBox(height: 12),
 

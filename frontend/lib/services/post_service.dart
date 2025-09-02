@@ -63,22 +63,17 @@ class PostService {
   }
 
   Future<void> increaseScoreRemote(
-    String userId,
-    String postId,
+    String id,
     double delta,
   ) async {
-    final response = await http.post(
-      Uri.parse("https://appdevproject-39ac.onrender.com/feed/$userId"),
-      headers: {"Content-Type": "application/json"},
-      body: jsonEncode({
-        "user_id": userId,
-        "post_id": postId,
-        "delta": delta,
-      }),
-    );
+    final postRef = _dbRef.child(id).child("likes");
 
-    if (response.statusCode != 200) {
-      throw Exception("Failed to update score: ${response.statusCode}");
-    }
+    await postRef.runTransaction((currentLikes) {
+      if (currentLikes == null) {
+        return Transaction.success(delta);
+      }
+      final updatedLikes = (currentLikes as int) + delta;
+      return Transaction.success(updatedLikes);
+    });
   }
 }

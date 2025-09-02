@@ -39,3 +39,16 @@ class PostData {
   }
 }
 
+extension PostDataWithId on PostData {
+  Map<String, dynamic> toJsonWithId() {
+    final json = toJson();
+    json['id'] = id;
+    return json;
+  }
+
+  static PostData fromJsonWithId(Map<String, dynamic> json) {
+    final post = PostData.fromJson(json);
+    post.id = json['id'];
+    return post;
+  }
+}
