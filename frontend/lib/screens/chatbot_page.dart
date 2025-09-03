@@ -55,7 +55,6 @@ class _ChatbotPageState extends State<ChatbotPage> {
                 );
               }
 
-              // Add one extra item for the loader when AI is responding.
               final itemCount = allMessages.length + (isAiResponding ? 1 : 0);
 
               return ListView.builder(
