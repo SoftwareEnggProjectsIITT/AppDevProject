@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from database import db
 from models import ChatRequest, ChatResponse, ChatListResponse, StatusResponse
-from model_1 import ask_constitution
+from modules.model_1 import ask_constitution
 from modules.generate_feed import generate_feed
 
 router = APIRouter(prefix="/chats", tags=["Chats"])
