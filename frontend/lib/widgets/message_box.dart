@@ -61,7 +61,7 @@ class _MessageBoxState extends State<MessageBox> {
                 minLines: 1,
                 maxLines: 4,
                 decoration: const InputDecoration(
-                  hintText: "Type a message...",
+                  hintText: "Ask your query...",
                   border: InputBorder.none,
                 ),
               ),
