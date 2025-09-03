@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/models/post_data.dart';
 import 'package:frontend/screens/post_page.dart';
+import 'package:frontend/services/post_service.dart';
 import 'package:frontend/widgets/bookmark_button.dart';
 import 'package:frontend/widgets/like_button.dart';
 import 'package:frontend/widgets/post_image.dart';
 
 class PostCard extends StatefulWidget {
-  const PostCard({super.key, required this.post, required this.needLike});
+  const PostCard({
+    super.key,
+    required this.post,
+    required this.needLike,
+    this.postService,
+  });
+
   final PostData post;
   final bool needLike;
+
+  final PostService? postService;
 
   @override
   State<PostCard> createState() => _PostCardState();
 }
 
 class _PostCardState extends State<PostCard> {
-
-  bool isLiked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +54,10 @@ class _PostCardState extends State<PostCard> {
             children: [
               // Image
               Hero(
-                tag: widget.post.image_link,
+                tag: '${widget.post.image_link} post card',
                 child: PostImage(url: widget.post.image_link),
               ),
+              if (widget.post.id != null) Text(widget.post.id!),
 
               const SizedBox(height: 12),
 
@@ -97,16 +105,18 @@ class _PostCardState extends State<PostCard> {
                   ? Row(
                     children: [
                       LikeButton(
-                        isLiked: isLiked,
+                        isLiked: widget.post.isLiked,
                         onTap: () {
                           setState(() {
-                            if (!isLiked) {
+                            if (!widget.post.isLiked) {
                               widget.post.likes++;
+                              widget.postService?.addRemoteLikes(widget.post.id!, 1);
                             }
                             else {
                               widget.post.likes--;
+                              widget.postService?.addRemoteLikes(widget.post.id!, -1);
                             }
-                            isLiked = !isLiked;
+                            widget.post.isLiked = !widget.post.isLiked;
                           });
                         },
                       ),
