@@ -110,11 +110,11 @@ class _HomePageState extends State<HomePage> {
           itemCount: _posts.length + 1,
           itemBuilder: (context, index) {
             if (index == 0) {
-                    return const Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Posts", style: TextStyle(fontSize: 20)),
-                    );
-                  }
+              return const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text("Posts", style: TextStyle(fontSize: 20)),
+              );
+            }
             final post = _posts[index - 1];
             return PostCard(
               post: post,

@@ -64,6 +64,7 @@ class PostService {
     return posts;
   }
 
+  // add likes to a post
   Future<void> addRemoteLikes(
     String id,
     double delta,
@@ -79,6 +80,7 @@ class PostService {
     });
   }
 
+  // increase category score for a user
   Future<void> increaseCategoryScore(String category, int delta) async {
     final user = FirebaseAuth.instance.currentUser!;
     final categoryRef = _dbUserRef.child(user.uid).child(category);
