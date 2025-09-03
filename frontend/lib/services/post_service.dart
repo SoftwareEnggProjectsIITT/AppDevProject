@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:frontend/models/feed_entry.dart';
 import 'package:frontend/models/post_data.dart';
@@ -7,6 +8,7 @@ import 'package:http/http.dart' as http;
 
 class PostService {
   final DatabaseReference _dbRef = FirebaseDatabase.instance.ref("posts");
+  final DatabaseReference _dbUserRef = FirebaseDatabase.instance.ref("users");
 
   // get all the posts
   Future<List<PostData>> fetchPosts() async {
@@ -74,6 +76,19 @@ class PostService {
       }
       final updatedLikes = (currentLikes as int) + delta;
       return Transaction.success(updatedLikes);
+    });
+  }
+
+  Future<void> increaseCategoryScore(String category, int delta) async {
+    final user = FirebaseAuth.instance.currentUser!;
+    final categoryRef = _dbUserRef.child(user.uid).child(category);
+
+    await categoryRef.runTransaction((currentScore) {
+      if (currentScore == null) {
+        return Transaction.success(delta);
+      }
+      final updatedScore = (currentScore as int) + delta;
+      return Transaction.success(updatedScore);
     });
   }
 }
