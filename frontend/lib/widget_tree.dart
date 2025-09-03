@@ -22,22 +22,38 @@ class _WidgetTreeState extends State<WidgetTree> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
+        // Use ValueListenableBuilder so AppBar actions update when selectedPageNotifier changes
         actions: [
-          Consumer(
-            builder: (context, ref, _) {
-              final isDarkMode = ref.watch(darkModeProvider);
-              return IconButton(
-                icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
-                onPressed: () {
-                  ref.read(darkModeProvider.notifier).toggleTheme();
-                },
+          ValueListenableBuilder<int>(
+            valueListenable: selectedPageNotifier,
+            builder: (context, selectedPage, _) {
+              return Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (selectedPage == 1)
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.add),
+                    ),
+                  Consumer(
+                    builder: (context, ref, _) {
+                      final isDarkMode = ref.watch(darkModeProvider);
+                      return IconButton(
+                        icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
+                        onPressed: () {
+                          ref.read(darkModeProvider.notifier).toggleTheme();
+                        },
+                      );
+                    },
+                  ),
+                ],
               );
             },
           ),
         ],
       ),
       drawer: MainDrawer(),
-      body: ValueListenableBuilder(
+      body: ValueListenableBuilder<int>(
         valueListenable: selectedPageNotifier,
         builder: (context, selectedPage, child) {
           return IndexedStack(
