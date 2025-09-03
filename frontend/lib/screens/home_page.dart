@@ -1,9 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/models/feed_entry.dart';
 import 'package:frontend/models/post_data.dart';
 import 'package:frontend/services/post_service.dart';
 import 'package:frontend/widgets/post_card.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+import 'package:lottie/lottie.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final PostService _postService = PostService();
   final ScrollController _scrollController = ScrollController();
+  bool _isLoading = true;
 
   List<PostData> posts = []; // This is the one that fetches from firebase
   List<FeedEntry> feed = []; // This contains the order of posts a/c to user
@@ -47,13 +50,19 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _loadPosts() async {
+    setState(() {
+      _isLoading = true;
+    });
+
     posts = await _postService.fetchPosts();
-    feed = await _postService.fetchFeedOrder("Sarang");
+    final userId = FirebaseAuth.instance.currentUser!.uid;
+    feed = await _postService.fetchFeedOrder(userId);
     posts = _postService.sortPostsByFeed(posts, feed);
 
     if (mounted) {
       setState(() {
         _posts = posts;
+        _isLoading = false;
       });
     }
   }
@@ -73,7 +82,24 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: LiquidPullToRefresh(
+      body: _isLoading
+      ? Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+
+          Lottie.asset('assets/animations/Loading_animation_blue.json'),
+
+          Text(
+            "Loading...", 
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.primary,
+              fontSize: 25,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
+      )
+      : LiquidPullToRefresh(
         onRefresh: _handleRefresh,
         color: Theme.of(context).colorScheme.primary,
         backgroundColor: Theme.of(context).colorScheme.onPrimary,
@@ -84,11 +110,11 @@ class _HomePageState extends State<HomePage> {
           itemCount: _posts.length + 1,
           itemBuilder: (context, index) {
             if (index == 0) {
-              return const Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Text("Posts", style: TextStyle(fontSize: 20)),
-              );
-            }
+                    return const Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Text("Posts", style: TextStyle(fontSize: 20)),
+                    );
+                  }
             final post = _posts[index - 1];
             return PostCard(
               post: post,
@@ -98,7 +124,6 @@ class _HomePageState extends State<HomePage> {
           },
         ),
       ),
-
       floatingActionButton: _showBackToTopButton
       ? FloatingActionButton(
         mini: true,
