@@ -48,73 +48,101 @@ class _PostPageState extends State<PostPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          BookmarkButton(post: widget.post),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Image
+                Hero(
+                  tag: '${widget.post.image_link} post page',
+                  child: PostImage(url: widget.post.image_link),
+                ),
+                const SizedBox(height: 12),
+          
+                // Category
+                Text(
+                  widget.post.category,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+                const SizedBox(height: 8),
+          
+                // Title
+                Text(
+                  widget.post.title.trim(),
+                  style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 16),
+          
+                // Body
+                SelectableLinkify(
+                  text: preprocessText("${widget.post.body} https://x.com/"),
+                  style: const TextStyle(fontSize: 16),
+                  linkStyle: const TextStyle(
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                  onOpen: (link) async {
+                    onLinkOpen(context, link.url);
+                  },
+                  options: const LinkifyOptions(humanize: false),
+                  contextMenuBuilder: (BuildContext context, EditableTextState editableTextState) {
+                    return AdaptiveTextSelectionToolbar.editableText(
+                      editableTextState: editableTextState
+                    );
+                  },
+                ),
+                const SizedBox(height: 24),
+          
+                // Date field
+                Text(
+                  "Posted on: ${widget.post.date}",
+                  style: const TextStyle(
+                    fontSize: 13,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          // Back + bookmark
+          Positioned(
+            top: 40,
+            left: 16,
+            right: 16,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Back
+                CircleAvatar(
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back),
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ),
+
+                // Bookmark
+                CircleAvatar(
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  child: BookmarkButton(post: widget.post),
+                )
+              ],
+            )
+          )
         ],
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Image
-            Hero(
-              tag: '${widget.post.image_link} post page',
-              child: PostImage(url: widget.post.image_link),
-            ),
-            const SizedBox(height: 12),
-
-            // Category
-            Text(
-              widget.post.category,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Colors.blueGrey,
-              ),
-            ),
-            const SizedBox(height: 8),
-
-            // Title
-            Text(
-              widget.post.title.trim(),
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 16),
-
-            // Body
-            SelectableLinkify(
-              text: preprocessText("${widget.post.body} https://x.com/"),
-              style: const TextStyle(fontSize: 16),
-              linkStyle: const TextStyle(
-                color: Colors.blue,
-                decoration: TextDecoration.underline,
-              ),
-              onOpen: (link) async {
-                onLinkOpen(context, link.url);
-              },
-              options: const LinkifyOptions(humanize: false),
-              contextMenuBuilder: (BuildContext context, EditableTextState editableTextState) {
-                return AdaptiveTextSelectionToolbar.editableText(
-                  editableTextState: editableTextState
-                );
-              },
-            ),
-            const SizedBox(height: 24),
-
-            // Date field
-            Text(
-              "Posted on: ${widget.post.date}",
-              style: const TextStyle(
-                fontSize: 13,
-                color: Colors.grey,
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
