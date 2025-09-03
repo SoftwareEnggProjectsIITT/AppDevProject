@@ -48,3 +48,13 @@ Future<String> createConversation(String title) async {
 
   return convoRef.id;
 }
+
+Stream<QuerySnapshot> getConversations() {
+  final user = FirebaseAuth.instance.currentUser;
+  return FirebaseFirestore.instance
+      .collection('chats')
+      .doc(user!.uid)
+      .collection('conversations')
+      .orderBy('createdAt', descending: true)
+      .snapshots();
+}
