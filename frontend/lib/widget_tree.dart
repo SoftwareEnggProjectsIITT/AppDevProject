@@ -6,6 +6,7 @@ import 'package:frontend/screens/chatbot_page.dart';
 import 'package:frontend/screens/home_page.dart';
 import 'package:frontend/widgets/bottom_navbar.dart';
 import 'package:frontend/widgets/main_drawer.dart';
+import 'package:frontend/widgets/new_chat.dart';
 
 
 List<Widget> pages = [const HomePage(), const ChatbotPage(), const BookmarksPage()];
@@ -19,6 +20,14 @@ class WidgetTree extends StatefulWidget {
 }
 
 class _WidgetTreeState extends State<WidgetTree> {
+  void showAddChatScreen() {
+    showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
+      context: context,
+      builder: (ctx) => NewChat()
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +43,7 @@ class _WidgetTreeState extends State<WidgetTree> {
                   children: [
                     if (selectedPage == 1)
                       IconButton(
-                        onPressed: () {},
+                        onPressed: showAddChatScreen,
                         icon: const Icon(Icons.add),
                       ),
                     Consumer(
