@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:frontend/providers/chat_provider.dart';
+import 'package:frontend/models/chat.dart';
 import 'package:frontend/services/get_reply.dart';
 import 'package:frontend/services/manage_messages.dart';
 import 'package:frontend/widgets/message_box.dart';
 import 'package:frontend/widgets/reply.dart';
 import 'package:frontend/widgets/reply_loader.dart';
 
-class ChatbotPage extends ConsumerWidget {
+class ChatbotPage extends StatefulWidget {
   const ChatbotPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final localMessages = ref.watch(chatProvider);
-    final isAiResponding = localMessages.any((msg) => msg.isLoading);
-    void send(text) async {
-      if (text.trim().isNotEmpty) {
-        ref
-            .read(chatProvider.notifier)
-            .addMessage(ChatMessage(text: text, sender: 'user'));
-        ref
-            .read(chatProvider.notifier)
-            .addMessage(ChatMessage(text: '', sender: 'ai', isLoading: true));
-        sendMessage(text, 'user');
-        
-        final reply = await getReply();
-        ref
-            .read(chatProvider.notifier).replaceLoadingMessage(reply);
-      }
-    }
+  State<ChatbotPage> createState() => _ChatbotPageState();
+}
 
+class _ChatbotPageState extends State<ChatbotPage> {
+  bool isAiResponding = false;
+
+  void send(String text) async {
+    if (text.trim().isEmpty) return;
+    sendMessage(text, "user");
+    setState(() {
+      isAiResponding = true;
+    });
+    await getReply(text);
+    setState(() {
+      isAiResponding = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Expanded(
@@ -38,8 +38,6 @@ class ChatbotPage extends ConsumerWidget {
             stream: getMessages(),
             builder: (context, snapshot) {
               final docs = snapshot.data?.docs ?? [];
-
-              // Convert Firestore docs into ChatMessage
               final allMessages = docs.map((doc) {
                 final data = doc.data() as Map<String, dynamic>;
                 return ChatMessage(
@@ -57,26 +55,28 @@ class ChatbotPage extends ConsumerWidget {
                 );
               }
 
+              // Add one extra item for the loader when AI is responding.
+              final itemCount = allMessages.length + (isAiResponding ? 1 : 0);
+
               return ListView.builder(
                 reverse: true,
                 padding: const EdgeInsets.all(12),
-                itemCount: allMessages.length,
+                itemCount: itemCount,
                 itemBuilder: (context, index) {
-                  final msg = allMessages[allMessages.length - 1 - index];
-                  final isUser = msg.sender == 'user';
-
-                  if (msg.isLoading) {
-                    // Loader bubble for AI
-                    return Align(
+                  // if loader is shown, show it as the newest (index==0)
+                  if (isAiResponding && index == 0) {
+                    return const Align(
                       alignment: Alignment.centerLeft,
                       child: ReplyLoader(),
                     );
                   }
+                  final offset = isAiResponding ? 1 : 0;
+                  final msg = allMessages[allMessages.length - 1 - (index - offset)];
+                  final isUser = msg.sender == 'user';
 
                   return Align(
-                    alignment: isUser
-                        ? Alignment.centerRight
-                        : Alignment.centerLeft,
+                    alignment:
+                        isUser ? Alignment.centerRight : Alignment.centerLeft,
                     child: isUser
                         ? Container(
                             margin: const EdgeInsets.all(5),
