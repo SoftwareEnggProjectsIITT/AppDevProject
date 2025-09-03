@@ -85,6 +85,7 @@ flutter:
     - assets/images/login2.png
     - assets/images/login3.png
     - assets/animations/Loading_Files.json
+    - assets/animations/Loading_animation_blue.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
