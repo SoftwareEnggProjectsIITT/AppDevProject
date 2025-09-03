@@ -66,9 +66,9 @@ class _MessageBoxState extends State<MessageBox> {
                 controller: _controller,
                 minLines: 1,
                 maxLines: 4,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   hintText: "Ask your query...",
-                  border: InputBorder.none,
+                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
                 ),
               ),
             ),
