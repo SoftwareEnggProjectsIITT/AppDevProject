@@ -18,7 +18,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
           destinations: [
             NavigationDestination(
               icon: Icon(Icons.home),
-              label: 'Home',
+              label: 'Posts',
             ),
             NavigationDestination(
               icon: Icon(Icons.chat_rounded),
