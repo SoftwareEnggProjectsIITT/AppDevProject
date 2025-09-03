@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:frontend/providers/dark_mode_provider.dart';
 
 ValueNotifier<int> selectedPageNotifier = ValueNotifier<int>(0);
-ValueNotifier<bool> isDarkModeNotifier = ValueNotifier<bool>(false);
 ValueNotifier<User?> userNotifier = ValueNotifier<User?>(null);
 
 final darkModeProvider = StateNotifierProvider<DarkModeNotifier, bool>(
