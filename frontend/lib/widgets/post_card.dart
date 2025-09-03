@@ -7,7 +7,7 @@ import 'package:frontend/widgets/like_button.dart';
 import 'package:frontend/widgets/post_image.dart';
 
 class PostCard extends StatefulWidget {
-  const PostCard({
+  PostCard({
     super.key,
     required this.post,
     required this.needLike,
@@ -16,6 +16,7 @@ class PostCard extends StatefulWidget {
 
   final PostData post;
   final bool needLike;
+  bool wasOpened = false;
 
   final PostService? postService;
 
@@ -37,6 +38,8 @@ class _PostCardState extends State<PostCard> {
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
         onTap: () {
+          widget.wasOpened = true;
+          widget.postService?.increaseCategoryScore(widget.post.category, 1);
           Navigator.push(
             context, 
             MaterialPageRoute(
@@ -107,6 +110,7 @@ class _PostCardState extends State<PostCard> {
                       LikeButton(
                         isLiked: widget.post.isLiked,
                         onTap: () {
+                          widget.postService?.increaseCategoryScore(widget.post.category, 1);
                           setState(() {
                             if (!widget.post.isLiked) {
                               widget.post.likes++;
