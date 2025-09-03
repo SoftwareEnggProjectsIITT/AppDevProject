@@ -18,7 +18,17 @@ class _NewChatState extends State<NewChat> {
           child: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsetsGeometry.all(10),
-              
+              child: Column(children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(onPressed: (){
+                      Navigator.pop(context);
+                    }, child: const Text('Cancel')),
+                    ElevatedButton(onPressed: (){}, child: const Text('Create Chat'))
+                  ]
+                )
+              ],)
             ),
           ),
         );
