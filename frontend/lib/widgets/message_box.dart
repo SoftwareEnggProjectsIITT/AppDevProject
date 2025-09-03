@@ -3,7 +3,8 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 
 class MessageBox extends StatefulWidget {
   final void Function(String) onSend;
-  const MessageBox({super.key, required this.onSend});
+  final bool isActive;
+  const MessageBox({super.key, required this.onSend, required this.isActive});
 
   @override
   State<MessageBox> createState() => _MessageBoxState();
@@ -22,6 +23,9 @@ class _MessageBoxState extends State<MessageBox> {
   }
 
   void _sendMessage() {
+    if (!widget.isActive) {
+      return;
+    }
     final text = _controller.text.trim();
     if (text.isNotEmpty) {
       widget.onSend(text);
@@ -34,12 +38,14 @@ class _MessageBoxState extends State<MessageBox> {
       bool available = await _speech.initialize();
       if (available) {
         setState(() => _isListening = true);
-        _speech.listen(onResult: (val) {
-          setState(() {
-            _voiceInput = val.recognizedWords;
-            _controller.text = _voiceInput;
-          });
-        });
+        _speech.listen(
+          onResult: (val) {
+            setState(() {
+              _voiceInput = val.recognizedWords;
+              _controller.text = _voiceInput;
+            });
+          },
+        );
       }
     } else {
       setState(() => _isListening = false);
@@ -67,13 +73,18 @@ class _MessageBoxState extends State<MessageBox> {
               ),
             ),
             IconButton(
-              icon: Icon(_isListening ? Icons.mic : Icons.mic_none,
-                  color: _isListening ? Colors.red : Colors.grey),
+              icon: Icon(
+                _isListening ? Icons.mic : Icons.mic_none,
+                color: _isListening ? Colors.red : Colors.grey,
+                size: _isListening ? 35 : 25,
+              ),
               onPressed: _listen,
             ),
             IconButton(
-              icon: const Icon(Icons.send, color: Colors.blue),
-              onPressed: _sendMessage,
+              icon: widget.isActive
+                  ? const Icon(Icons.send, color: Colors.green)
+                  : const Icon(Icons.stop, color: Colors.red),
+              onPressed: widget.isActive ? _sendMessage : null,
             ),
           ],
         ),

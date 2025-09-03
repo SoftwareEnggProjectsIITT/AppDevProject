@@ -1,42 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:frontend/providers/chat_provider.dart';
 import 'package:frontend/services/manage_messages.dart';
 import 'package:frontend/widgets/message_box.dart';
 import 'package:frontend/widgets/reply.dart';
+import 'package:frontend/widgets/reply_loader.dart';
 
 class ChatbotPage extends ConsumerWidget {
   const ChatbotPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final localMessages = ref.watch(chatProvider);
+    final isAiResponding = localMessages.any((msg) => msg.isLoading);
+    void _send(text) {
+      if (text.trim().isNotEmpty) {
+        ref
+            .read(chatProvider.notifier)
+            .addMessage(ChatMessage(text: text, sender: 'user'));
+        ref
+            .read(chatProvider.notifier)
+            .addMessage(ChatMessage(text: '', sender: 'ai', isLoading: true));
+        sendMessage(text, 'user');
+      }
+    }
+
     return Column(
       children: [
         Expanded(
           child: StreamBuilder<QuerySnapshot>(
             stream: getMessages(),
             builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(child: CircularProgressIndicator());
-              }
+              final docs = snapshot.data?.docs ?? [];
 
-              if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                return const Center(child: Text("No messages yet"));
-              }
+              // 🔹 Convert Firestore docs into ChatMessage
+              final firestoreMessages = docs.map((doc) {
+                final data = doc.data() as Map<String, dynamic>;
+                return ChatMessage(
+                  text: data['text'] ?? '',
+                  sender: data['sender'] ?? 'unknown',
+                );
+              }).toList();
 
-              final docs = snapshot.data!.docs;
+              // 🔹 Merge local + firestore
+              final allMessages = [...firestoreMessages, ...localMessages];
+
+              if (allMessages.isEmpty) {
+                return const Center(
+                  child: Text(
+                    "What's in your mind today?",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                );
+              }
 
               return ListView.builder(
                 reverse: true,
                 padding: const EdgeInsets.all(12),
-                itemCount: docs.length,
+                itemCount: allMessages.length,
                 itemBuilder: (context, index) {
-                  final doc = docs[docs.length - 1 - index];
-                  final data = doc.data() as Map<String, dynamic>;
-                  final msg = data['text'] ?? '';
-                  final sender = data['sender'] ?? 'unknown';
+                  final msg = allMessages[allMessages.length - 1 - index];
+                  final isUser = msg.sender == 'user';
 
-                  final isUser = sender == 'user';
+                  if (msg.isLoading) {
+                    // Loader bubble for AI
+                    return Align(
+                      alignment: Alignment.centerLeft,
+                      child: ReplyLoader(),
+                    );
+                  }
 
                   return Align(
                     alignment: isUser
@@ -44,18 +77,23 @@ class ChatbotPage extends ConsumerWidget {
                         : Alignment.centerLeft,
                     child: isUser
                         ? Container(
+                            margin: const EdgeInsets.all(5),
                             padding: const EdgeInsets.all(8),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              gradient: const LinearGradient(colors: [
-                                Color.fromARGB(255, 48, 143, 51),
-                                Color.fromARGB(255, 48, 143, 51),
-                              ]),
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 48, 143, 51),
+                                  Color.fromARGB(255, 48, 143, 51),
+                                ],
+                              ),
                             ),
-                            child: Text(msg,
-                                style: const TextStyle(color: Colors.white)),
+                            child: Text(
+                              msg.text,
+                              style: const TextStyle(color: Colors.white),
+                            ),
                           )
-                        : Reply(reply: msg),
+                        : Reply(reply: msg.text),
                   );
                 },
               );
@@ -63,10 +101,9 @@ class ChatbotPage extends ConsumerWidget {
           ),
         ),
         MessageBox(
+          isActive: !isAiResponding,
           onSend: (text) {
-            if (text.trim().isNotEmpty) {
-              sendMessage(text, 'user');
-            }
+            _send(text);
           },
         ),
       ],
