@@ -12,9 +12,6 @@ class BookmarksPage extends ConsumerWidget {
     final List<PostData> bookmarks = ref.watch(bookmarksProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bookmarked Posts'),
-      ),
       body: bookmarks.isEmpty
           ? const Center(
               child: Text(

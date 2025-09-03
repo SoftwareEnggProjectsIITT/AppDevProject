@@ -7,10 +7,9 @@ import 'package:frontend/screens/home_page.dart';
 import 'package:frontend/widgets/bottom_navbar.dart';
 import 'package:frontend/widgets/main_drawer.dart';
 
-// List of pages to be displayed
+
 List<Widget> pages = [const HomePage(), const ChatbotPage(), const BookmarksPage()];
-// List of titles corresponding to each page
-List<String> pageTitles = ['Home Page', 'LegalEase Chatbot', 'Bookmarked Posts'];
+List<String> pageTitles = ['Explore Posts', 'LegalEase Chatbot', 'Bookmarks'];
 
 class WidgetTree extends StatefulWidget {
   const WidgetTree({super.key});
@@ -28,7 +27,6 @@ class _WidgetTreeState extends State<WidgetTree> {
         builder: (context, selectedPage, child) {
           return Scaffold(
             appBar: AppBar(
-              // The title now dynamically changes based on the selected page
               title: Text(pageTitles[selectedPage]),
               actions: [
                 Row(
