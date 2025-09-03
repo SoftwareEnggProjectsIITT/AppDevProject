@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:frontend/providers/chat_provider.dart';
+import 'package:frontend/services/get_reply.dart';
 import 'package:frontend/services/manage_messages.dart';
 import 'package:frontend/widgets/message_box.dart';
 import 'package:frontend/widgets/reply.dart';
@@ -14,7 +15,7 @@ class ChatbotPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final localMessages = ref.watch(chatProvider);
     final isAiResponding = localMessages.any((msg) => msg.isLoading);
-    void _send(text) {
+    void send(text) async {
       if (text.trim().isNotEmpty) {
         ref
             .read(chatProvider.notifier)
@@ -23,6 +24,10 @@ class ChatbotPage extends ConsumerWidget {
             .read(chatProvider.notifier)
             .addMessage(ChatMessage(text: '', sender: 'ai', isLoading: true));
         sendMessage(text, 'user');
+        
+        final reply = await getReply();
+        ref
+            .read(chatProvider.notifier).replaceLoadingMessage(reply);
       }
     }
 
@@ -34,8 +39,8 @@ class ChatbotPage extends ConsumerWidget {
             builder: (context, snapshot) {
               final docs = snapshot.data?.docs ?? [];
 
-              // 🔹 Convert Firestore docs into ChatMessage
-              final firestoreMessages = docs.map((doc) {
+              // Convert Firestore docs into ChatMessage
+              final allMessages = docs.map((doc) {
                 final data = doc.data() as Map<String, dynamic>;
                 return ChatMessage(
                   text: data['text'] ?? '',
@@ -43,14 +48,11 @@ class ChatbotPage extends ConsumerWidget {
                 );
               }).toList();
 
-              // 🔹 Merge local + firestore
-              final allMessages = [...firestoreMessages, ...localMessages];
-
               if (allMessages.isEmpty) {
                 return const Center(
                   child: Text(
                     "What's in your mind today?",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 );
               }
@@ -103,7 +105,7 @@ class ChatbotPage extends ConsumerWidget {
         MessageBox(
           isActive: !isAiResponding,
           onSend: (text) {
-            _send(text);
+            send(text);
           },
         ),
       ],
