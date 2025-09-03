@@ -33,7 +33,7 @@ class _NewChatState extends State<NewChat> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (ctx, con) {
+      builder: (ctx, _) {
         return SizedBox(
           height: double.infinity,
           width: double.infinity,
