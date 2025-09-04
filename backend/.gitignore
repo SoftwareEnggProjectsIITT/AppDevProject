@@ -49,10 +49,6 @@ htmlcov/
 *.db
 *.sqlite3
 
-# Environment variables
-.env
-.env.*
-
 # Docker
 *.pid
 *.seed

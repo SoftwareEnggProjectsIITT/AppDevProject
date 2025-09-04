@@ -25,7 +25,10 @@ def generate_feed(user_id: str):
         
         category = post['category']
         clicks = click_data[category]
-        category_score = clicks/max_clicks
+        if max_clicks == 0:
+            category_score = 0
+        else:
+            category_score = clicks/max_clicks
         
         MAX_DAYS = 5
         MIN_SCORE = 0.1  # score at 5 days
