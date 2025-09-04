@@ -39,7 +39,8 @@ class _PostCardState extends State<PostCard> {
         borderRadius: BorderRadius.circular(16),
         onTap: () {
           widget.wasOpened = true;
-          widget.postService?.increaseCategoryScore(widget.post.category, 1);
+          // TODO: uncomment after fixed
+          // widget.postService?.increaseCategoryScore(widget.post.category, 1);
           Navigator.push(
             context, 
             MaterialPageRoute(
@@ -110,7 +111,8 @@ class _PostCardState extends State<PostCard> {
                       LikeButton(
                         isLiked: widget.post.isLiked,
                         onTap: () {
-                          widget.postService?.increaseCategoryScore(widget.post.category, 1);
+                          // TODO: Uncomment after fixed
+                          // widget.postService?.increaseCategoryScore(widget.post.category, 1);
                           setState(() {
                             if (!widget.post.isLiked) {
                               widget.post.likes++;

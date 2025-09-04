@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   bool _isLoading = true;
 
   List<PostData> posts = []; // This is the one that fetches from firebase
-  List<FeedEntry> feed = []; // This contains the order of posts a/c to user
+  List<FeedEntry> feedOrder = []; // This contains the order of posts a/c to user
   List<PostData> _posts = []; // These are the posts that finally renders
 
   bool _showBackToTopButton = false;
@@ -56,8 +56,8 @@ class _HomePageState extends State<HomePage> {
 
     posts = await _postService.fetchPosts();
     final userId = FirebaseAuth.instance.currentUser!.uid;
-    feed = await _postService.fetchFeedOrder(userId);
-    posts = _postService.sortPostsByFeed(posts, feed);
+    feedOrder = await _postService.fetchFeedOrder("Sarang");
+    posts = _postService.sortPostsByFeed(posts, feedOrder);
 
     if (mounted) {
       setState(() {
