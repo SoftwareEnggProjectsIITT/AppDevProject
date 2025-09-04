@@ -7,19 +7,21 @@ import 'package:frontend/widgets/message_box.dart';
 import 'package:frontend/widgets/reply.dart';
 import 'package:frontend/widgets/reply_loader.dart';
 
-class ChatbotPage extends StatefulWidget {
-  const ChatbotPage({super.key});
+class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key, required this.conversationId});
+
+  final String conversationId;
 
   @override
-  State<ChatbotPage> createState() => _ChatbotPageState();
+  State<ChatScreen> createState() => _ChatScreenState();
 }
 
-class _ChatbotPageState extends State<ChatbotPage> {
+class _ChatScreenState extends State<ChatScreen> {
   bool isAiResponding = false;
 
   void send(String text) async {
     if (text.trim().isEmpty) return;
-    sendMessage(text, "user");
+    sendMessage(widget.conversationId, text, "user");
     setState(() {
       isAiResponding = true;
     });
@@ -35,7 +37,7 @@ class _ChatbotPageState extends State<ChatbotPage> {
       children: [
         Expanded(
           child: StreamBuilder<QuerySnapshot>(
-            stream: getMessages(),
+            stream: getMessages(widget.conversationId),
             builder: (context, snapshot) {
               final docs = snapshot.data?.docs ?? [];
               final allMessages = docs.map((doc) {
