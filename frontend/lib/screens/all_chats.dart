@@ -1,6 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:frontend/screens/chatbot_page.dart';
+import 'package:frontend/screens/chat_screen.dart';
 import 'package:frontend/services/manage_messages.dart';
 import 'package:frontend/widgets/conv_card.dart';
 
@@ -25,7 +26,6 @@ class _AllChatsScreenState extends State<AllChatsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("All Chats")),
       body: StreamBuilder<QuerySnapshot>(
         stream: getConversations(),
         builder: (context, snapshot) {
@@ -42,10 +42,10 @@ class _AllChatsScreenState extends State<AllChatsScreen> {
             itemCount: conversations.length,
             itemBuilder: (context, index) {
               final convo = conversations[index];
-              final conversationId = convo.id; // <-- your convoId
+              final conversationId = convo.id;
               final title = convo['title'] ?? "Untitled";
-              final category = convo['category'] ?? "General";
-
+              //final category = convo['category'] ?? "General";
+              final category = "General";
               return ConvCard(
                 title: title,
                 category: category,

@@ -7,6 +7,6 @@ Future<String> getReply(String query) async {
     reply = "I am sorry but I don't know the answer of $query.";
   });
 
-  sendMessage(reply, "ai");
+  //sendMessage(reply, "ai");
   return reply;
 }
