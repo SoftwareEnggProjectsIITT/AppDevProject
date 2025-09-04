@@ -20,11 +20,21 @@ class _ChatScreenState extends State<ChatScreen> {
   final ScrollController _scrollController = ScrollController();
   bool _showBackToRecentButton = false;
 
+  String? _conversationTitle;
+
+  Future<void> _loadConversationTitle() async {
+    final title = await getConversationTitle(widget.conversationId);
+    setState(() {
+      _conversationTitle = title ?? "Untitled";
+    });
+  }
+
   @override
   void initState() {
     super.initState();
+    _loadConversationTitle();
     _scrollController.addListener(() {
-      if (_scrollController.offset < -300) {
+      if (_scrollController.offset > 300) {
         if (!_showBackToRecentButton) {
           setState(() => _showBackToRecentButton = true);
         }
@@ -68,18 +78,7 @@ class _ChatScreenState extends State<ChatScreen> {
 Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: FutureBuilder<String?>(
-        future: getConversationTitle(widget.conversationId),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Text("Loading...");
-          }
-          if (snapshot.hasError) {
-            return const Text("Error");
-          }
-          return Text(snapshot.data ?? "Untitled");
-        },
-      ),
+      title: Text(_conversationTitle ?? "Loading..."),
     ),
     body: Stack(
       children: [
@@ -168,8 +167,6 @@ Widget build(BuildContext context) {
             const SizedBox(height: 10),
           ],
         ),
-
-        // 👇 Floating button positioned just above the MessageBox
         if (_showBackToRecentButton)
           Positioned(
             bottom: 75,
