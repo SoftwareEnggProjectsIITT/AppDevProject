@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:frontend/providers/notifiers.dart';
+import 'package:frontend/screens/all_chats.dart';
 import 'package:frontend/screens/bookmarks_page.dart';
-import 'package:frontend/screens/chatbot_page.dart';
 import 'package:frontend/screens/home_page.dart';
 import 'package:frontend/widgets/bottom_navbar.dart';
 import 'package:frontend/widgets/main_drawer.dart';
 import 'package:frontend/widgets/new_chat.dart';
 
 
-List<Widget> pages = [const HomePage(), const ChatbotPage(), const BookmarksPage()];
-List<String> pageTitles = ['Explore Posts', 'LegalEase Chatbot', 'Bookmarks'];
+List<Widget> pages = [const HomePage(), const AllChatsScreen(), const BookmarksPage()];
+List<String> pageTitles = ['Explore Posts', 'LegalEase Chatbots', 'Bookmarks'];
 
 class WidgetTree extends StatefulWidget {
   const WidgetTree({super.key});
