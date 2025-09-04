@@ -13,8 +13,7 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 
 #Configure Gemini API
 load_dotenv()
-GEMINI_API_KEY = "AIzaSyBZIfKRPI2WUvRtXSbEcAjg3tRQwskODhA"
-genai.configure(api_key=GEMINI_API_KEY)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 #Defining Categories for which pdf to pass to embed and corresponding QUERY_PROMPT for it
 categories = {
