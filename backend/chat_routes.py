@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from database import db
 from models import ChatRequest, ChatResponse, ChatListResponse, StatusResponse
-from modules.model_1 import ask_constitution
+from modules.model_1 import ask_question
 from modules.generate_feed import generate_feed
 
 router = APIRouter(prefix="/chats", tags=["Chats"])
@@ -56,13 +56,13 @@ def delete_single_chat(user_id: str, chat_id: str):
     return {"status": "error", "message": f"Chat {chat_id} not found for {user_id}"}
 
 
-@router.post("/ask_constitution", response_model=StatusResponse)
-def ask_constitution_route(query: str):
+@router.post("/ask_question", response_model=StatusResponse)
+def ask_question_route(query: str):
     """
     Ask a question about the Constitution using the RAG model.
     """
     try:
-        answer = ask_constitution(query)
+        answer = ask_question(query)
         return {
             "status": "success",
             "message": answer
