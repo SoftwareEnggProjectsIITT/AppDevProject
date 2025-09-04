@@ -22,7 +22,7 @@ class ConvCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(title),
+                      Text(title, style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),),
                       const SizedBox(height: 5),
                       Text(category)
                     ],
