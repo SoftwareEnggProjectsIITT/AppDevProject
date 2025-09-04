@@ -53,12 +53,14 @@ class _ReplyState extends State<Reply> {
             padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              gradient: LinearGradient(colors: [
-                Colors.white,
-                Colors.white,
-              ])
+              color: Theme.of(context).colorScheme.surfaceContainerHigh,
             ),
-            child: Text(widget.reply),
+            child: Text(
+              widget.reply,
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+            ),
           ),
           
           IconButton(
