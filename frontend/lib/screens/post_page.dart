@@ -14,11 +14,10 @@ class PostPage extends StatefulWidget {
 }
 
 class _PostPageState extends State<PostPage> {
-
   String preprocessText(String input) {
     return input
-      .replaceAll(RegExp(r'\[at\]', caseSensitive: false), '@')
-      .replaceAll(RegExp(r'\[dot\]', caseSensitive: false), '.');
+        .replaceAll(RegExp(r'\[at\]', caseSensitive: false), '@')
+        .replaceAll(RegExp(r'\[dot\]', caseSensitive: false), '.');
   }
 
   Future<void> onLinkOpen(BuildContext context, String url) async {
@@ -30,19 +29,18 @@ class _PostPageState extends State<PostPage> {
         await launchUrl(uri);
       } else {
         messenger.showSnackBar(
-          SnackBar(content: Text("Could not open email client for ${uri.path}")),
+          SnackBar(
+            content: Text("Could not open email client for ${uri.path}"),
+          ),
         );
       }
-    } 
-    else {
+    } else {
       if (await canLaunchUrl(uri)) {
         await launchUrl(uri, mode: LaunchMode.externalApplication);
       } else {
-        messenger.showSnackBar(
-          SnackBar(content: Text("Could not open $url")),
-        );
+        messenger.showSnackBar(SnackBar(content: Text("Could not open $url")));
       }
-    }  
+    }
   }
 
   @override
@@ -61,17 +59,14 @@ class _PostPageState extends State<PostPage> {
                   child: PostImage(url: widget.post.image_link),
                 ),
                 const SizedBox(height: 12),
-          
+
                 // Category
                 Text(
                   widget.post.category,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.blueGrey,
-                  ),
+                  style: const TextStyle(fontSize: 14, color: Colors.blueGrey),
                 ),
                 const SizedBox(height: 8),
-          
+
                 // Title
                 Text(
                   widget.post.title.trim(),
@@ -81,7 +76,7 @@ class _PostPageState extends State<PostPage> {
                   ),
                 ),
                 const SizedBox(height: 16),
-          
+
                 // Body
                 SelectableLinkify(
                   text: preprocessText("${widget.post.body} https://x.com/"),
@@ -94,21 +89,22 @@ class _PostPageState extends State<PostPage> {
                     onLinkOpen(context, link.url);
                   },
                   options: const LinkifyOptions(humanize: false),
-                  contextMenuBuilder: (BuildContext context, EditableTextState editableTextState) {
-                    return AdaptiveTextSelectionToolbar.editableText(
-                      editableTextState: editableTextState
-                    );
-                  },
+                  contextMenuBuilder:
+                      (
+                        BuildContext context,
+                        EditableTextState editableTextState,
+                      ) {
+                        return AdaptiveTextSelectionToolbar.editableText(
+                          editableTextState: editableTextState,
+                        );
+                      },
                 ),
                 const SizedBox(height: 24),
-          
+
                 // Date field
                 Text(
                   "Posted on: ${widget.post.date}",
-                  style: const TextStyle(
-                    fontSize: 13,
-                    color: Colors.grey,
-                  ),
+                  style: const TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ],
             ),
@@ -124,9 +120,12 @@ class _PostPageState extends State<PostPage> {
               children: [
                 // Back
                 CircleAvatar(
-                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  backgroundColor: Theme.of(context).colorScheme.background,
                   child: IconButton(
-                    icon: const Icon(Icons.arrow_back),
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: Theme.of(context).colorScheme.onBackground,
+                    ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.of(context).pop();
@@ -136,12 +135,12 @@ class _PostPageState extends State<PostPage> {
 
                 // Bookmark
                 CircleAvatar(
-                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  backgroundColor: Theme.of(context).colorScheme.background,
                   child: BookmarkButton(post: widget.post),
-                )
+                ),
               ],
-            )
-          )
+            ),
+          ),
         ],
       ),
     );
