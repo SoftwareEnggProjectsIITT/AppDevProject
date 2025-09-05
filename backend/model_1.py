@@ -20,7 +20,8 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 # helper to auto fetch all pdfs from folder
 def get_pdfs(folder: str):
-    return [p.as_posix() for p in Path(folder).glob("*.pdf")]
+    folder = os.path.normpath(folder)  # normalize slashes
+    return [os.path.join(folder, os.path.basename(p)) for p in Path(folder).glob("*.pdf")]
 
 
 #Defining Categories for which pdf to pass to embed and corresponding QUERY_PROMPT for it
@@ -401,4 +402,6 @@ def ask_question(query: str, category_id: int) -> str:
 
 
 #Testing and improving
-print(ask_question("My Wife is accusing me for fake domestic violence and demanding money, what can I do?", 13))
+#print(ask_question("My Wife is accusing me for fake domestic violence and demanding money, what can I do?", 13))
+
+print(get_pdfs("data_for_rag/Banking_&_Finance_Insurance_Security"))
