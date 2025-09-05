@@ -3,9 +3,10 @@ import modules.parser_utils as parser_utils
 import modules.get_ids as get_ids
 import modules.scraper as scraper
 import modules.uploader as uploader
+import modules.delete_old_posts as delete_old_posts
 
 #getting all the links for the specified date
-date = "3"
+date = "4"
 category_ids_dict = get_ids.get_ids_by_categories(date)
 
 ref = firebase_config.init_firebase()
@@ -24,3 +25,5 @@ for category in category_ids_dict:
         image_link = parser_utils.parse_image(html, id, category)
         
         uploader.upload_post(ref, id, category, title, body, date, image_link)
+        
+delete_old_posts.delete_old_posts()
