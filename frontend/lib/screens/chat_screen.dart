@@ -135,7 +135,7 @@ Widget build(BuildContext context) {
                             : Alignment.centerLeft,
                         child: isUser
                             ? Container(
-                                margin: const EdgeInsets.only(left: 25),
+                                margin: const EdgeInsets.all(5),
                                 padding: const EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),

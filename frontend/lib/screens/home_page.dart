@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   bool _isLoading = true;
 
   List<PostData> posts = []; // This is the one that fetches from firebase
-  List<FeedEntry> feed = []; // This contains the order of posts a/c to user
+  List<FeedEntry> feedOrder = []; // This contains the order of posts a/c to user
   List<PostData> _posts = []; // These are the posts that finally renders
 
   bool _showBackToTopButton = false;
@@ -56,8 +56,8 @@ class _HomePageState extends State<HomePage> {
 
     posts = await _postService.fetchPosts();
     final userId = FirebaseAuth.instance.currentUser!.uid;
-    feed = await _postService.fetchFeedOrder(userId);
-    posts = _postService.sortPostsByFeed(posts, feed);
+    feedOrder = await _postService.fetchFeedOrder(userId);
+    posts = _postService.sortPostsByFeed(posts, feedOrder);
 
     if (mounted) {
       setState(() {
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
       : LiquidPullToRefresh(
         onRefresh: _handleRefresh,
         color: Theme.of(context).colorScheme.primary,
-        backgroundColor: Theme.of(context).colorScheme.onPrimary,
+        backgroundColor: Theme.of(context).colorScheme.background,
         showChildOpacityTransition: false,
         child: ListView.builder(
           controller: _scrollController,
@@ -110,11 +110,11 @@ class _HomePageState extends State<HomePage> {
           itemCount: _posts.length + 1,
           itemBuilder: (context, index) {
             if (index == 0) {
-                    return const Padding(
-                      padding: EdgeInsets.all(12.0),
-                      child: Text("Posts", style: TextStyle(fontSize: 20)),
-                    );
-                  }
+              return const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text("Posts", style: TextStyle(fontSize: 20)),
+              );
+            }
             final post = _posts[index - 1];
             return PostCard(
               post: post,
