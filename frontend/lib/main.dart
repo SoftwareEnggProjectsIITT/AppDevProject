@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:frontend/models/color_scheme.dart';
 import 'package:frontend/providers/notifiers.dart';
 import 'package:frontend/screens/login.dart';
 import 'package:frontend/widget_tree.dart';
@@ -30,16 +31,18 @@ class MyApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.light().copyWith(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(255, 96, 59, 181),
-          brightness: Brightness.light,
-        ),
+        colorScheme: kColorScheme,
+        // colorScheme: ColorScheme.fromSeed(
+        //   seedColor: Color.fromARGB(255, 96, 59, 181),
+        //   brightness: Brightness.light,
+        // ),
       ),
       darkTheme: ThemeData.dark().copyWith(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color.fromARGB(25, 5, 99, 125),
-          brightness: Brightness.dark,
-        ),
+        colorScheme: kDarkColorScheme
+        // colorScheme: ColorScheme.fromSeed(
+        //   seedColor: Color.fromARGB(25, 5, 99, 125),
+        //   brightness: Brightness.dark,
+        // ),
       ),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
       home: const FirebaseAuthWrapper(),

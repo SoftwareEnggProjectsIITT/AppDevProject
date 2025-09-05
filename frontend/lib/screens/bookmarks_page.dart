@@ -13,20 +13,20 @@ class BookmarksPage extends ConsumerWidget {
 
     return Scaffold(
       body: bookmarks.isEmpty
-          ? const Center(
-              child: Text(
-                "No bookmarks yet",
-                style: TextStyle(fontSize: 16),
-              ),
-            )
-          : ListView.builder(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              itemCount: bookmarks.length,
-              itemBuilder: (context, index) {
-                final post = bookmarks[index];
-                return PostCard(post: post, needLike: false); // Uses your existing PostCard
-              },
-            ),
+      ? const Center(
+        child: Text(
+          "No bookmarks yet",
+          style: TextStyle(fontSize: 16),
+        ),
+      )
+      : ListView.builder(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        itemCount: bookmarks.length,
+        itemBuilder: (context, index) {
+          final post = bookmarks[index];
+          return PostCard(post: post, needLike: false); // Uses your existing PostCard
+        },
+      ),
     );
   }
 }

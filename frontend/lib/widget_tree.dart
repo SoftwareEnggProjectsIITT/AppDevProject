@@ -37,8 +37,19 @@ class _WidgetTreeState extends State<WidgetTree> {
         return Scaffold(
           appBar: AppBar(
             title: Text(pageTitles[selectedPage]),
-            backgroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
-            foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Theme.of(context).colorScheme.surfaceContainerHighest,
+                    // Theme.of(context).colorScheme.onPrimary,
+                    Theme.of(context).colorScheme.primaryContainer,
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+            ),
             actions: [
               Row(
                 mainAxisSize: MainAxisSize.min,
