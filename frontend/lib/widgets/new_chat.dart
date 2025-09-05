@@ -11,6 +11,7 @@ class NewChat extends StatefulWidget {
 class _NewChatState extends State<NewChat> {
   final _titleController = TextEditingController();
   var _isSubmitting = false;
+  
   void _submit() async {
     if (_titleController.text.trim().isEmpty) {
       showDialog(
