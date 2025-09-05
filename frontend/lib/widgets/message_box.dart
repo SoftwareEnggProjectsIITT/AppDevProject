@@ -68,7 +68,9 @@ class _MessageBoxState extends State<MessageBox> {
                 maxLines: 4,
                 decoration: InputDecoration(
                   hintText: "Ask your query...",
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
                   fillColor: Theme.of(context).colorScheme.outline,
                 ),
               ),
@@ -76,14 +78,19 @@ class _MessageBoxState extends State<MessageBox> {
             IconButton(
               icon: Icon(
                 _isListening ? Icons.mic : Icons.mic_none,
-                color: _isListening ? Colors.red : Theme.of(context).colorScheme.onSurface,
+                color: _isListening
+                    ? Colors.red
+                    : Theme.of(context).colorScheme.onSurface,
                 size: _isListening ? 35 : 25,
               ),
               onPressed: _listen,
             ),
             IconButton(
               icon: widget.isActive
-                  ? Icon(Icons.send, color: Theme.of(context).colorScheme.onSurface)
+                  ? Icon(
+                      Icons.send,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    )
                   : Icon(Icons.stop, color: Colors.red),
               onPressed: widget.isActive ? _sendMessage : null,
             ),

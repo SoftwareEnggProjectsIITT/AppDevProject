@@ -7,6 +7,6 @@ Future<String> getReply(String query) async {
     reply = "I am sorry but I don't know the answer of $query.";
   });
 
-  sendMessage(convNotifier.value!, reply, "ai");
+  await sendMessage(convNotifier.value!, reply, "ai");
   return reply;
 }

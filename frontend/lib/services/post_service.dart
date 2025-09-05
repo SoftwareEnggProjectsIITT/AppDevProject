@@ -30,7 +30,7 @@ class PostService {
   // fetch the sorting order of the posts
   Future<List<FeedEntry>> fetchFeedOrder(String userId) async {
     final response = await http.get(
-      Uri.parse("https://appdevproject-39ac.onrender.com/feed/$userId"),
+      Uri.parse("https://appdevproject-umx9.onrender.com/chats/feed/$userId"),
     );
 
     if (response.statusCode == 200) {
@@ -38,12 +38,13 @@ class PostService {
 
     final feed = decoded['feed'] as List<dynamic>;
 
-    return feed
-        .map((entry) => FeedEntry.fromMap(Map<String, dynamic>.from(entry)))
-        .toList();
+    return feed.map((entry) {
+      final map = Map<String, dynamic>.from(entry);
+      return FeedEntry.fromMap(map);
+    }).toList();
     } else {
-        throw Exception("Failed to fetch feed: ${response.statusCode}");
-      }
+      throw Exception("Failed to fetch feed: ${response.statusCode}");
+    }
   }
 
   // sort the posts
@@ -89,7 +90,8 @@ class PostService {
       if (currentScore == null) {
         return Transaction.success(delta);
       }
-      final updatedScore = (currentScore as int) + delta;
+
+      final updatedScore = (currentScore as num).toInt() + delta;
       return Transaction.success(updatedScore);
     });
   }

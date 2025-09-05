@@ -32,44 +32,46 @@ class _WidgetTreeState extends State<WidgetTree> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ValueListenableBuilder<int>(
-        valueListenable: selectedPageNotifier,
-        builder: (context, selectedPage, child) {
-          return Scaffold(
-            appBar: AppBar(
-              title: Text(pageTitles[selectedPage]),
-              actions: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    if (selectedPage == 1)
-                      IconButton(
-                        onPressed: showAddChatScreen,
-                        icon: const Icon(Icons.add),
-                      ),
-                    Consumer(
-                      builder: (context, ref, _) {
-                        final isDarkMode = ref.watch(darkModeProvider);
-                        return IconButton(
-                          icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
-                          onPressed: () {
-                            ref.read(darkModeProvider.notifier).toggleTheme();
-                          },
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            drawer: MainDrawer(),
-            body: IndexedStack(
-              index: selectedPage,
-              children: pages,
-            ),
-            bottomNavigationBar: const BottomNavbar(),
-          );
-        },
-      ),
+      valueListenable: selectedPageNotifier,
+      builder: (context, selectedPage, child) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(pageTitles[selectedPage]),
+            backgroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
+            foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            actions: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (selectedPage == 1)
+                  IconButton(
+                    onPressed: showAddChatScreen,
+                    icon: const Icon(Icons.add),
+                  ),
+                  Consumer(
+                    builder: (context, ref, _) {
+                      final isDarkMode = ref.watch(darkModeProvider);
+                      return IconButton(
+                        icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
+                        onPressed: () {
+                          ref.read(darkModeProvider.notifier).toggleTheme();
+                        },
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+          drawer: MainDrawer(),
+          body: IndexedStack(
+            index: selectedPage,
+            children: pages,
+          ),
+          bottomNavigationBar: const BottomNavbar(),
+        );
+      },
+    ),
     );
   }
 }
