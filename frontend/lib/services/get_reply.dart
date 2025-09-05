@@ -1,12 +1,11 @@
 import 'package:frontend/providers/notifiers.dart';
+import 'package:frontend/services/gemini_service.dart';
 import 'package:frontend/services/manage_messages.dart';
 
 Future<String> getReply(String query) async {
+  final GeminiService geminiService = GeminiService();
   late String reply;
-  await Future.delayed(Duration(seconds: 1), () {
-    reply = "I am sorry but I don't know the answer of $query.";
-  });
-
+  reply = await geminiService.getReply(query);
   await sendMessage(convNotifier.value!, reply, "ai");
   return reply;
 }
