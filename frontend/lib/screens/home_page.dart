@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/models/feed_entry.dart';
@@ -104,20 +102,14 @@ class _HomePageState extends State<HomePage> {
       : LiquidPullToRefresh(
         onRefresh: _handleRefresh,
         color: Theme.of(context).colorScheme.primary,
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         showChildOpacityTransition: false,
         child: ListView.builder(
           controller: _scrollController,
           physics: const AlwaysScrollableScrollPhysics(),
-          itemCount: _posts.length + 1,
+          itemCount: _posts.length,
           itemBuilder: (context, index) {
-            if (index == 0) {
-              return const Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Text("Posts", style: TextStyle(fontSize: 20)),
-              );
-            }
-            final post = _posts[index - 1];
+            final post = _posts[index];
             return PostCard(
               post: post,
               needLike: true,
