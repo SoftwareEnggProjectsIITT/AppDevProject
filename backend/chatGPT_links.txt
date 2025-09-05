@@ -7,3 +7,6 @@ https://chatgpt.com/share/68b5bf8e-c2d8-8003-b229-8cf7dea8592a
 
 data mining for rag model:
 https://chatgpt.com/share/68b5a475-d46c-8003-95a4-4acc6fd76f06
+
+optimizing the rag model:
+https://chatgpt.com/share/68bae52c-c264-8003-828c-21c626efca9e
