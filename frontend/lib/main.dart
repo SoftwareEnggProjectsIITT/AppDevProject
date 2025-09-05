@@ -7,6 +7,7 @@ import 'package:frontend/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:frontend/firebase_options.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,14 +29,16 @@ class MyApp extends ConsumerWidget {
     final isDarkMode = ref.watch(darkModeProvider);
 
     final lightTheme = ThemeData.light().copyWith(
-      colorScheme: kColorScheme,
+      colorScheme: blueishColorScheme,
+      textTheme: GoogleFonts.poppinsTextTheme(),
       // colorScheme: ColorScheme.fromSeed(
       //   seedColor: Color.fromARGB(255, 96, 59, 181),
       //   brightness: Brightness.light,
       // ),
     );
     final darkTheme = ThemeData.dark().copyWith(
-      colorScheme: kDarkColorScheme,
+      colorScheme: blueishDarkColorScheme,
+      textTheme: GoogleFonts.poppinsTextTheme(),
       // colorScheme: ColorScheme.fromSeed(
       //   seedColor: Color.fromARGB(25, 5, 99, 125),
       //   brightness: Brightness.dark,
