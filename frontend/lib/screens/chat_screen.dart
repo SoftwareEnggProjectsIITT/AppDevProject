@@ -146,7 +146,7 @@ Widget build(BuildContext context) {
                                     ],
                                   ),
                                 ),
-                                child: Text(
+                                child: SelectableText(
                                   msg.text,
                                   style: const TextStyle(color: Colors.white),
                                 ),
