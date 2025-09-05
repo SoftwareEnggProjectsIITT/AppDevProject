@@ -58,7 +58,7 @@ class _ReplyState extends State<Reply> {
             child: Text(
               widget.reply,
               style: TextStyle(
-                color: Theme.of(context).colorScheme.onSurface,
+                color: Theme.of(context).colorScheme.onSecondaryContainer,
               ),
             ),
           ),

@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
 
     posts = await _postService.fetchPosts();
     final userId = FirebaseAuth.instance.currentUser!.uid;
-    feedOrder = await _postService.fetchFeedOrder("Sarang");
+    feedOrder = await _postService.fetchFeedOrder(userId);
     posts = _postService.sortPostsByFeed(posts, feedOrder);
 
     if (mounted) {
