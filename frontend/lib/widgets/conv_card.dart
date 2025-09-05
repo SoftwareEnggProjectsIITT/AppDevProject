@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ConvCard extends StatelessWidget {
-  const ConvCard({super.key, required this.title, required this.category, required this.showChat});
+  const ConvCard({super.key, required this.title, required this.showChat});
 
   final String title;
-  final String category;
   final void Function() showChat;
 
   @override
@@ -15,8 +14,9 @@ class ConvCard extends StatelessWidget {
         child: InkWell(
           onTap: showChat,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7.5),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
                   child: Column(
@@ -30,7 +30,6 @@ class ConvCard extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 5),
-                      Text(category, style: TextStyle(color: Colors.blueGrey, fontSize: 13),)
                     ],
                   ),
                 ),

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from models import ChatRequest, ChatResponse, ChatListResponse, StatusResponse
-from model_1 import ask_question
+from server_script import ask_question
 from modules.generate_feed import generate_feed
 
 router = APIRouter(prefix="/chats", tags=["Chats"])
@@ -9,12 +9,12 @@ router = APIRouter(prefix="/chats", tags=["Chats"])
 
 
 @router.post("/ask_question", response_model=StatusResponse)
-def ask_question_route(query: str, category:int):
+def ask_question_route(query: str):
     """
     Ask a question about the Constitution using the RAG model.
     """
     
-    answer = ask_question(query, category)
+    answer = ask_question(query)
     return {
         "status": "success",
         "message": answer
