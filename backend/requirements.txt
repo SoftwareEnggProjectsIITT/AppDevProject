@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements.in
 #
+accelerate==1.10.1
+    # via unstructured-inference
 aiofiles==24.1.0
     # via unstructured-client
 aiohappyeyeballs==2.6.1
@@ -14,6 +16,8 @@ aiosignal==1.4.0
     # via aiohttp
 annotated-types==0.7.0
     # via pydantic
+antlr4-python3-runtime==4.9.3
+    # via omegaconf
 anyio==4.10.0
     # via
     #   httpx
@@ -57,6 +61,7 @@ cffi==1.17.1
     #   trio
 charset-normalizer==3.4.3
     # via
+    #   pdfminer-six
     #   requests
     #   unstructured
 chromadb==1.0.20
@@ -75,26 +80,41 @@ colorama==0.4.6
     #   uvicorn
 coloredlogs==15.0.1
     # via onnxruntime
+contourpy==1.3.3
+    # via matplotlib
 cryptography==45.0.7
     # via
+    #   msoffcrypto-tool
+    #   pdfminer-six
     #   pyjwt
     #   unstructured-client
+cycler==0.12.1
+    # via matplotlib
 dataclasses-json==0.6.7
     # via
     #   langchain-community
     #   unstructured
+deprecated==1.2.18
+    # via pikepdf
 distro==1.9.0
     # via posthog
 dotenv==0.9.9
     # via -r requirements.in
 durationpy==0.10
     # via kubernetes
+effdet==0.4.1
+    # via unstructured
 emoji==2.14.1
     # via unstructured
+et-xmlfile==2.0.0
+    # via openpyxl
 fastapi==0.116.1
     # via -r requirements.in
 filelock==3.19.1
-    # via huggingface-hub
+    # via
+    #   huggingface-hub
+    #   torch
+    #   transformers
 filetype==1.2.0
     # via
     #   langchain-google-genai
@@ -103,12 +123,16 @@ firebase-admin==7.1.0
     # via -r requirements.in
 flatbuffers==25.2.10
     # via onnxruntime
+fonttools==4.59.2
+    # via matplotlib
 frozenlist==1.7.0
     # via
     #   aiohttp
     #   aiosignal
 fsspec==2025.9.0
-    # via huggingface-hub
+    # via
+    #   huggingface-hub
+    #   torch
 google-ai-generativelanguage==0.6.15
     # via google-generativeai
 google-api-core[grpc]==2.25.1
@@ -119,6 +143,7 @@ google-api-core[grpc]==2.25.1
     #   google-cloud-core
     #   google-cloud-firestore
     #   google-cloud-storage
+    #   google-cloud-vision
     #   google-generativeai
 google-api-python-client==2.181.0
     # via google-generativeai
@@ -131,6 +156,7 @@ google-auth==2.40.3
     #   google-cloud-core
     #   google-cloud-firestore
     #   google-cloud-storage
+    #   google-cloud-vision
     #   google-generativeai
     #   kubernetes
 google-auth-httplib2==0.2.0
@@ -143,6 +169,8 @@ google-cloud-firestore==2.21.0
     # via firebase-admin
 google-cloud-storage==3.3.1
     # via firebase-admin
+google-cloud-vision==3.10.2
+    # via unstructured
 google-crc32c==1.7.1
     # via
     #   google-cloud-storage
@@ -200,7 +228,12 @@ httpx[http2]==0.28.1
 httpx-sse==0.4.1
     # via langchain-community
 huggingface-hub==0.34.4
-    # via tokenizers
+    # via
+    #   accelerate
+    #   timm
+    #   tokenizers
+    #   transformers
+    #   unstructured-inference
 humanfriendly==10.0
     # via coloredlogs
 hyperframe==6.1.0
@@ -216,6 +249,8 @@ importlib-metadata==8.7.0
     # via opentelemetry-api
 importlib-resources==6.5.2
     # via chromadb
+jinja2==3.1.6
+    # via torch
 joblib==1.5.2
     # via nltk
 jsonpatch==1.33
@@ -226,6 +261,8 @@ jsonschema==4.25.1
     # via chromadb
 jsonschema-specifications==2025.4.1
     # via jsonschema
+kiwisolver==1.4.9
+    # via matplotlib
 kubernetes==33.1.0
     # via chromadb
 langchain==0.3.27
@@ -255,41 +292,86 @@ langsmith==0.4.23
     #   langchain-community
     #   langchain-core
 lxml==6.0.1
+    # via
+    #   pikepdf
+    #   python-docx
+    #   python-pptx
+    #   unstructured
+markdown==3.9
     # via unstructured
 markdown-it-py==4.0.0
     # via rich
+markupsafe==3.0.2
+    # via jinja2
 marshmallow==3.26.1
     # via dataclasses-json
+matplotlib==3.10.6
+    # via unstructured-inference
 mdurl==0.1.2
     # via markdown-it-py
+ml-dtypes==0.5.3
+    # via onnx
 mmh3==5.2.0
     # via chromadb
 mpmath==1.3.0
     # via sympy
 msgpack==1.1.1
     # via cachecontrol
+msoffcrypto-tool==5.4.2
+    # via unstructured
 multidict==6.6.4
     # via
     #   aiohttp
     #   yarl
 mypy-extensions==1.1.0
     # via typing-inspect
+networkx==3.5
+    # via
+    #   torch
+    #   unstructured
 nltk==3.9.1
     # via unstructured
 numpy==2.3.2
     # via
+    #   accelerate
     #   chromadb
+    #   contourpy
     #   langchain-community
+    #   matplotlib
+    #   ml-dtypes
+    #   onnx
     #   onnxruntime
+    #   opencv-python
+    #   pandas
+    #   pycocotools
+    #   scipy
+    #   torchvision
+    #   transformers
     #   unstructured
+    #   unstructured-inference
 oauthlib==3.3.1
     # via
     #   kubernetes
     #   requests-oauthlib
 olefile==0.47
-    # via python-oxmsg
+    # via
+    #   msoffcrypto-tool
+    #   python-oxmsg
+omegaconf==2.3.0
+    # via effdet
+onnx==1.19.0
+    # via
+    #   unstructured
+    #   unstructured-inference
 onnxruntime==1.22.1
-    # via chromadb
+    # via
+    #   chromadb
+    #   unstructured
+    #   unstructured-inference
+opencv-python==4.11.0.86
+    # via unstructured-inference
+openpyxl==3.1.5
+    # via unstructured
 opentelemetry-api==1.36.0
     # via
     #   chromadb
@@ -322,14 +404,40 @@ overrides==7.7.0
     # via chromadb
 packaging==25.0
     # via
+    #   accelerate
     #   build
     #   huggingface-hub
     #   langchain-core
     #   langsmith
     #   marshmallow
+    #   matplotlib
     #   onnxruntime
-pdfminer==20191125
-    # via -r requirements.in
+    #   pikepdf
+    #   transformers
+    #   unstructured-pytesseract
+pandas==2.3.2
+    # via
+    #   unstructured
+    #   unstructured-inference
+pdf2image==1.17.0
+    # via unstructured
+pdfminer-six==20250506
+    # via
+    #   unstructured
+    #   unstructured-inference
+pi-heif==1.1.0
+    # via unstructured
+pikepdf==9.10.2
+    # via unstructured
+pillow==11.3.0
+    # via
+    #   matplotlib
+    #   pdf2image
+    #   pi-heif
+    #   pikepdf
+    #   python-pptx
+    #   torchvision
+    #   unstructured-pytesseract
 playwright==1.55.0
     # via -r requirements.in
 posthog==5.4.0
@@ -343,19 +451,24 @@ proto-plus==1.26.1
     #   google-ai-generativelanguage
     #   google-api-core
     #   google-cloud-firestore
+    #   google-cloud-vision
 protobuf==5.29.5
     # via
     #   google-ai-generativelanguage
     #   google-api-core
     #   google-cloud-firestore
+    #   google-cloud-vision
     #   google-generativeai
     #   googleapis-common-protos
     #   grpcio-status
+    #   onnx
     #   onnxruntime
     #   opentelemetry-proto
     #   proto-plus
 psutil==7.0.0
-    # via unstructured
+    # via
+    #   accelerate
+    #   unstructured
 pyasn1==0.6.1
     # via
     #   pyasn1-modules
@@ -364,10 +477,10 @@ pyasn1-modules==0.4.2
     # via google-auth
 pybase64==1.4.2
     # via chromadb
+pycocotools==2.0.10
+    # via effdet
 pycparser==2.22
     # via cffi
-pycryptodome==3.23.0
-    # via pdfminer
 pydantic==2.11.7
     # via
     #   chromadb
@@ -389,12 +502,19 @@ pygments==2.19.2
     # via rich
 pyjwt[crypto]==2.10.1
     # via firebase-admin
+pypandoc==1.15
+    # via unstructured
 pyparsing==3.2.3
-    # via httplib2
+    # via
+    #   httplib2
+    #   matplotlib
 pypdf==6.0.0
     # via
     #   -r requirements.in
+    #   unstructured
     #   unstructured-client
+pypdfium2==4.30.0
+    # via unstructured-inference
 pypika==0.48.9
     # via chromadb
 pyproject-hooks==1.2.0
@@ -406,7 +526,11 @@ pysocks==1.7.1
 python-dateutil==2.9.0.post0
     # via
     #   kubernetes
+    #   matplotlib
+    #   pandas
     #   posthog
+python-docx==1.2.0
+    # via unstructured
 python-dotenv==1.1.1
     # via
     #   dotenv
@@ -416,19 +540,31 @@ python-iso639==2025.2.18
     # via unstructured
 python-magic==0.4.27
     # via unstructured
+python-multipart==0.0.20
+    # via unstructured-inference
 python-oxmsg==0.0.2
     # via unstructured
+python-pptx==1.0.2
+    # via unstructured
+pytz==2025.2
+    # via pandas
 pyyaml==6.0.2
     # via
+    #   accelerate
     #   chromadb
     #   huggingface-hub
     #   kubernetes
     #   langchain
     #   langchain-community
     #   langchain-core
+    #   omegaconf
+    #   timm
+    #   transformers
     #   uvicorn
 rapidfuzz==3.14.0
-    # via unstructured
+    # via
+    #   unstructured
+    #   unstructured-inference
 referencing==0.36.2
     # via
     #   jsonschema
@@ -437,6 +573,7 @@ regex==2025.9.1
     # via
     #   -r requirements.in
     #   nltk
+    #   transformers
 requests==2.32.5
     # via
     #   -r requirements.in
@@ -451,6 +588,7 @@ requests==2.32.5
     #   posthog
     #   requests-oauthlib
     #   requests-toolbelt
+    #   transformers
     #   unstructured
 requests-oauthlib==2.0.0
     # via kubernetes
@@ -468,6 +606,13 @@ rpds-py==0.27.1
     #   referencing
 rsa==4.9.1
     # via google-auth
+safetensors==0.6.2
+    # via
+    #   accelerate
+    #   timm
+    #   transformers
+scipy==1.16.1
+    # via unstructured-inference
 selenium==4.35.0
     # via -r requirements.in
 shellingham==1.5.4
@@ -494,21 +639,43 @@ sqlalchemy==2.0.43
 starlette==0.47.3
     # via fastapi
 sympy==1.14.0
-    # via onnxruntime
+    # via
+    #   onnxruntime
+    #   torch
 tenacity==9.1.2
     # via
     #   chromadb
     #   langchain-community
     #   langchain-core
+timm==1.0.19
+    # via
+    #   effdet
+    #   unstructured-inference
 tokenizers==0.22.0
-    # via chromadb
+    # via
+    #   chromadb
+    #   transformers
+torch==2.8.0
+    # via
+    #   accelerate
+    #   effdet
+    #   timm
+    #   torchvision
+    #   unstructured-inference
+torchvision==0.23.0
+    # via
+    #   effdet
+    #   timm
 tqdm==4.67.1
     # via
     #   chromadb
     #   google-generativeai
     #   huggingface-hub
     #   nltk
+    #   transformers
     #   unstructured
+transformers==4.56.1
+    # via unstructured-inference
 trio==0.30.0
     # via
     #   selenium
@@ -525,6 +692,7 @@ typing-extensions==4.14.1
     #   google-generativeai
     #   huggingface-hub
     #   langchain-core
+    #   onnx
     #   opentelemetry-api
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-sdk
@@ -532,9 +700,12 @@ typing-extensions==4.14.1
     #   pydantic
     #   pydantic-core
     #   pyee
+    #   python-docx
     #   python-oxmsg
+    #   python-pptx
     #   selenium
     #   sqlalchemy
+    #   torch
     #   typer
     #   typing-inspect
     #   typing-inspection
@@ -545,9 +716,15 @@ typing-inspection==0.4.1
     # via
     #   pydantic
     #   pydantic-settings
-unstructured==0.18.14
+tzdata==2025.2
+    # via pandas
+unstructured[all-docs]==0.18.14
     # via -r requirements.in
 unstructured-client==0.42.3
+    # via unstructured
+unstructured-inference==1.0.5
+    # via unstructured
+unstructured-pytesseract==0.3.15
     # via unstructured
 uritemplate==4.2.0
     # via google-api-python-client
@@ -569,12 +746,21 @@ websocket-client==1.8.0
 websockets==15.0.1
     # via uvicorn
 wrapt==1.17.3
-    # via unstructured
+    # via
+    #   deprecated
+    #   unstructured
 wsproto==1.2.0
     # via trio-websocket
+xlrd==2.0.2
+    # via unstructured
+xlsxwriter==3.2.5
+    # via python-pptx
 yarl==1.20.1
     # via aiohttp
 zipp==3.23.0
     # via importlib-metadata
 zstandard==0.24.0
     # via langsmith
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
