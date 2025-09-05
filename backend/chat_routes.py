@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from models import ChatRequest, ChatResponse, ChatListResponse, StatusResponse
-from model_1 import ask_question
+from server_script import ask_question
 from modules.generate_feed import generate_feed
 
 router = APIRouter(prefix="/chats", tags=["Chats"])
