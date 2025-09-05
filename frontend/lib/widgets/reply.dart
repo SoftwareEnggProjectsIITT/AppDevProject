@@ -66,7 +66,9 @@ class _ReplyState extends State<Reply> {
                 color: Theme.of(context).colorScheme.surfaceContainer,
               ),
               child: DefaultTextStyle(
-                style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurface
+                ),
                 child: Column(
                   children: MarkdownGenerator().buildWidgets(widget.reply),
                 ),
