@@ -135,6 +135,9 @@ class _PostCardState extends State<PostCard> {
                         ),
                         Text(
                           widget.post.likes.toString(),
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.onPrimaryContainer,
+                          ),
                         ),
                       ],
                     ) 
