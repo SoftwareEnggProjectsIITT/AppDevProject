@@ -63,16 +63,24 @@ class _ReplyState extends State<Reply> {
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surfaceContainer,
               ),
-              child: Column(
-                children: MarkdownGenerator().buildWidgets(widget.reply),
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurface
+                ),
+                child: Column(
+                  children: MarkdownGenerator().buildWidgets(widget.reply),
+                ),
               ),
             ),
           ),
           IconButton(
             onPressed: _toggleSpeech,
-            icon: Icon(_isSpeaking ? Icons.pause : Icons.volume_up),
+            icon: Icon(
+              _isSpeaking ? Icons.pause : Icons.volume_up,
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
           ),
         ],
       ),

@@ -102,20 +102,14 @@ class _HomePageState extends State<HomePage> {
       : LiquidPullToRefresh(
         onRefresh: _handleRefresh,
         color: Theme.of(context).colorScheme.primary,
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         showChildOpacityTransition: false,
         child: ListView.builder(
           controller: _scrollController,
           physics: const AlwaysScrollableScrollPhysics(),
-          itemCount: _posts.length + 1,
+          itemCount: _posts.length,
           itemBuilder: (context, index) {
-            if (index == 0) {
-              return const Padding(
-                padding: EdgeInsets.all(12.0),
-                child: Text("Posts", style: TextStyle(fontSize: 20)),
-              );
-            }
-            final post = _posts[index - 1];
+            final post = _posts[index];
             return PostCard(
               post: post,
               needLike: true,
@@ -127,8 +121,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: _showBackToTopButton
       ? FloatingActionButton(
         mini: true,
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
+        foregroundColor: Theme.of(context).colorScheme.onTertiary,
         onPressed: _scrollToTop,
         child: const Icon(Icons.arrow_upward, size: 20),
       )

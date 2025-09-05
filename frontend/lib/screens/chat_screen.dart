@@ -75,99 +75,98 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
 @override
-Widget build(BuildContext context) {
-  return Scaffold(
-    appBar: AppBar(
-      title: Text(_conversationTitle ?? "Loading..."),
-    ),
-    body: Stack(
-      children: [
-        Column(
-          children: [
-            Expanded(
-              child: StreamBuilder<QuerySnapshot>(
-                stream: getMessages(widget.conversationId),
-                builder: (context, snapshot) {
-                  final docs = snapshot.data?.docs ?? [];
-                  final allMessages = docs.map((doc) {
-                    final data = doc.data() as Map<String, dynamic>;
-                    return ChatMessage(
-                      text: data['text'] ?? '',
-                      sender: data['sender'] ?? 'unknown',
-                    );
-                  }).toList();
-
-                  if (allMessages.isEmpty) {
-                    return const Center(
-                      child: Text(
-                        "What's in your mind today?",
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    );
-                  }
-
-                  final itemCount =
-                      allMessages.length + (isAiResponding ? 1 : 0);
-
-                  return ListView.builder(
-                    controller: _scrollController,
-                    reverse: true,
-                    padding: const EdgeInsets.all(12),
-                    itemCount: itemCount,
-                    itemBuilder: (context, index) {
-                      if (isAiResponding && index == 0) {
-                        return const Align(
-                          alignment: Alignment.centerLeft,
-                          child: ReplyLoader(),
-                        );
-                      }
-                      final offset = isAiResponding ? 1 : 0;
-                      final msg = allMessages[
-                          allMessages.length - 1 - (index - offset)];
-                      final isUser = msg.sender == 'user';
-
-                      return Align(
-                        alignment: isUser
-                            ? Alignment.centerRight
-                            : Alignment.centerLeft,
-                        child: isUser
-                            ? Container(
-                                margin: const EdgeInsets.all(5),
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  gradient: const LinearGradient(
-                                    colors: [
-                                      Color.fromARGB(255, 48, 143, 51),
-                                      Color.fromARGB(255, 48, 143, 51),
-                                    ],
-                                  ),
-                                ),
-                                child: SelectableText(
-                                  msg.text,
-                                  style: const TextStyle(color: Colors.white),
-                                ),
-                              )
-                            : Reply(reply: msg.text),
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(_conversationTitle ?? "Loading..."),
+      ),
+      body: Stack(
+        children: [
+          Container(
+            color: Theme.of(context).colorScheme.surface,
+            child: Column(
+              children: [
+                Expanded(
+                  child: StreamBuilder<QuerySnapshot>(
+                  stream: getMessages(widget.conversationId),
+                  builder: (context, snapshot) {
+                    final docs = snapshot.data?.docs ?? [];
+                    final allMessages = docs.map((doc) {
+                      final data = doc.data() as Map<String, dynamic>;
+                      return ChatMessage(
+                        text: data['text'] ?? '',
+                        sender: data['sender'] ?? 'unknown',
                       );
-                    },
-                  );
-                },
-              ),
+                    }).toList();
+
+                    if (allMessages.isEmpty) {
+                      return const Center(
+                        child: Text(
+                          "What's in your mind today?",
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      );
+                    }
+
+                    final itemCount =
+                    allMessages.length + (isAiResponding ? 1 : 0);
+
+                    return ListView.builder(
+                      controller: _scrollController,
+                      reverse: true,
+                      padding: const EdgeInsets.all(12),
+                      itemCount: itemCount,
+                      itemBuilder: (context, index) {
+                        if (isAiResponding && index == 0) {
+                          return const Align(
+                            alignment: Alignment.centerLeft,
+                            child: ReplyLoader(),
+                          );
+                        }
+                        final offset = isAiResponding ? 1 : 0;
+                        final msg = allMessages[
+                        allMessages.length - 1 - (index - offset)];
+                        final isUser = msg.sender == 'user';
+
+                        return Align(
+                          alignment: isUser
+                          ? Alignment.centerRight
+                          : Alignment.centerLeft,
+                          child: isUser
+                          ? Container(
+                            margin: const EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                            ),
+                            child: Text(
+                              msg.text,
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.onSurface,
+                              ),
+                            ),
+                          )
+                          : Reply(reply: msg.text),
+                        );
+                      },
+                    );
+                  },
+                ),
+                ),
+                MessageBox(
+                  isActive: !isAiResponding,
+                  onSend: (text) {
+                    send(text);
+                  },
+                ),
+              ],
             ),
-            MessageBox(
-              isActive: !isAiResponding,
-              onSend: (text) {
-                send(text);
-              },
-            ),
-            const SizedBox(height: 10),
-          ],
-        ),
-        if (_showBackToRecentButton)
+          ),
+          if (_showBackToRecentButton)
           Positioned(
             bottom: 75,
             right: 10,
@@ -181,8 +180,8 @@ Widget build(BuildContext context) {
               ),
             ),
           ),
-      ],
-    ),
-  );
-}
+        ],
+      ),
+    );
+  }
 }
