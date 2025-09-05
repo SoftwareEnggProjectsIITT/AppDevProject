@@ -16,6 +16,7 @@ class ReplyLoader extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: const [
+          Text('Getting reply '),
           SpinKitThreeBounce(
             color: Colors.grey,
             size: 20.0,

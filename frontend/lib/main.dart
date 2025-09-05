@@ -42,7 +42,7 @@ class MyApp extends ConsumerWidget {
         ),
       ),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: const FirebaseAuthWrapper(),
+      home: const FirebaseAuthWrapper()
     );
   }
 }
