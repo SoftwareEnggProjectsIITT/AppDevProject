@@ -17,7 +17,7 @@ class GeminiService {
       "contents": [
         {
           "parts": [
-            {"text": systemPrompt}
+            {"text": prompt}
           ]
         }
       ]
