@@ -46,7 +46,6 @@ htmlcov/
 # FastAPI specific
 # If using SQLite locally
 *.db
-*.sqlite3
 
 # Docker
 *.pid
