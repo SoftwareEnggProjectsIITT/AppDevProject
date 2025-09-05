@@ -27,24 +27,37 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isDarkMode = ref.watch(darkModeProvider);
 
+    final lightTheme = ThemeData.light().copyWith(
+      colorScheme: kColorScheme,
+      // colorScheme: ColorScheme.fromSeed(
+      //   seedColor: Color.fromARGB(255, 96, 59, 181),
+      //   brightness: Brightness.light,
+      // ),
+    );
+    final darkTheme = ThemeData.dark().copyWith(
+      colorScheme: kDarkColorScheme,
+      // colorScheme: ColorScheme.fromSeed(
+      //   seedColor: Color.fromARGB(25, 5, 99, 125),
+      //   brightness: Brightness.dark,
+      // ),
+    );
+
+    final targetTheme = isDarkMode ? darkTheme : lightTheme;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.light().copyWith(
-        colorScheme: kColorScheme,
-        // colorScheme: ColorScheme.fromSeed(
-        //   seedColor: Color.fromARGB(255, 96, 59, 181),
-        //   brightness: Brightness.light,
-        // ),
-      ),
-      darkTheme: ThemeData.dark().copyWith(
-        colorScheme: kDarkColorScheme
-        // colorScheme: ColorScheme.fromSeed(
-        //   seedColor: Color.fromARGB(25, 5, 99, 125),
-        //   brightness: Brightness.dark,
-        // ),
-      ),
-      themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: ThemeMode.light,
+      builder: (context, child) {
+        return AnimatedTheme(
+          data: targetTheme, 
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+          child: child!
+        );
+      },
       home: const FirebaseAuthWrapper(),
     );
   }
