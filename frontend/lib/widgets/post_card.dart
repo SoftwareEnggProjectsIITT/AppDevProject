@@ -38,8 +38,10 @@ class _PostCardState extends State<PostCard> {
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
         onTap: () {
+          if (!widget.wasOpened) {
+            widget.postService?.increaseCategoryScore(widget.post.category, 2);
+          }
           widget.wasOpened = true;
-          widget.postService?.increaseCategoryScore(widget.post.category, 1);
           Navigator.push(
             context, 
             MaterialPageRoute(
@@ -110,15 +112,16 @@ class _PostCardState extends State<PostCard> {
                       LikeButton(
                         isLiked: widget.post.isLiked,
                         onTap: () {
-                          widget.postService?.increaseCategoryScore(widget.post.category, 1);
                           setState(() {
                             if (!widget.post.isLiked) {
                               widget.post.likes++;
                               widget.postService?.addRemoteLikes(widget.post.id!, 1);
+                              widget.postService?.increaseCategoryScore(widget.post.category, 10);
                             }
                             else {
                               widget.post.likes--;
                               widget.postService?.addRemoteLikes(widget.post.id!, -1);
+                              widget.postService?.increaseCategoryScore(widget.post.category, -10);
                             }
                             widget.post.isLiked = !widget.post.isLiked;
                           });
