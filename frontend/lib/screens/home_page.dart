@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/models/feed_entry.dart';
@@ -127,8 +129,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: _showBackToTopButton
       ? FloatingActionButton(
         mini: true,
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
+        foregroundColor: Theme.of(context).colorScheme.onTertiary,
         onPressed: _scrollToTop,
         child: const Icon(Icons.arrow_upward, size: 20),
       )

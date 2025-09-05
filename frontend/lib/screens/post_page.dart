@@ -46,6 +46,7 @@ class _PostPageState extends State<PostPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -55,7 +56,7 @@ class _PostPageState extends State<PostPage> {
               children: [
                 // Image
                 Hero(
-                  tag: '${widget.post.image_link} post page',
+                  tag: '${widget.post.image_link} ${true.toString()}',
                   child: PostImage(url: widget.post.image_link),
                 ),
                 const SizedBox(height: 12),
@@ -70,17 +71,21 @@ class _PostPageState extends State<PostPage> {
                 // Title
                 Text(
                   widget.post.title.trim(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
                 const SizedBox(height: 16),
 
                 // Body
                 SelectableLinkify(
-                  text: preprocessText("${widget.post.body} https://x.com/"),
-                  style: const TextStyle(fontSize: 16),
+                  text: preprocessText(widget.post.body),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Theme.of(context).colorScheme.onSurface
+                  ),
                   linkStyle: const TextStyle(
                     color: Colors.blue,
                     decoration: TextDecoration.underline,

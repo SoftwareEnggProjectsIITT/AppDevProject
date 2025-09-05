@@ -57,7 +57,7 @@ class _ReplyState extends State<Reply> {
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.surfaceContainerLow,
               ),
               child: Column(
                 children: MarkdownGenerator().buildWidgets(widget.reply),
@@ -66,7 +66,10 @@ class _ReplyState extends State<Reply> {
           ),
           IconButton(
             onPressed: _toggleSpeech,
-            icon: Icon(_isSpeaking ? Icons.pause : Icons.volume_up),
+            icon: Icon(
+              _isSpeaking ? Icons.pause : Icons.volume_up,
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
           ),
         ],
       ),
