@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/models/tts.dart';
-
+import 'package:markdown_widget/markdown_widget.dart';
 
 class Reply extends StatefulWidget {
   const Reply({super.key, required this.reply});
@@ -23,7 +23,7 @@ class _ReplyState extends State<Reply> {
       });
     } else {
       setState(() {
-        _isSpeaking = true;   // mark speaking started
+        _isSpeaking = true; // mark speaking started
       });
       await _tts!.speak();
     }
@@ -38,7 +38,7 @@ class _ReplyState extends State<Reply> {
 
     _tts!.fTts.setCompletionHandler(() {
       setState(() {
-        _isSpeaking = false;  // reset when finished
+        _isSpeaking = false; // reset when finished
       });
     });
   }
@@ -51,18 +51,19 @@ class _ReplyState extends State<Reply> {
         children: [
           Container(
             padding: EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Theme.of(context).colorScheme.surfaceContainerHigh,
-            ),
-            child: Text(
-              widget.reply,
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.onSecondaryContainer,
+
+            child: Container(
+              margin: EdgeInsets.only(right: 25),
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              child: Column(
+                children: MarkdownGenerator().buildWidgets(widget.reply),
               ),
             ),
           ),
-          
           IconButton(
             onPressed: _toggleSpeech,
             icon: Icon(_isSpeaking ? Icons.pause : Icons.volume_up),
