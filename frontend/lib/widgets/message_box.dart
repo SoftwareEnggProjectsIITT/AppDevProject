@@ -58,7 +58,7 @@ class _MessageBoxState extends State<MessageBox> {
     return SafeArea(
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.surface,
         child: Row(
           children: [
             Expanded(
@@ -68,22 +68,30 @@ class _MessageBoxState extends State<MessageBox> {
                 maxLines: 4,
                 decoration: InputDecoration(
                   hintText: "Ask your query...",
-                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  fillColor: Theme.of(context).colorScheme.outline,
                 ),
               ),
             ),
             IconButton(
               icon: Icon(
                 _isListening ? Icons.mic : Icons.mic_none,
-                color: _isListening ? Colors.red : Colors.grey,
+                color: _isListening
+                    ? Colors.red
+                    : Theme.of(context).colorScheme.onSurface,
                 size: _isListening ? 35 : 25,
               ),
               onPressed: _listen,
             ),
             IconButton(
               icon: widget.isActive
-                  ? const Icon(Icons.send, color: Colors.green)
-                  : const Icon(Icons.stop, color: Colors.red),
+                  ? Icon(
+                      Icons.send,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    )
+                  : Icon(Icons.stop, color: Colors.red),
               onPressed: widget.isActive ? _sendMessage : null,
             ),
           ],
