@@ -9,21 +9,16 @@ router = APIRouter(prefix="/chats", tags=["Chats"])
 
 
 @router.post("/ask_question", response_model=StatusResponse)
-def ask_question_route(query: str):
+def ask_question_route(query: str, category:int):
     """
     Ask a question about the Constitution using the RAG model.
     """
-    try:
-        answer = ask_question(query)
-        return {
-            "status": "success",
-            "message": answer
-        }
-    except Exception as e:
-        return {
-            "status": "error",
-            "message": str(e)
-        }
+    
+    answer = ask_question(query, category)
+    return {
+        "status": "success",
+        "message": answer
+    }
 
 
 @router.get("/feed/{user_id}")
