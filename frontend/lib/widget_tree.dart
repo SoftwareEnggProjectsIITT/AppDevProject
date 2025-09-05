@@ -36,7 +36,12 @@ class _WidgetTreeState extends State<WidgetTree> {
       builder: (context, selectedPage, child) {
         return Scaffold(
           appBar: AppBar(
-            title: Text(pageTitles[selectedPage]),
+            title: Text(
+              pageTitles[selectedPage], 
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+              ),
+            ),
             flexibleSpace: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
