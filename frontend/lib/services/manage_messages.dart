@@ -51,7 +51,6 @@ Future<String> createConversation(String title) async {
 
 Stream<QuerySnapshot> getConversations() {
   final user = FirebaseAuth.instance.currentUser;
-  print("Jalwa hai humara");
   return FirebaseFirestore.instance
       .collection('chats')
       .doc(user!.uid)

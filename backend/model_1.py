@@ -80,7 +80,7 @@ Do not answer the question, only produce the reformulated queries.
             input_variables=["question"],
             template="""
 You are an expert query reformulator.  
-The user has asked the following question about Civil Procedure, Civil Law Property in India:  
+The user has asked the following question about Constitutional and General Law in India:  
 
 Question: {question}  
 
@@ -101,7 +101,7 @@ Do not answer the question, only produce the reformulated queries.
             input_variables=["question"],
             template="""
 You are an expert query reformulator.  
-The user has asked the following question about Consumer Public Interest Safety in India:  
+The user has asked the following question about Consumer Public Interest Safety Law in India:  
 
 Question: {question}  
 
@@ -289,7 +289,7 @@ Do not answer the question, only produce the reformulated queries.
             input_variables=["question"],
             template="""
 You are an expert query reformulator.  
-The user has asked the following question about Labour and Employment Laws in India:  
+The user has asked the following question about Labor and Employment Laws in India:  
 
 Question: {question}  
 
@@ -347,7 +347,7 @@ Do not answer the question, only produce the reformulated queries.
             input_variables=["question"],
             template="""
 You are an expert query reformulator.  
-The user has asked the following question about Taxation, Indirect Tax Laws in India:  
+The user has asked the following question about Transport and Infrastructure Laws in India:  
 
 Question: {question}  
 
@@ -439,7 +439,59 @@ def build_chain(category_id: int):
     return chain
 
 
-def ask_question(query: str, category_id: int) -> str:
+def classify_category(query: str) -> int:
+    """
+    Use LLM to classify the query into one of the 17 predefined categories.
+
+    Args:
+        query (str): User's question.
+
+    Returns:
+        int: Category number (1-17).
+    """
+    category_list = """
+    1) Agriculture, Co-operatives, and Farm Laws 
+    2) Banking, Finance Insurance Security
+    3) Civil Procedure, Civil Law Property
+    4) Constitutional and General Law
+    5) Consumer Public Interest Safety Law
+    6) Corporate Commercial Financial Laws
+    7) Crime, Special Statutes Laws
+    8) Criminal Procedure Evidence Laws
+    9) Education Health Medical regulation Laws
+    10) Environment, Forest, Wildlife and Biodiversity Laws
+    11) Intellectual Property Laws
+    12) IT, Data and Telecom Laws
+    13) Juvenile Family and Personal Laws
+    14) Labor and Employment Laws
+    15) Miscellaneous Procedure Governance Laws
+    16) Taxation, Indirect Tax Laws
+    17) Transport and Infrastructure Laws
+    """
+
+    prompt = f"""
+    You are a legal categorization expert. 
+    The user asks: "{query}"
+
+    Based on the list of categories below, determine the **single most relevant category number**.
+    Only respond with the number (1-17), nothing else.
+
+    Categories:
+    {category_list}
+    """
+
+    response = llm.invoke(prompt)
+    try:
+        category_num = int(response.content.strip())
+        if 1 <= category_num <= 17:
+            return category_num
+        else:
+            raise ValueError(f"Invalid category number from model: {category_num}")
+    except Exception as e:
+        raise ValueError(f"Failed to classify category: {response.content}") from e
+
+
+def ask_question(query: str) -> str:
     """
     Query the RAG pipeline with a user question.
     
@@ -450,6 +502,8 @@ def ask_question(query: str, category_id: int) -> str:
         str: Formatted answer from the RAG pipeline.
     """
     try:
+        category_id = classify_category(query)
+        print("This belongs to category: ", category_id)
         chain = build_chain(category_id)
         back_prompt = "Explain your reasoning and tell section or page number where it can be found"
         query = query + back_prompt
@@ -459,4 +513,4 @@ def ask_question(query: str, category_id: int) -> str:
         return f"Error: {str(e)}"
 
 #Testing and improving
-print(ask_question("My Wife is accusing me for fake domestic violence and demanding money, what can I do?", 13))
+#print(ask_question("What rights do I have if I had to kill a wild animal for my self defense?"))
