@@ -45,11 +45,8 @@ class _AllChatsScreenState extends State<AllChatsScreen> {
               final convo = conversations[index];
               final conversationId = convo.id;
               final title = convo['title'] ?? "Untitled";
-              //final category = convo['category'] ?? "General";
-              final category = "General";
               return ConvCard(
                 title: title,
-                category: category,
                 showChat: () => openChat(conversationId),
               );
             },
