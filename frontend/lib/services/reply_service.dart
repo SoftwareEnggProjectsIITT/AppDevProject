@@ -20,7 +20,6 @@ class GeminiService {
       final body = await response.stream.bytesToString();
       final data = jsonDecode(body);
 
-      // ✅ Await getReply
       return await getReply(data['message']);
     } else {
       return response.reasonPhrase ?? "Unknown error";
@@ -51,7 +50,6 @@ class GeminiService {
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
 
-        // ✅ Defensive parsing
         final reply = data["candidates"]?[0]?["content"]?["parts"]?[0]?["text"];
         return reply ?? "No reply from Gemini";
       } else {

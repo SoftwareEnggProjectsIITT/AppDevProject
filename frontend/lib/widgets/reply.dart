@@ -15,6 +15,12 @@ class _ReplyState extends State<Reply> {
   Tts? _tts;
   var _isSpeaking = false;
 
+  @override
+  void dispose() async {
+    super.dispose();
+    await _tts!.stop();
+  }
+
   void _toggleSpeech() async {
     if (_isSpeaking) {
       await _tts!.stop();
