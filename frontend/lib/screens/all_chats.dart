@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:frontend/providers/notifiers.dart';
 import 'package:frontend/screens/chat_screen.dart';
 import 'package:frontend/services/manage_messages.dart';
 import 'package:frontend/widgets/conv_card.dart';
@@ -15,6 +15,7 @@ class AllChatsScreen extends StatefulWidget {
 class _AllChatsScreenState extends State<AllChatsScreen> {
 
   void openChat(String conversationId) {
+    convNotifier.value = conversationId;
     Navigator.push(
       context,
       MaterialPageRoute(

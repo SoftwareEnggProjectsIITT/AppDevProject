@@ -1,12 +1,12 @@
+import 'package:frontend/providers/notifiers.dart';
 import 'package:frontend/services/manage_messages.dart';
 
 Future<String> getReply(String query) async {
-  var reply;
-  // The Duration object specifies the delay
-  await Future.delayed(Duration(seconds: 5), () {
+  late String reply;
+  await Future.delayed(Duration(seconds: 1), () {
     reply = "I am sorry but I don't know the answer of $query.";
   });
 
-  //sendMessage(reply, "ai");
+  sendMessage(convNotifier.value!, reply, "ai");
   return reply;
 }

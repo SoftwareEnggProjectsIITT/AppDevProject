@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-from langchain_community.document_loaders import UnstructuredPDFLoader, PyPDFLoader
+from langchain_community.document_loaders.pdf import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
@@ -34,10 +34,10 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     2: {
-        "pdfs": ["data_for_rag\Banking_&_Finance_Insurance_Security/a1934-2.pdf",
-                 "data_for_rag\Banking_&_Finance_Insurance_Security/A1999_41.pdf",
-                 "data_for_rag\Banking_&_Finance_Insurance_Security/A2002-54.pdf",
-                 "data_for_rag\Banking_&_Finance_Insurance_Security/A194910.pdf"],
+        "pdfs": ["data_for_rag/Banking_&_Finance_Insurance_Security/a1934-2.pdf",
+                 "data_for_rag/Banking_&_Finance_Insurance_Security/A1999_41.pdf",
+                 "data_for_rag/Banking_&_Finance_Insurance_Security/A2002-54.pdf",
+                 "data_for_rag/Banking_&_Finance_Insurance_Security/A194910.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -53,11 +53,11 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     3: {
-        "pdfs": ["data_for_rag\Civil_procedure_Civil_law_Property/189304.pdf",
-                 "data_for_rag\Civil_procedure_Civil_law_Property\A1948-56.pdf",
-                 "data_for_rag\Civil_procedure_Civil_law_Property/a1958-28.pdf",
-                 "data_for_rag\Civil_procedure_Civil_law_Property\A1963-47.pdf",
-                 "data_for_rag\Civil_procedure_Civil_law_Property/the_registration_act,1908.pdf"],
+        "pdfs": ["data_for_rag/Civil_procedure_Civil_law_Property/189304.pdf",
+                 "data_for_rag/Civil_procedure_Civil_law_Property/A1948-56.pdf",
+                 "data_for_rag/Civil_procedure_Civil_law_Property/a1958-28.pdf",
+                 "data_for_rag/Civil_procedure_Civil_law_Property/A1963-47.pdf",
+                 "data_for_rag/Civil_procedure_Civil_law_Property/the_registration_act,1908.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -73,8 +73,8 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     4: {
-        "pdfs": ["data_for_rag\Constitutional_General/20240716890312078.pdf",
-                 "data_for_rag\Constitutional_General/the_general_clauses_act,_1897.pdf"],
+        "pdfs": ["data_for_rag/Constitutional_General/20240716890312078.pdf",
+                 "data_for_rag/Constitutional_General/the_general_clauses_act,_1897.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -90,12 +90,12 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     5: {
-        "pdfs": ["data_for_rag\Consumer_Public_interest_Safety/200634_food_safety_and_standards_act,_2006.pdf",
-                 "data_for_rag\Consumer_Public_interest_Safety\drug_cosmeticsa1940-23.pdf",
-                 "data_for_rag\Consumer_Public_interest_Safety\eng201935.pdf",
-                 "data_for_rag\Consumer_Public_interest_Safety\essential_commodities_act_1955.pdf",
-                 "data_for_rag\Consumer_Public_interest_Safety\legalmetrology_act_2009.pdf",
-                 "data_for_rag\Consumer_Public_interest_Safety/right_yo_information_act.pdf",],
+        "pdfs": ["data_for_rag/Consumer_Public_interest_Safety/200634_food_safety_and_standards_act,_2006.pdf",
+                 "data_for_rag/Consumer_Public_interest_Safety/drug_cosmeticsa1940-23.pdf",
+                 "data_for_rag/Consumer_Public_interest_Safety/eng201935.pdf",
+                 "data_for_rag/Consumer_Public_interest_Safety/essential_commodities_act_1955.pdf",
+                 "data_for_rag/Consumer_Public_interest_Safety/legalmetrology_act_2009.pdf",
+                 "data_for_rag/Consumer_Public_interest_Safety/right_yo_information_act.pdf",],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -111,14 +111,14 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     6: {
-        "pdfs": ["data_for_rag\Corporate_Commercial_Financial\A1999_42.pdf",
+        "pdfs": ["data_for_rag/Corporate_Commercial_Financial/A1999_42.pdf",
                  "data_for_rag/Corporate_Commercial_Financial/A2003-12.pdf",
-                 "data_for_rag\Corporate_Commercial_Financial\A2009-06.pdf",
-                 "data_for_rag\Corporate_Commercial_Financial\A2013-18.pdf",
-                 "data_for_rag\Corporate_Commercial_Financial\AA1992__15secu.pdf",
-                 "data_for_rag\Corporate_Commercial_Financial\indian_partnership_act_1932.pdf",
-                 "data_for_rag\Corporate_Commercial_Financial/negotiable_instruments_act,_1881.pdf",
-                 "data_for_rag\Corporate_Commercial_Financial/the_insolvency_and_bankruptcy_code,_2016.pdf"],
+                 "data_for_rag/Corporate_Commercial_Financial/A2009-06.pdf",
+                 "data_for_rag/Corporate_Commercial_Financial/A2013-18.pdf",
+                 "data_for_rag/Corporate_Commercial_Financial/AA1992__15secu.pdf",
+                 "data_for_rag/Corporate_Commercial_Financial/indian_partnership_act_1932.pdf",
+                 "data_for_rag/Corporate_Commercial_Financial/negotiable_instruments_act,_1881.pdf",
+                 "data_for_rag/Corporate_Commercial_Financial/the_insolvency_and_bankruptcy_code,_2016.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -134,12 +134,12 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     7: {
-        "pdfs": ["data_for_rag\Crime_Special_statutes\A1959_54.pdf",
-                 "data_for_rag\Crime_Special_statutes\A1967-37.pdf",
-                 "data_for_rag\Crime_Special_statutes\A2003-15.pdf",
-                 "data_for_rag\Crime_Special_statutes\corruptiona1988-49.pdf",
-                 "data_for_rag\Crime_Special_statutes\scheduled_castes_and_the_scheduled_tribes.pdf",
-                 "data_for_rag\Crime_Special_statutes/the_immoral_traffic_(prevention)_act,_1956.pdf"],
+        "pdfs": ["data_for_rag/Crime_Special_statutes/A1959_54.pdf",
+                 "data_for_rag/Crime_Special_statutes/A1967-37.pdf",
+                 "data_for_rag/Crime_Special_statutes/A2003-15.pdf",
+                 "data_for_rag/Crime_Special_statutes/corruptiona1988-49.pdf",
+                 "data_for_rag/Crime_Special_statutes/scheduled_castes_and_the_scheduled_tribes.pdf",
+                 "data_for_rag/Crime_Special_statutes/the_immoral_traffic_(prevention)_act,_1956.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -155,10 +155,10 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     8: {
-        "pdfs": ["data_for_rag\Criminal_Procedure_Evidence\A1963-36.pdf",
-                 "data_for_rag\Criminal_Procedure_Evidence\AAA1948___37.pdf",
-                 "data_for_rag\Criminal_Procedure_Evidence\iea_1872.pdf",
-                 "data_for_rag\Criminal_Procedure_Evidence/repealedfileopen.pdf"],
+        "pdfs": ["data_for_rag/Criminal_Procedure_Evidence/A1963-36.pdf",
+                 "data_for_rag/Criminal_Procedure_Evidence/AAA1948___37.pdf",
+                 "data_for_rag/Criminal_Procedure_Evidence/iea_1872.pdf",
+                 "data_for_rag/Criminal_Procedure_Evidence/repealedfileopen.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -174,10 +174,10 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     9: {
-        "pdfs": ["data_for_rag\Education_Health_Medical_regulation/195603.pdf",
-                 "data_for_rag\Education_Health_Medical_regulation\A2017-10.pdf",
-                 "data_for_rag\Education_Health_Medical_regulation\A2019_30.pdf",
-                 "data_for_rag\Education_Health_Medical_regulation/the_right_of_children_to_free_and_compulsory_education_act_2009.pdf"],
+        "pdfs": ["data_for_rag/Education_Health_Medical_regulation/195603.pdf",
+                 "data_for_rag/Education_Health_Medical_regulation/A2017-10.pdf",
+                 "data_for_rag/Education_Health_Medical_regulation/A2019_30.pdf",
+                 "data_for_rag/Education_Health_Medical_regulation/the_right_of_children_to_free_and_compulsory_education_act_2009.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -193,12 +193,12 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     10: {
-        "pdfs": ["data_for_rag\Environment_Forest_Wildlife_Biodiversity/air_act-1981.pdf",
-                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity\ep_act_1986.pdf",
-                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_biological_diversity_act,_2002.pdf",
-                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_forest_(conservation)_act,_1980.pdf",
-                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
-                 "data_for_rag\Environment_Forest_Wildlife_Biodiversity/the_wild_life_(protection)_act,_1972.pdf"],
+        "pdfs": ["data_for_rag/Environment_Forest_Wildlife_Biodiversity/air_act-1981.pdf",
+                 "data_for_rag/Environment_Forest_Wildlife_Biodiversity/ep_act_1986.pdf",
+                 "data_for_rag/Environment_Forest_Wildlife_Biodiversity/the_biological_diversity_act,_2002.pdf",
+                 "data_for_rag/Environment_Forest_Wildlife_Biodiversity/the_forest_(conservation)_act,_1980.pdf",
+                 "data_for_rag/Environment_Forest_Wildlife_Biodiversity/the_water_(prevention_and_control_of_pollution)_act,_1974.pdf",
+                 "data_for_rag/Environment_Forest_Wildlife_Biodiversity/the_wild_life_(protection)_act,_1972.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -214,11 +214,11 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     11: {
-        "pdfs": ["data_for_rag\Intellectual_Property/200016.pdf",
-                 "data_for_rag\Intellectual_Property\A1970-39.pdf",
-                 "data_for_rag\Intellectual_Property\A1999-48.pdf",
-                 "data_for_rag\Intellectual_Property/the_copyright_act,_1957.pdf",
-                 "data_for_rag\Intellectual_Property/the_trade_marks_act,_1999.pdf"],
+        "pdfs": ["data_for_rag/Intellectual_Property/200016.pdf",
+                 "data_for_rag/Intellectual_Property/A1970-39.pdf",
+                 "data_for_rag/Intellectual_Property/A1999-48.pdf",
+                 "data_for_rag/Intellectual_Property/the_copyright_act,_1957.pdf",
+                 "data_for_rag/Intellectual_Property/the_trade_marks_act,_1999.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -234,10 +234,10 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     12: {
-        "pdfs": ["data_for_rag\IT_Data_Telecom/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
-                 "data_for_rag\IT_Data_Telecom\engaadhaar.pdf",
-                 "data_for_rag\IT_Data_Telecom\indiantelegraphact_1885.pdf",
-                 "data_for_rag\IT_Data_Telecom\it_act_2000_updated.pdf"],
+        "pdfs": ["data_for_rag/IT_Data_Telecom/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+                 "data_for_rag/IT_Data_Telecom/engaadhaar.pdf",
+                 "data_for_rag/IT_Data_Telecom/indiantelegraphact_1885.pdf",
+                 "data_for_rag/IT_Data_Telecom/it_act_2000_updated.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -253,16 +253,16 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     13: {
-        "pdfs": ["data_for_rag\Juvenile_Family_Personal_law/189008.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\A1869-04.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\A1872-15.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\A1937-26.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\A1955-25.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law/a2016-2.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\AAA1956suc___30.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\protection_of_women_from_domestic_violence_act,_2005.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law\special_marriage_act.pdf",
-                 "data_for_rag\Juvenile_Family_Personal_law/the_hindu_adoptions_and_maintenance_act,1965.pdf"],
+        "pdfs": ["data_for_rag/Juvenile_Family_Personal_law/189008.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/A1869-04.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/A1872-15.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/A1937-26.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/A1955-25.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/a2016-2.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/AAA1956suc___30.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/protection_of_women_from_domestic_violence_act,_2005.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/special_marriage_act.pdf",
+                 "data_for_rag/Juvenile_Family_Personal_law/the_hindu_adoptions_and_maintenance_act,1965.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -278,12 +278,12 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     14: {
-        "pdfs": ["data_for_rag\Labour_&_Employment/a1948-011.pdf",
-                 "data_for_rag\Labour_&_Employment\A1972-39.pdf",
-                 "data_for_rag\Labour_&_Employment\A2013-14.pdf",
-                 "data_for_rag\Labour_&_Employment\A194863.pdf",
-                 "data_for_rag\Labour_&_Employment\maternity_benefit.pdf",
-                 "data_for_rag\Labour_&_Employment\payment_of_wages_act_1936.pdf"],
+        "pdfs": ["data_for_rag/Labour_&_Employment/a1948-011.pdf",
+                 "data_for_rag/Labour_&_Employment/A1972-39.pdf",
+                 "data_for_rag/Labour_&_Employment/A2013-14.pdf",
+                 "data_for_rag/Labour_&_Employment/A194863.pdf",
+                 "data_for_rag/Labour_&_Employment/maternity_benefit.pdf",
+                 "data_for_rag/Labour_&_Employment/payment_of_wages_act_1936.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -299,10 +299,10 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     15: {
-        "pdfs": ["data_for_rag\Misc_Procedure_Governance\A1923-19.pdf",
-                 "data_for_rag\Misc_Procedure_Governance/a1972-52.pdf",
-                 "data_for_rag\Misc_Procedure_Governance/a1996-26.pdf",
-                 "data_for_rag\Misc_Procedure_Governance\A2005-53.pdf"],
+        "pdfs": ["data_for_rag/Misc_Procedure_Governance/A1923-19.pdf",
+                 "data_for_rag/Misc_Procedure_Governance/a1972-52.pdf",
+                 "data_for_rag/Misc_Procedure_Governance/a1996-26.pdf",
+                 "data_for_rag/Misc_Procedure_Governance/A2005-53.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -318,11 +318,11 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     16: {
-        "pdfs": ["data_for_rag\Taxation_Indirect_tax/a1944-01.pdf",
-                 "data_for_rag\Taxation_Indirect_tax/a1961-43.pdf",
-                 "data_for_rag\Taxation_Indirect_tax/a2017-12.pdf",
-                 "data_for_rag\Taxation_Indirect_tax\igst-act.pdf",
-                 "data_for_rag\Taxation_Indirect_tax/the_customs_act,_1962.pdf"],
+        "pdfs": ["data_for_rag/Taxation_Indirect_tax/a1944-01.pdf",
+                 "data_for_rag/Taxation_Indirect_tax/a1961-43.pdf",
+                 "data_for_rag/Taxation_Indirect_tax/a2017-12.pdf",
+                 "data_for_rag/Taxation_Indirect_tax/igst-act.pdf",
+                 "data_for_rag/Taxation_Indirect_tax/the_customs_act,_1962.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -338,10 +338,10 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     17: {
-        "pdfs": ["data_for_rag\Transport_Infrastructure/197833.pdf",
-                 "data_for_rag\Transport_Infrastructure/a1988-59.pdf",
-                 "data_for_rag\Transport_Infrastructure\AAA1956____48.pdf",
-                 "data_for_rag\Transport_Infrastructure/the_railways_act,_1989.pdf"],
+        "pdfs": ["data_for_rag/Transport_Infrastructure/197833.pdf",
+                 "data_for_rag/Transport_Infrastructure/a1988-59.pdf",
+                 "data_for_rag/Transport_Infrastructure/AAA1956____48.pdf",
+                 "data_for_rag/Transport_Infrastructure/the_railways_act,_1989.pdf"],
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -379,7 +379,7 @@ def build_chain(category_id: int):
 
     all_docs = []
     for path in categories[category_id]["pdfs"]:
-        loader = UnstructuredPDFLoader(file_path=path)
+        loader = PyPDFLoader(file_path=path)
         data = loader.load()
         all_docs.extend(data)
 
