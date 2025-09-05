@@ -20,13 +20,13 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 # helper to auto fetch all pdfs from folder
 def get_pdfs(folder: str):
-    return [str(p) for p in Path(folder).glob("*.pdf")]
+    return [p.as_posix() for p in Path(folder).glob("*.pdf")]
 
 
 #Defining Categories for which pdf to pass to embed and corresponding QUERY_PROMPT for it
 categories = {
     1: {
-        "pdfs": get_pdfs(r"data_for_rag\\Agriculture_Co-operatives_Farm_laws"),
+        "pdfs": get_pdfs("data_for_rag/Agriculture_Co-operatives_Farm_laws"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -42,7 +42,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     2: {
-        "pdfs": get_pdfs(r"data_for_rag\\Banking_&_Finance_Insurance_Security"),
+        "pdfs": get_pdfs("data_for_rag/Banking_&_Finance_Insurance_Security"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -58,7 +58,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     3: {
-        "pdfs": get_pdfs(r"data_for_rag\\Civil_procedure_Civil_law_Property"),
+        "pdfs": get_pdfs("data_for_rag/Civil_procedure_Civil_law_Property"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -74,7 +74,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     4: {
-        "pdfs": get_pdfs(r"data_for_rag\\Constitutional_General"),
+        "pdfs": get_pdfs("data_for_rag/Constitutional_General"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -90,7 +90,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     5: {
-        "pdfs": get_pdfs(r"data_for_rag\\Consumer_Public_interest_Safety"),
+        "pdfs": get_pdfs("data_for_rag/Consumer_Public_interest_Safety"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -106,7 +106,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     6: {
-        "pdfs": get_pdfs(r"data_for_rag\\Corporate_Commercial_Financial"),
+        "pdfs": get_pdfs("data_for_rag/Corporate_Commercial_Financial"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -122,7 +122,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     7: {
-        "pdfs": get_pdfs(r"data_for_rag\\Crime_Special_statutes"),
+        "pdfs": get_pdfs("data_for_rag/Crime_Special_statutes"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -138,7 +138,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     8: {
-        "pdfs": get_pdfs(r"data_for_rag\\Criminal_Procedure_Evidence"),
+        "pdfs": get_pdfs("data_for_rag/Criminal_Procedure_Evidence"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -154,7 +154,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     9: {
-        "pdfs": get_pdfs(r"data_for_rag\\Education_Health_Medical_regulation"),
+        "pdfs": get_pdfs("data_for_rag/Education_Health_Medical_regulation"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -170,7 +170,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     10: {
-        "pdfs": get_pdfs(r"data_for_rag\\Environment_Forest_Wildlife_Biodiversity"),
+        "pdfs": get_pdfs("data_for_rag/Environment_Forest_Wildlife_Biodiversity"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -186,7 +186,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     11: {
-        "pdfs": get_pdfs(r"data_for_rag\\Intellectual_Property"),
+        "pdfs": get_pdfs("data_for_rag/Intellectual_Property"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -202,7 +202,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     12: {
-        "pdfs": get_pdfs(r"data_for_rag\\IT_Data_Telecom"),
+        "pdfs": get_pdfs("data_for_rag/IT_Data_Telecom"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -218,7 +218,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     13: {
-        "pdfs": get_pdfs(r"data_for_rag\\Juvenile_Family_Personal_law"),
+        "pdfs": get_pdfs("data_for_rag/Juvenile_Family_Personal_law"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -234,7 +234,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     14: {
-        "pdfs": get_pdfs(r"data_for_rag\\Labour_&_Employment"),
+        "pdfs": get_pdfs("data_for_rag/Labour_&_Employment"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -250,7 +250,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     15: {
-        "pdfs": get_pdfs(r"data_for_rag\\Misc_Procedure_Governance"),
+        "pdfs": get_pdfs("data_for_rag/Misc_Procedure_Governance"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -266,7 +266,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     16: {
-        "pdfs": get_pdfs(r"data_for_rag\\Taxation_Indirect_tax"),
+        "pdfs": get_pdfs("data_for_rag/Taxation_Indirect_tax"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -282,7 +282,7 @@ Do not answer the question, only produce the reformulated queries.
         )
     },
     17: {
-        "pdfs": get_pdfs(r"data_for_rag\\Transport_Infrastructure"),
+        "pdfs": get_pdfs("data_for_rag/Transport_Infrastructure"),
         "QUERY_PROMPT": PromptTemplate(
             input_variables=["question"],
             template="""
@@ -310,7 +310,7 @@ llm = ChatGoogleGenerativeAI(
 
 #Embeddings with Gemini too
 embedding_model = GoogleGenerativeAIEmbeddings(
-    model="models\\embedding-001",
+    model="models/embedding-001",
     google_api_key=GEMINI_API_KEY
 )
 
@@ -363,7 +363,7 @@ def build_chain(category_id: int):
     Instructions:
     - Summarize clearly in 3–5 sentences.  
     - Highlight important keywords.  
-    - Always cite the page\\section numbers at the end.  
+    - Always cite the page/section numbers at the end.  
     """
 
 
