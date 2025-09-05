@@ -13,6 +13,7 @@ class AllChatsScreen extends StatefulWidget {
 }
 
 class _AllChatsScreenState extends State<AllChatsScreen> {
+  String _searchQuery = "";
 
   void openChat(String conversationId) {
     convNotifier.value = conversationId;
@@ -27,32 +28,68 @@ class _AllChatsScreenState extends State<AllChatsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: StreamBuilder<QuerySnapshot>(
-        stream: getConversations(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-            return const Center(child: Text("No conversations yet"));
-          }
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurface,
+              ),
+              decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: "Search conversations...",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
+              ),
+              onChanged: (value) {
+                setState(() {
+                  _searchQuery = value.toLowerCase().trim();
+                });
+              },
+            ),
+          ),
 
-          final conversations = snapshot.data!.docs;
+          // Conversation list
+          Expanded(
+            child: StreamBuilder<QuerySnapshot>(
+              stream: getConversations(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+                  return const Center(child: Text("No conversations yet"));
+                }
 
-          return ListView.builder(
-            itemCount: conversations.length,
-            itemBuilder: (context, index) {
-              final convo = conversations[index];
-              final conversationId = convo.id;
-              final title = convo['title'] ?? "Untitled";
-              return ConvCard(
-                title: title,
-                showChat: () => openChat(conversationId),
-              );
-            },
-          );
-        },
+                final conversations = snapshot.data!.docs.where((convo) {
+                  final title = (convo['title'] ?? "Untitled").toString().toLowerCase();
+                  return title.contains(_searchQuery);
+                }).toList();
+
+                if (conversations.isEmpty) {
+                  return const Center(child: Text("No matches found"));
+                }
+
+                return ListView.builder(
+                  itemCount: conversations.length,
+                  itemBuilder: (context, index) {
+                    final convo = conversations[index];
+                    final conversationId = convo.id;
+                    final title = convo['title'] ?? "Untitled";
+                    return ConvCard(
+                      title: title,
+                      showChat: () => openChat(conversationId),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
