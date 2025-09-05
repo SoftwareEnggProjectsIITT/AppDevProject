@@ -57,8 +57,8 @@ class _MessageBoxState extends State<MessageBox> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-        color: Theme.of(context).colorScheme.surface,
+        padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
+        color: Theme.of(context).colorScheme.surfaceContainerHigh,
         child: Row(
           children: [
             Expanded(

@@ -79,11 +79,20 @@ class MainDrawer extends StatelessWidget {
                           children: [
                             Text(
                               userName,
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimaryContainer,
+                                fontWeight: FontWeight.bold
+                              ),
                             ),
                             const SizedBox(height: 5),
-                            Text(userEmail),
+                            FittedBox(
+                              child: Text(
+                                userEmail,
+                                style: TextStyle(
+                                  color: Theme.of(context).colorScheme.onPrimaryContainer
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -96,9 +105,12 @@ class MainDrawer extends StatelessWidget {
                     size: 20,
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
-                  title: const Text(
+                  title: Text(
                     'Logout',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSurface,
+                      fontSize: 20
+                    ),
                   ),
                   onTap: () => _logout(context),
                 ),
