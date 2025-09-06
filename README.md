@@ -11,7 +11,7 @@ LegalEase is a Flutter-based mobile application designed to promote awareness of
 - Encourage civic participation by making policy knowledge accessible to everyone.  
 ### 📂 Project Structure  
 
-#### Frontend (`Coding/appDev/flutter/AppDevProject/frontend/lib`)  
+#### Frontend (`AppDevProject/frontend/lib`)  
 ```
 ├── firebase_options.dart
 ├── main.dart
