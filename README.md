@@ -1,161 +1,118 @@
-# 📢 Political Accountability & Civic Engagement App
+# LegalEase  
 
-_(SDG Goal 16 – Peace, Justice, and Strong Institutions)_
+## 🌍 SDG Goal 16 — Peace, Justice and Strong Institutions  
 
-## 📖 Overview
+### 📖 Overview  
+LegalEase is a Flutter-based mobile application designed to promote awareness of constitutional laws and provide citizens with the latest policy information. Leveraging a Retrieval-Augmented Generation (RAG) pipeline, the app enables users to ask queries about laws while staying updated on policy changes.  
 
-A **Flutter-based mobile app** that enables verified citizens to report local civic issues, collectively validate them, and escalate to the correct authority using an administrative hierarchy. It also highlights **verified completed works** by public representatives to improve transparency during elections.
+### 🎯 Objectives  
+- Educate people about laws of the constitution.  
+- Provide up-to-date information on policies and governance.  
+- Encourage civic participation by making policy knowledge accessible to everyone.  
+### 📂 Project Structure  
 
-## 🎯 Objectives
-
-- **Empower citizens** to report and track local issues.
-- **Increase transparency** via community validation and public escalation.
-- **Reward good governance** by showcasing verified completed work.
-- **Build trust** between citizens and representatives.
-
-## 🛠️ Core Features (Expected)
-
-1. **User Verification**
-   - Aadhaar-based verification _(sandbox/mock in development)_.
-2. **Issue Reporting**
-   - Title, description, media (photos/videos), geo-tagged location, category.
-3. **Community Validation**
-   - Upvotes/downvotes, “I witnessed this” verification by nearby users.
-4. **Escalation Engine**
-   - Auto-escalates by threshold along an authority tree (Ward → District → State → National).
-   - “Nearby districts” expansion for high-impact issues.
-5. **Moderator Review**
-   - Human review once a report crosses a configurable threshold.
-6. **Completed Work Showcase**
-   - Representatives post achievements for local verification; once verified, broadcast nationally.
-7. **Feed & Locality Scoping**
-   - Localized feed by user location; expands in scope after escalation.
-8. **Notifications**
-   - Status changes, escalation events, moderator decisions, authority responses.
-9. **Basic Analytics (MVP)**
-   - Issue counts by category/area, SLA/resolution times, top escalations.
-
-## 🧭 Non-Goals (for MVP)
-
-- End-to-end biometric KYC.
-- Binding legal ticketing with government portals (can be integrated later).
-- Complex gamification/leaderboards.
-
-## 🏗️ Tech Stack (Proposed)
-
-- **Frontend:** Flutter (Dart)
-- **Middleware:**FastAPI deployed on google could run (free)
-- **Backend:** Firebase (Auth, Firestore, Storage, Cloud Functions)
-- **Maps & Geocoding:** Google Maps Platform
-- **Auth:** Aadhaar sandbox/mock for development
-- **CI/CD:** GitHub Actions / Codemagic (optional)
-
-## 📂 Project Structure (Proposed)
-
-```text
-project_root/
-├─ lib/
-│  ├─ main.dart
-│  ├─ app.dart
-│  └─ src/
-│     ├─ features/
-│     │  ├─ auth/
-│     │  │  ├─ data/        # adapters, repositories
-│     │  │  ├─ domain/      # entities, models
-│     │  │  └─ presentation/# screens, widgets, state
-│     │  ├─ reports/        # issue reporting & feed
-│     │  ├─ escalation/     # thresholds, routing logic
-│     │  ├─ moderation/     # moderator tools
-│     │  └─ showcase/       # completed works flow
-│     ├─ services/          # location, media, api clients
-│     ├─ common/            # ui kit, theming, utils
-│     └─ routing/           # app routes
-├─ assets/
-│  ├─ images/
-│  └─ icons/
-├─ backend/                 # server or cloud functions (if any)
-├─ test/                    # unit/widget tests
-├─ pubspec.yaml
-├─ README.md
-└─ .gitignore
+#### Frontend (`AppDevProject/frontend/lib`)  
 ```
-
-## 🧩 Data Model (MVP Sketch)
-
-- **User:** `id`, `name`, `aadhaar_verified`, `location`, `roles` (citizen/moderator/admin)
-- **Report:** `id`, `author_id`, `title`, `description`, `media_urls[]`, `category`, `geo`, `status`, `upvotes`, `verifications`, `current_level`, `history[]`
-- **EscalationRule:** `level`, `threshold`, `radius_km`, `next_level`
-- **Showcase:** `id`, `rep_id`, `title`, `description`, `media_urls[]`, `locality`, `verified_votes`, `status`
-
-## 🧱 Roles & Permissions
-
-- **Citizen:** create reports, vote/verify, view feed.
-- **Moderator:** review flagged/escalated reports, mark as valid/invalid, request more proof.
-- **Admin:** manage escalation rules, categories, authority hierarchy.
-
-## 🔁 Escalation Logic (Example)
-
-1. Report reaches `threshold[level]` in its locality → escalate to next authority level.
-2. If impact score or velocity is high, expand visibility to **nearby districts**.
-3. Moderator review is triggered at configured levels; invalid reports are rolled back or archived with reason.
-4. Authority responses (if integrated) reduce escalation or mark resolved.
-
-## ⚙️ Setup & Run (Flutter)
-
-### Prerequisites
-
-- Flutter SDK (stable), Dart, Android Studio/Xcode setup.
-- A Google Maps API key (if using maps).
-- Firebase project (if using Firebase).
-
-### Local Development
-
-```bash
-# 1) Install dependencies
-flutter pub get
-
-# 2) Configure env (see .env.example) and firebase_options.dart if using FlutterFire
-
-# 3) Run
-flutter run
+├── firebase_options.dart
+├── main.dart
+├── models
+│   ├── auth.dart
+│   ├── chat.dart
+│   ├── color_scheme.dart
+│   ├── feed_entry.dart
+│   ├── post_data.dart
+│   └── tts.dart
+├── providers
+│   ├── bookmarks_provider.dart
+│   ├── dark_mode_provider.dart
+│   ├── notifiers.dart
+│   └── post_categories.dart
+├── screens
+│   ├── all_chats.dart
+│   ├── bookmarks_page.dart
+│   ├── chat_screen.dart
+│   ├── home_page.dart
+│   ├── login.dart
+│   └── post_page.dart
+├── services
+│   ├── get_reply.dart
+│   ├── manage_messages.dart
+│   ├── post_service.dart
+│   └── reply_service.dart
+├── widgets
+│   ├── bookmark_button.dart
+│   ├── bottom_navbar.dart
+│   ├── conv_card.dart
+│   ├── like_button.dart
+│   ├── login_page_builder.dart
+│   ├── main_drawer.dart
+│   ├── message_box.dart
+│   ├── new_chat.dart
+│   ├── post_card.dart
+│   ├── post_image.dart
+│   ├── reply.dart
+│   └── reply_loader.dart
+└── widget_tree.dart
 ```
+### ✨ Core Features  
+- 🔑 User Verification with Google — Secure login for all users.  
+- 🌓 Light & Dark Mode — Personalized user experience.  
+- 🤖 Chatbot — Ask questions about laws and policies using RAG-powered responses.  
+- 💬 Multiple Chats — Maintain separate conversations within the same chat window to ask different questions.  
+- 📌 Bookmark — Save important queries or policies for quick access.  
+- ❤ Like — Mark policies or law explanations you find useful.  
+- 📰 Personalized Feed — Content recommendations based on user activity such as likes, bookmarks, and watch history.  
+- 🎙 Speech-to-Text — Ask questions using your voice.  
+- 🔊 Text-to-Speech — Listen to law explanations and policy answers.  
 
-## 🔐 Environment Variables
+### 📱 Screens/Pages  
 
-Create `.env` or use Flutter flavor configs:
+**Login Page**  
+Secure Google authentication for users.  
 
-- `GOOGLE_MAPS_API_KEY=`
-- `FIREBASE_PROJECT_ID=`
-- `AADHAAR_SANDBOX_KEY=` _(mock for dev)_
-- `ESCALATION_DEFAULT_THRESHOLD=`
-
-## 🧪 Testing
-
-```bash
-flutter test
-```
-
-## 🧭 SDG Alignment
-
-Supports **UN SDG 16** by enabling accountable institutions and inclusive participation through verified, auditable citizen reports and transparent escalation.
-
-## 🗺️ Roadmap
-
-- v0.1: Report creation, local feed, upvotes, basic escalation, mock verification.
-- v0.2: Moderator dashboard, notifications, showcase verification flow.
-- v0.3: Authority directory import, analytics, multi-language UI.
-- v1.0: Govt portal integrations, AI-assisted fraud detection.
-
-## 🤝 Contributing
-
-1. Fork & create a feature branch.
-2. Write tests where sensible.
-3. Open a PR describing the change and screenshots.
-
-## 📝 License
-
-Add your preferred license (e.g., MIT).
+<br>  
+<img src="images/login_page.jpg" alt="Login Page" width="300" height="600">  
 
 ---
 
-> Note: Aadhaar integration should use **sandbox/mock** in development and comply with all legal and privacy requirements in production.
+**Home Page**  
+Displays personalized feed and navigation to other features.  
+
+<br>  
+<img src="images/home_page.jpg" alt="Home Page" width="300" height="600">  
+
+---
+
+**Chatbot Page**  
+Interact with the RAG-powered chatbot to ask queries about laws and policies.  
+
+<br>  
+<img src="images/chatbot_page.jpg" alt="Chatbot Page" width="300" height="600">  
+
+---
+
+**Detailed View Page**  
+View full details of policies, laws, or bookmarked content.  
+
+<br>  
+<img src="images/detailed_view.jpg" alt="Detailed View Page" width="300" height="600">  
+
+---
+
+**Bookmark Page**  
+Access saved queries and policy information for quick reference.  
+
+<br>  
+<img src="images/bookmark_page.jpg" alt="Bookmark Page" width="300" height="600">  
+
+
+### 📌 Contributions  
+- Nillanjan: Added splash screen on first start, login screen, storing user messages and conversations, creating backup mechanisms in case of cold-start or backend data mismatch (directly calling LLM), and building the frontend for chatbot.  
+- Sarang: Developed personalized feed for every user, integrated real-time news & posts on Firebase, prepared datasets for RAG chatbot, and handled model deployment.  
+- Piyush: Designed explore page with interactive cards, color themes, day/night mode, implemented persistent bookmarks & likes storage for each user, and created a new table for every user in the database.  
+- Prathamesh: Implemented RAG model logic, created vector embeddings of government data, experimented with multiple models/hyperparameters/query prompts, and optimized answer generation (selecting relevant PDFs, ensuring validity, and providing references).  
+- Sabari: Built backend endpoints using FastAPI to handle chats and policy data, and integrated Firebase authentication.  
+
+---
+
+🚀 Building transparency and empowering citizens through technology with LegalEase.  
