@@ -11,23 +11,40 @@ class NewChat extends StatefulWidget {
 class _NewChatState extends State<NewChat> {
   final _titleController = TextEditingController();
   var _isSubmitting = false;
-  
+
   void _submit() async {
     if (_titleController.text.trim().isEmpty) {
       showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Invalid Input'),
-          content: const Text('Please make sure a valid title was entered.'),
+          title: Text(
+            'Invalid Input',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onError
+            ),
+
+          ),
+          content: Text(
+            'Please make sure a valid title was entered.',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onError
+            ),
+          ),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(ctx);
               },
-              child: const Text('Okay'),
+              child: Text(
+                'Okay',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
+              ),
             ),
           ],
-        ));
+        )
+      );
       return;
     }
     setState(() {
@@ -38,7 +55,6 @@ class _NewChatState extends State<NewChat> {
       _isSubmitting = false;
     });
     Navigator.pop(context);
-    
   }
 
   @override
@@ -53,12 +69,29 @@ class _NewChatState extends State<NewChat> {
               padding: EdgeInsetsGeometry.all(20),
               child: Column(
                 children: [
-                  const Text("Create New Chat", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),),
+                  Text(
+                    "Create New Chat", 
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).colorScheme.onSurface,
+                    ),
+                  ),
                   const SizedBox(height: 20,),
                   TextField(
                     controller: _titleController,
                     maxLength: 20,
-                    decoration: InputDecoration(label: Text('Title')),
+                    decoration: InputDecoration(
+                      label: Text(
+                        'Title',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.onSurface,
+                        ),
+                      )
+                    ),
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSurface,
+                    ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -67,7 +100,12 @@ class _NewChatState extends State<NewChat> {
                         onPressed:_isSubmitting ? null : () {
                           Navigator.pop(context);
                         },
-                        child: const Text('Cancel'),
+                        child: Text(
+                          'Cancel',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.onSurface
+                          )
+                        ),
                       ),
                       ElevatedButton(
                         onPressed:_isSubmitting ? null :  _submit,
