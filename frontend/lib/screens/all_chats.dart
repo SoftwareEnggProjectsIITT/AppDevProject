@@ -55,42 +55,56 @@ class _AllChatsScreenState extends State<AllChatsScreen> {
                 },
               ),
             ),
-      
+
             // Conversation list
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
-                stream: getConversations(),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
+              stream: getConversations(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());
                   }
-                  if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                    return const Center(child: Text("No conversations yet"));
+                if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+                    return Center(child:
+                      Text(
+                        "No conversations yet",
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.onSurface,
+                        ),
+                      )
+                    );
                   }
-      
-                  final conversations = snapshot.data!.docs.where((convo) {
-                    final title = (convo['title'] ?? "Untitled").toString().toLowerCase();
-                    return title.contains(_searchQuery);
-                  }).toList();
-      
-                  if (conversations.isEmpty) {
-                    return const Center(child: Text("No matches found"));
-                  }
-      
-                  return ListView.builder(
-                    itemCount: conversations.length,
-                    itemBuilder: (context, index) {
-                      final convo = conversations[index];
-                      final conversationId = convo.id;
-                      final title = convo['title'] ?? "Untitled";
-                      return ConvCard(
-                        title: title,
-                        showChat: () => openChat(conversationId),
-                      );
-                    },
+
+                final conversations = snapshot.data!.docs.where((convo) {
+                  final title = (convo['title'] ?? "Untitled").toString().toLowerCase();
+                  return title.contains(_searchQuery);
+                }).toList();
+
+                if (conversations.isEmpty) {
+                  return Center(
+                    child: Text(
+                      "No matches found",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
+                    )
                   );
-                },
-              ),
+                }
+
+                return ListView.builder(
+                  itemCount: conversations.length,
+                  itemBuilder: (context, index) {
+                    final convo = conversations[index];
+                    final conversationId = convo.id;
+                    final title = convo['title'] ?? "Untitled";
+                    return ConvCard(
+                      title: title,
+                      showChat: () => openChat(conversationId),
+                    );
+                  },
+                );
+              },
+            ),
             ),
           ],
         ),
