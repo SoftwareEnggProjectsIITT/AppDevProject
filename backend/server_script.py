@@ -24,7 +24,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     google_api_key=GEMINI_API_KEY,
-    temperature=0.3
+    temperature=1
 )
 
 embedding_model = GoogleGenerativeAIEmbeddings(
@@ -116,8 +116,15 @@ def build_chain(vectorstore):
     retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
     prompt_template = """
-    You are an expert legal assistant. 
-    Answer using the provided context. If the answer isn't in context, say so clearly.
+    You are an expert legal and law assistant.
+When answering, strictly use the provided dataset as your source.
+
+If the answer is present in the dataset, provide it accurately.
+
+If the answer is not present in the dataset, explicitly state:
+“No such provision is present in government laws/schemes.”
+
+Then, provide a relevant answer based only on the dataset’s knowledge, not external knowledge.
 
     Question: {question}
 
@@ -158,5 +165,5 @@ def ask_question(query: str) -> str:
         return f"Error: {str(e)}"
 
 
-# user_query = "What rights do I have if I kill a wild animal in self-defense?"
-# print(ask_question(user_query))
+user_query = "How much tax do I have to pay if my husband is in army?"
+print(ask_question(user_query))
