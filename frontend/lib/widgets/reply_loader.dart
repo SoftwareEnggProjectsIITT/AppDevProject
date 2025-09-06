@@ -10,15 +10,20 @@ class ReplyLoader extends StatelessWidget {
       padding: EdgeInsets.all(8),
       margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.surfaceContainer,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
-        children: const [
-          Text('Getting reply '),
+        children: [
+          Text(
+            'Getting reply ',
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
+          ),
           SpinKitThreeBounce(
-            color: Colors.grey,
+            color: Theme.of(context).colorScheme.onSurface,
             size: 20.0,
           ),
         ],
