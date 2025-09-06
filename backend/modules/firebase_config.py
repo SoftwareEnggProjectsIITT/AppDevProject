@@ -1,13 +1,14 @@
 import firebase_admin
 from firebase_admin import credentials, db
-from pathlib import Path
+import base64
 import json
 import os
 
 # Initialize only once when this file is imported
 if not firebase_admin._apps:
-    service_account_info = json.loads(os.environ["FIREBASE_SERVICE_KEY"])
-    cred = credentials.Certificate(service_account_info)
+    encoded = os.getenv("FIREBASE_SERVICE_KEY")
+    key_dict = json.loads(base64.b64decode(encoded))
+    cred = credentials.Certificate(key_dict)
     firebase_admin.initialize_app(cred, {
         "databaseURL": "https://se-app-dev-9e20f-default-rtdb.asia-southeast1.firebasedatabase.app/"
     })
