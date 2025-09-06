@@ -66,11 +66,26 @@ LegalEase is a Flutter-based mobile application designed to promote awareness of
 - 🔊 Text-to-Speech — Listen to law explanations and policy answers.  
 
 ### 📱 Screens/Pages  
-- [Login Page](images/login_page.jpg) — Secure Google authentication for users.  
-- [Home Page](images/home_page.jpg) — Displays personalized feed and navigation to other features.  
-- [Chatbot Page](images/chatbot_page.jpg) — Interact with the RAG-powered chatbot to ask queries about laws and policies.  
-- [Detailed View Page](images/detailed_view.jpg) — View full details of policies, laws, or bookmarked content.   
-- [Bookmark Page](images/bookmark_page.jpg) — Access saved queries and policy information for quick reference.  
+
+**Login Page**  
+Secure Google authentication for users.  
+![Login Page](images/login_page.jpg)  
+
+**Home Page**  
+Displays personalized feed and navigation to other features.  
+![Home Page](images/home_page.jpg)  
+
+**Chatbot Page**  
+Interact with the RAG-powered chatbot to ask queries about laws and policies.  
+![Chatbot Page](images/chatbot_page.jpg)  
+
+**Detailed View Page**  
+View full details of policies, laws, or bookmarked content.  
+![Detailed View Page](images/detailed_view.jpg)  
+
+**Bookmark Page**  
+Access saved queries and policy information for quick reference.  
+![Bookmark Page](images/bookmark_page.jpg)  
 
 ### 🛠 Tech Stack  
 - Frontend: Flutter  
