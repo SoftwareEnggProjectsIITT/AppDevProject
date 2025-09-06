@@ -73,6 +73,9 @@ class _MessageBoxState extends State<MessageBox> {
                   ),
                   fillColor: Theme.of(context).colorScheme.outline,
                 ),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
               ),
             ),
             IconButton(
