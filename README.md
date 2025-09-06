@@ -69,32 +69,42 @@ LegalEase is a Flutter-based mobile application designed to promote awareness of
 
 **Login Page**  
 Secure Google authentication for users.  
-![Login Page](images/login_page.jpg)  
+
+<br>  
+<img src="images/login_page.jpg" alt="Login Page" width="300" height="600">  
+
+---
 
 **Home Page**  
 Displays personalized feed and navigation to other features.  
-![Home Page](images/home_page.jpg)  
+
+<br>  
+<img src="images/home_page.jpg" alt="Home Page" width="300" height="600">  
+
+---
 
 **Chatbot Page**  
 Interact with the RAG-powered chatbot to ask queries about laws and policies.  
-![Chatbot Page](images/chatbot_page.jpg)  
+
+<br>  
+<img src="images/chatbot_page.jpg" alt="Chatbot Page" width="300" height="600">  
+
+---
 
 **Detailed View Page**  
 View full details of policies, laws, or bookmarked content.  
-![Detailed View Page](images/detailed_view.jpg)  
+
+<br>  
+<img src="images/detailed_view.jpg" alt="Detailed View Page" width="300" height="600">  
+
+---
 
 **Bookmark Page**  
 Access saved queries and policy information for quick reference.  
-![Bookmark Page](images/bookmark_page.jpg)  
 
-### 🛠 Tech Stack  
-- Frontend: Flutter  
-- Middleware: FastAPI  
-- Backend: Firebase, LangChain  
-- CI/CD: GitHub  
-- Deployment: Render  
+<br>  
+<img src="images/bookmark_page.jpg" alt="Bookmark Page" width="300" height="600">  
 
----
 
 ### 📌 Contributions  
 - Nillanjan: Added splash screen on first start, login screen, storing user messages and conversations, creating backup mechanisms in case of cold-start or backend data mismatch (directly calling LLM), and building the frontend for chatbot.  
