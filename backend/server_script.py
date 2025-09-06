@@ -165,5 +165,5 @@ def ask_question(query: str) -> str:
         return f"Error: {str(e)}"
 
 
-user_query = "How much tax do I have to pay if my husband is in army?"
+user_query = "Impact of gst rate cut on new car buy"
 print(ask_question(user_query))
