@@ -12,7 +12,7 @@ LegalEase is a Flutter-based mobile application designed to promote awareness of
 ### 📂 Project Structure  
 
 #### Frontend (`Coding/appDev/flutter/AppDevProject/frontend/lib`)  
-
+```
 ├── firebase_options.dart
 ├── main.dart
 ├── models
@@ -53,7 +53,7 @@ LegalEase is a Flutter-based mobile application designed to promote awareness of
 │   ├── reply.dart
 │   └── reply_loader.dart
 └── widget_tree.dart
-
+```
 ### ✨ Core Features  
 - 🔑 User Verification with Google — Secure login for all users.  
 - 🌓 Light & Dark Mode — Personalized user experience.  
@@ -66,11 +66,11 @@ LegalEase is a Flutter-based mobile application designed to promote awareness of
 - 🔊 Text-to-Speech — Listen to law explanations and policy answers.  
 
 ### 📱 Screens/Pages  
-- [Login Page](images/login_page.png) — Secure Google authentication for users.  
-- [Home Page](images/home_page.png) — Displays personalized feed and navigation to other features.  
-- [Chatbot Page](images/chatbot_page.png) — Interact with the RAG-powered chatbot to ask queries about laws and policies.  
-- [Detailed View Page](images/detailed_view.png) — View full details of policies, laws, or bookmarked content.   
-- [Bookmark Page](images/bookmark_page.png) — Access saved queries and policy information for quick reference.  
+- [Login Page](images/login_page.jpg) — Secure Google authentication for users.  
+- [Home Page](images/home_page.jpg) — Displays personalized feed and navigation to other features.  
+- [Chatbot Page](images/chatbot_page.jpg) — Interact with the RAG-powered chatbot to ask queries about laws and policies.  
+- [Detailed View Page](images/detailed_view.jpg) — View full details of policies, laws, or bookmarked content.   
+- [Bookmark Page](images/bookmark_page.jpg) — Access saved queries and policy information for quick reference.  
 
 ### 🛠 Tech Stack  
 - Frontend: Flutter  
