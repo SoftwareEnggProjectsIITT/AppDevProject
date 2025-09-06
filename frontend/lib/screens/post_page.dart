@@ -125,11 +125,11 @@ class _PostPageState extends State<PostPage> {
               children: [
                 // Back
                 CircleAvatar(
-                  backgroundColor: Theme.of(context).colorScheme.background,
+                  backgroundColor: Theme.of(context).colorScheme.surface,
                   child: IconButton(
                     icon: Icon(
                       Icons.arrow_back,
-                      color: Theme.of(context).colorScheme.onBackground,
+                      color: Theme.of(context).colorScheme.onSurface,
                     ),
                     color: Colors.white,
                     onPressed: () {
@@ -140,7 +140,7 @@ class _PostPageState extends State<PostPage> {
 
                 // Bookmark
                 CircleAvatar(
-                  backgroundColor: Theme.of(context).colorScheme.background,
+                  backgroundColor: Theme.of(context).colorScheme.surface,
                   child: BookmarkButton(post: widget.post),
                 ),
               ],

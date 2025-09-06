@@ -100,12 +100,13 @@ class _ChatScreenState extends State<ChatScreen> {
                     }).toList();
 
                     if (allMessages.isEmpty) {
-                      return const Center(
+                      return Center(
                         child: Text(
                           "What's in your mind today?",
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.onSurface,
                           ),
                         ),
                       );

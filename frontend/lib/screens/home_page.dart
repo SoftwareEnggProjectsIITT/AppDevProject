@@ -83,21 +83,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _isLoading
-      ? Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+      ? Transform.scale(
+        scale: 0.9,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
 
-          Lottie.asset('assets/animations/Loading_animation_blue.json'),
-
-          Text(
-            "Loading...", 
-            style: TextStyle(
-              color: Theme.of(context).colorScheme.primary,
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
+            Lottie.asset(
+              'assets/animations/Loading_animation_blue.json'
             ),
-          ),
-        ],
+
+            Text(
+              "Loading...", 
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurface,
+                fontSize: 25,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
       )
       : LiquidPullToRefresh(
         onRefresh: _handleRefresh,
