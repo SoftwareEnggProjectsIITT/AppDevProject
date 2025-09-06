@@ -40,7 +40,8 @@ class _WidgetTreeState extends State<WidgetTree> {
               child: Text(
                 pageTitles[selectedPage], 
                 style: TextStyle(
-                  fontWeight: FontWeight.bold
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.onSurface
                 ),
               ),
             ),
