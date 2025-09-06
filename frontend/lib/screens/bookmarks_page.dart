@@ -13,10 +13,16 @@ class BookmarksPage extends ConsumerWidget {
 
     return Scaffold(
       body: bookmarks.isEmpty
-      ? const Center(
-        child: Text(
-          "No bookmarks yet",
-          style: TextStyle(fontSize: 16),
+      ? Container(
+        color: Theme.of(context).colorScheme.surface,
+        child: Center(
+          child: Text(
+            "No bookmarks yet",
+            style: TextStyle(
+              fontSize: 16,
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
+          ),
         ),
       )
       : ListView.builder(
